@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="*"%>
     <%@ page import="java.util.*" %>
      <%@ page import="com.v2crm.web.forms.*" %>
      <%@ page import="com.v2crm.domain.Lead" %>
@@ -48,7 +46,7 @@
               <tbody>
               <% for(Lead c: leadsForm.getLeads()){ %>
         <tr>
-          <td><%=c.getFirstName()()%></td>
+          <td><%=c.getFirstName()%></td>
           <td><%=c.getLastName()%></td>
           <td><%=c.getIndustry().toString()%></td>
           <td><%=c.getMobile()%></td>
