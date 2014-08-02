@@ -4,16 +4,16 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
-		<set-property property="contextConfigLocation"
-			value="/WEB-INF/classes/appContext.xml" />
-  	</plug-in>
+	
   	
     <package name="default" namespace="/" extends="struts-default">
         <result-types>
             <result-type name="json" class="org.apache.struts2.json.JSONResult"/>
         </result-types>    
-        "src/main/webapp/jquery-ui.js"
+        <action name="displayStudentList" class="com.v2crm.web.actions.StudentsAction" 
+                  method="displayStudentList">
+		   <result name="success">/displayTag.jsp</result>
+		</action>
          <action name="getLeadsJson" class="com.v2crm.web.actions.LeadAction">
             <result type="json" />
          </action>
