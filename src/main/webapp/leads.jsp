@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <title>Jatin Sutaria | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<link href="css/displaytag.css" rel="stylesheet" type="text/css" />
+  
         <!-- bootstrap 3.0.2 -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- font Awesome -->
@@ -35,7 +37,7 @@
 		    <link href="css/basic.css" rel="stylesheet" type="text/css" />
 		    <script> 
 		    $(function(){
-		      $("#leadsTableContent").load("leadsTable.jsp"); 
+		    //  $("#leadsTableContent").load("displayStudentList"); 
 		    });
 		 </script> 
     </head>
@@ -390,118 +392,41 @@
 
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">
-                <!-- Content Header (Page header) -->
-                <section class="content-header">
-                    <h1>
-                        Dashboard
-                        <small>Control panel</small>
-                    </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Dashboard</li>
-                    </ol>
-                </section>
-
-                <!-- Main content -->
-                <section class="content">
-
-                    <!-- Small boxes (Stat box) -->
-                    <div class="row">
-                        <div class="col-lg-3 col-xs-6">
-                            <!-- small box -->
-                            <div class="small-box bg-aqua">
-                                <div class="inner">
-                                    <h3>
-                                        150
-                                    </h3>
-                                    <p>
-                                        New Orders
-                                    </p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-bag"></i>
-                                </div>
-                                <a href="#" class="small-box-footer">
-                                    More info <i class="fa fa-arrow-circle-right"></i>
-                                </a>
-                            </div>
-                        </div><!-- ./col -->
-                        <div class="col-lg-3 col-xs-6">
-                            <!-- small box -->
-                            <div class="small-box bg-green">
-                                <div class="inner">
-                                    <h3>
-                                        53<sup style="font-size: 20px">%</sup>
-                                    </h3>
-                                    <p>
-                                        Bounce Rate
-                                    </p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-stats-bars"></i>
-                                </div>
-                                <a href="#" class="small-box-footer">
-                                    More info <i class="fa fa-arrow-circle-right"></i>
-                                </a>
-                            </div>
-                        </div><!-- ./col -->
-                        <div class="col-lg-3 col-xs-6">
-                            <!-- small box -->
-                            <div class="small-box bg-yellow">
-                                <div class="inner">
-                                    <h3>
-                                        44
-                                    </h3>
-                                    <p>
-                                        User Registrations
-                                    </p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-person-add"></i>
-                                </div>
-                                <a href="#" class="small-box-footer">
-                                    More info <i class="fa fa-arrow-circle-right"></i>
-                                </a>
-                            </div>
-                        </div><!-- ./col -->
-                        <div class="col-lg-3 col-xs-6">
-                            <!-- small box -->
-                            <div class="small-box bg-red">
-                                <div class="inner">
-                                    <h3>
-                                        65
-                                    </h3>
-                                    <p>
-                                        Unique Visitors
-                                    </p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-pie-graph"></i>
-                                </div>
-                                <a href="#" class="small-box-footer">
-                                    More info <i class="fa fa-arrow-circle-right"></i>
-                                </a>
-                            </div>
-                        </div><!-- ./col -->
-                    </div><!-- /.row -->
-
-                    <!-- top row -->
-                    <div class="row">
-                        <div class="col-xs-12 connectedSortable">
-                            
-                        </div><!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-
-                    <!-- Main row -->
-                    <!--<div class="row"> -->
-                        
-                        
-                   <!-- </div> -->
-                   <div id="leadsTableContent"></div>
-
-                </section><!-- /.content -->
-            </aside><!-- /.right-side -->
+           
+                <!-- .table - Uses sparkline charts-->
+                <table class="table table-striped">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Industry</th>
+                        <th>Organization Name</th>
+						<th>Search By Condition(s)</th>
+						<th>Get All</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="firstName" class="form-control" placeholder="First Name"/></td>
+                        <td><input type="text" name="lastName" class="form-control" placeholder="Last Name"/></td>
+                        <td><input type="text" name="company" class="form-control" placeholder="Company"/></td>
+                        <td><input type="text" name="industry" class="form-control" placeholder="Industry"/></td>
+						 <td><button class="btn btn-info"><i class="fa fa-download"></i> Search Leads</button></td>
+						  <td><button class="btn btn-warning"><i class="fa fa-bug"></i> Get All Leads</button></td>
+                    </tr>
+                   
+                </table><!-- /.table -->
+				 
+	            
+				<div>
+				<display:table id="studentTable" partialList="true"  size="20" name="data" pagesize="5"  requestURI="">
+				<display:column property="rollNo" title="Roll No"/>
+				<display:column property="studentName" title="Student Name"/>
+				<display:column property="department" title="Department"/>
+				<display:column property="rank" title="Rank"/>
+				<display:column title="Edit"></display:column>
+				<display:column title="Delete"></display:column>
+				</display:table>
+				</div>
+               </aside><!-- /.right-side -->
+			 
         </div><!-- ./wrapper -->
 
         <!-- add new calendar event modal -->

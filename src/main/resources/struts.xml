@@ -12,7 +12,7 @@
         </result-types>    
         <action name="displayStudentList" class="com.v2crm.web.actions.StudentsAction" 
                   method="displayStudentList">
-		   <result name="success">/displayTag.jsp</result>
+		   <result name="success">/leads.jsp</result>
 		</action>
          <action name="getLeadsJson" class="com.v2crm.web.actions.LeadAction">
             <result type="json" />
