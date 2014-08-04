@@ -1,4 +1,5 @@
-
+<%@taglib prefix="s" uri="/struts-tags"%>
+<%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <!DOCTYPE html>
 <html>
     <head>
