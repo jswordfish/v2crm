@@ -1,6 +1,7 @@
 package com.v2crm.web.actions;
 
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -50,6 +51,34 @@ public String displayStudentList()
         request.setAttribute( "data", dataList );
         return SUCCESS;
 }
+
+public String editStudent(){
+	Enumeration<String> en = request.getParameterNames();
+	while(en.hasMoreElements()){
+		System.out.println("param "+en.nextElement());
+	}
+	
+	en = request.getAttributeNames();
+	while(en.hasMoreElements()){
+		System.out.println(en.nextElement());
+	}
+    return "edit_success";
+}
+
+public String deleteStudent(){
+	Enumeration<String> en = request.getParameterNames();
+	while(en.hasMoreElements()){
+		System.out.println("param "+en.nextElement());
+	}
+	
+	en = request.getAttributeNames();
+	while(en.hasMoreElements()){
+		System.out.println(en.nextElement());
+	}
+    return "delete_success";
+}
+
+
 
 public List<StudentBean> getStudents() 
 {

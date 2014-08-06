@@ -7,21 +7,20 @@
 	
   	
     <package name="default" namespace="/" extends="struts-default">
-        <result-types>
-            <result-type name="json" class="org.apache.struts2.json.JSONResult"/>
-        </result-types>    
-        <action name="displayStudentList" class="com.v2crm.web.actions.StudentsAction" 
-                  method="displayStudentList">
+   
+        <action name="DisplayLeads" class="com.v2crm.web.actions.LeadAction" 
+                  method="displayLeads">
 		   <result name="success">/leads.jsp</result>
 		</action>
-         <action name="getLeadsJson" class="com.v2crm.web.actions.LeadAction">
-            <result type="json" />
-         </action>
-         
-         <action name="listLeads" class="com.v2crm.web.actions.LeadAction">
-                <result type="json">pages/leadsTable.jsp</result>
-          </action>        
-       
+		<action name="EditLead" class="com.v2crm.web.actions.EditLeadAction" 
+                  method="editLead">
+		   <result name="edit_success">/leadForm.jsp</result>
+		</action>
+		<action name="DeleteLead" class="com.v2crm.web.actions.LeadAction" 
+                  method="deleteLead">
+		   <result name="delete_success">/leads.jsp</result>
+		</action>
+      
     </package>
 
 </struts>

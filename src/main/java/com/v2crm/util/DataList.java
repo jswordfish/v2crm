@@ -9,7 +9,7 @@ import org.displaytag.properties.SortOrderEnum;
 
 public class DataList implements PaginatedList{
 	/** default page size */
-	private static int DEFAULT_PAGE_SIZE = 5;
+	private static int DEFAULT_PAGE_SIZE = 10;
 
 	/** current page index, starts at 0 */
 	private int index;

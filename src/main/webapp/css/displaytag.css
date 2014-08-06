@@ -11,7 +11,7 @@ th,td {
 }
 
 thead tr {
-	background-color: #fc0;
+	background-color: #ADD8E6;
 }
 
 th.sorted {
@@ -55,7 +55,7 @@ tr.odd {
 }
 
 tr.tableRowEven,tr.even {
-	background-color: #fea
+	background-color: #E0FFFF
 }
 
 div.exportlinks {

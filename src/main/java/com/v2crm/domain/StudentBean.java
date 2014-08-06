@@ -7,6 +7,7 @@ public class StudentBean {
 	private String studentName;
 	private String department;
 	private int rank;
+	
 
 	public StudentBean(String rollNo, String studentName, String department, int rank) 
 	{

@@ -1,5 +1,7 @@
 <%@taglib prefix="s" uri="/struts-tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
+
+<%@ page import="com.v2crm.domain.*" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -394,39 +396,27 @@
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">
            
-                <!-- .table - Uses sparkline charts-->
-                <table class="table table-striped">
-                    <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Industry</th>
-                        <th>Organization Name</th>
-						<th>Search By Condition(s)</th>
-						<th>Get All</th>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="firstName" class="form-control" placeholder="First Name"/></td>
-                        <td><input type="text" name="lastName" class="form-control" placeholder="Last Name"/></td>
-                        <td><input type="text" name="company" class="form-control" placeholder="Company"/></td>
-                        <td><input type="text" name="industry" class="form-control" placeholder="Industry"/></td>
-                        <td><input type="text" name="assignedBy" class="form-control" placeholder="Assigned By"/></td>
-						 <td><button class="btn btn-info"><i class="fa fa-download"></i> Search Leads</button></td>
-						  <td><button class="btn btn-warning"><i class="fa fa-bug"></i> Get All Leads</button></td>
-                    </tr>
-                   
-                </table><!-- /.table -->
-				 
-	            
-				<div>
-				<display:table id="leadsTable" partialList="true"  size="20" name="data" pagesize="10"  requestURI="">
-				<display:column property="firstName" title="First Name"/>
-				<display:column property="lastName" title="Last Name"/>
-				<display:column property="company" title="Company"/>
-				<display:column property="industry" title="Industry"/>
-				<display:column title="Edit" property="id" paramId="id" href="EditLead"></display:column>
-				<display:column title="Delete" property="id" paramId="id" href="DeleteLead"></display:column>
-				</display:table>
-				</div>
+                 <%
+  
+  Lead lead = (Lead) session.getAttribute("lead");
+  System.out.println("lead is "+lead);
+  lead = (Lead) request.getAttribute("lead");
+  System.out.println("lead1 is "+lead);
+  %>
+<s:form action="register">  
+<s:textfield name="lead.firstName" label="FirstName"></s:textfield>  
+ <s:textfield name="lead.lastName" label="LastName"></s:textfield>  
+  <s:textfield name="lead.company" label="Company"></s:textfield>  
+  <s:textfield name="lead.primaryEmail" label="Email"></s:textfield>  
+  <s:textfield name="lead.designation" label="Designation"></s:textfield>  
+  <s:textfield name="lead.mobile" label="Mobile"></s:textfield>
+<s:textfield name="lead.website" label="Website"></s:textfield>
+<s:textfield name="lead.fax" label="Fax"></s:textfield>  
+
+  
+<s:submit value="register"></s:submit>  
+  
+</s:form>  
                </aside><!-- /.right-side -->
 			 
         </div><!-- ./wrapper -->
