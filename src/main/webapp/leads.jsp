@@ -418,13 +418,13 @@
 				 
 	            
 				<div>
-				<display:table id="leadsTable" partialList="true"  size="20" name="data" pagesize="10"  requestURI="">
+				<display:table id="leadsTable" decorator="com.v2crm.web.displaytag.decorators.DisplayTableDecorator" partialList="true"  size="20" name="data" pagesize="10"  requestURI="">
 				<display:column property="firstName" title="First Name"/>
 				<display:column property="lastName" title="Last Name"/>
 				<display:column property="company" title="Company"/>
 				<display:column property="industry" title="Industry"/>
-				<display:column title="Edit" property="id" paramId="id" href="EditLead"></display:column>
-				<display:column title="Delete" property="id" paramId="id" href="DeleteLead"></display:column>
+				 <display:column property="editLink" title="Edit" />
+				 <display:column property="deleteLink" title="Delete" />
 				</display:table>
 				</div>
                </aside><!-- /.right-side -->
