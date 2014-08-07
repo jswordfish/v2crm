@@ -1,5 +1,5 @@
-<%@taglib prefix="s" uri="/struts-tags"%>
-<%@taglib prefix="display" uri="http://displaytag.sf.net"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 
 <%@ page import="com.v2crm.domain.*" %>
 <!DOCTYPE html>
@@ -35,7 +35,18 @@
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
-        
+        <style type="text/css">
+.label {
+ 
+ 
+  color: blue;
+  left: 0;
+  font-size: 10pt;
+  font-weight: bold;
+
+  
+}
+</style>
          <script src="js/jquery-1.8.2.js"></script> 
 		    <link href="css/basic.css" rel="stylesheet" type="text/css" />
 		    <script> 
@@ -396,27 +407,27 @@
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">
            
-                 <%
+<s:form action="register" validate="true" theme="simple">  
+<label for="register_lead_firstName" class="label">First Name:</label>
+<s:textfield name="lead.firstName" label="First Name"></s:textfield> <br/> 
+<label for="lastName" class="label">Last Name:</label>
+ <s:textfield name="lead.lastName" label="Last Name"></s:textfield>  <br/>
+ <label for="register_lead_firstName" class="label">Company:</label>
+  <s:textfield name="lead.company" label="Company"></s:textfield>  <br/>
+  <label for="register_lead_firstName" class="label">Primary Email:</label>
+  <s:textfield name="lead.primaryEmail" label="Email"></s:textfield> <br/>
+  <label for="register_lead_firstName" class="label">Designation:</label>
+  <s:textfield name="lead.designation" label="Designation"></s:textfield>  <br/>
+  <label for="register_lead_firstName" class="label">Mobile:</label>
+  <s:textfield name="lead.mobile" label="Mobile"></s:textfield><br/>
+  <label for="register_lead_firstName" class="label">Web Site:</label>
+<s:textfield name="lead.website" label="Website"></s:textfield><br/>
+<label for="register_lead_firstName" class="label">Fax:</label>
+<s:textfield name="lead.fax" label="Fax"></s:textfield>  <br/>
+<s:submit value="back" float="left"></s:submit>  
+ 
   
-  Lead lead = (Lead) session.getAttribute("lead");
-  System.out.println("lead is "+lead);
-  lead = (Lead) request.getAttribute("lead");
-  System.out.println("lead1 is "+lead);
-  %>
-<s:form action="register">  
-<s:textfield name="lead.firstName" label="FirstName"></s:textfield>  
- <s:textfield name="lead.lastName" label="LastName"></s:textfield>  
-  <s:textfield name="lead.company" label="Company"></s:textfield>  
-  <s:textfield name="lead.primaryEmail" label="Email"></s:textfield>  
-  <s:textfield name="lead.designation" label="Designation"></s:textfield>  
-  <s:textfield name="lead.mobile" label="Mobile"></s:textfield>
-<s:textfield name="lead.website" label="Website"></s:textfield>
-<s:textfield name="lead.fax" label="Fax"></s:textfield>  
 
-  
-<s:submit value="register"></s:submit>  
-  
-</s:form>  
                </aside><!-- /.right-side -->
 			 
         </div><!-- ./wrapper -->
@@ -455,5 +466,6 @@
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
         <script src="js/AdminLTE/dashboard.js" type="text/javascript"></script>        
 
+</s:form>  
     </body>
 </html>

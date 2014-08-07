@@ -35,6 +35,14 @@ public class EditLeadAction extends ActionSupport implements ServletRequestAware
 		// TODO Auto-generated method stub
 		this.httpServletRequest = arg0;  
 	}
+	
+	public void setLead(Lead lead1){
+		this.lead = lead1;
+	}
+	
+	public Lead getLead(){
+		return this.lead;
+	}
 
 	
 }
