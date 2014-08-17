@@ -1,20 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="sj" uri="/struts-jquery-tags" %>
+<%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
 
 <%@ page import="com.v2crm.domain.*" %>
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Jatin Sutaria | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-		<link href="css/displaytag.css" rel="stylesheet" type="text/css" />
-  
-        <!-- bootstrap 3.0.2 -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <!-- font Awesome -->
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <!-- Ionicons -->
+  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+
+    <!-- Include FontAwesome CSS if you want to use feedback icons provided by FontAwesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <!-- BootstrapValidator CSS -->
+    <link rel="stylesheet" href="css/bootstrapValidator.min.css"/>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- BootstrapValidator JS -->
+    <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
+	 <!-- Ionicons -->
         <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
         <!-- Morris chart -->
         <link href="css/morris/morris.css" rel="stylesheet" type="text/css" />
@@ -28,6 +38,7 @@
         <link href="css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
         <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
+		
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,24 +47,68 @@
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
         <style type="text/css">
-.label {
- 
- 
-  color: blue;
-  left: 0;
-  font-size: 10pt;
-  font-weight: bold;
+		 .bs-example{
+			margin: 20px;
+		  }
+		  
+		  
 
-  
+		.bs-example  input[type="text"] {
+		   height: 24px;
+		   font-size: 15px;
+		   line-height: 24px;
+		}
+		.bs-example  input::-webkit-input-placeholder {
+	color: rgba(255,0,255,1); /* white color with alpha = 1 (alpha = opacity varies on a scale of 0 to 1 with decimal values in between) */
+	text-transform: capitalize;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: lighter;
+	letter-spacing: 0.1em;
+	line-height: 18px;
+	padding: 0px 10px;
+	text-align: left;
+	text-decoration: blink; /* blink property doesn't work in chrome right now */
 }
-</style>
-         <script src="js/jquery-1.8.2.js"></script> 
-		    <link href="css/basic.css" rel="stylesheet" type="text/css" />
-		    <script> 
-		    $(function(){
-		    //  $("#leadsTableContent").load("displayStudentList"); 
-		    });
-		 </script> 
+input::-moz-placeholder {
+	color: rgba(255,0,255,1);
+	text-transform: capitalize;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+	line-height: 25px;
+	padding: 0px 10px;
+	text-align: left;
+	text-decoration: blink;
+}
+input:-moz-placeholder {   /* Older versions of Firefox */
+	color: rgba(255,0,255,1);    /* alpha property doesn't properly work Firefox */
+	text-transform: capitalize;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+	line-height: 18px;
+	padding: 0px 10px;
+	text-align: left;
+	text-decoration: blink;
+}
+input:-ms-input-placeholder { 
+	color: rgba(255,0,255,1);
+	text-transform: capitalize;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+	line-height: 18px;
+	padding: 0px 10px;
+	text-align: left;
+	text-decoration: blink;
+}
+
+		</style>
+         
     </head>
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
@@ -407,27 +462,225 @@
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">
            
-<s:form action="register" validate="true" theme="simple">  
-<label for="register_lead_firstName" class="label">First Name:</label>
-<s:textfield name="lead.firstName" label="First Name"></s:textfield> <br/> 
-<label for="lastName" class="label">Last Name:</label>
- <s:textfield name="lead.lastName" label="Last Name"></s:textfield>  <br/>
- <label for="register_lead_firstName" class="label">Company:</label>
-  <s:textfield name="lead.company" label="Company"></s:textfield>  <br/>
-  <label for="register_lead_firstName" class="label">Primary Email:</label>
-  <s:textfield name="lead.primaryEmail" label="Email"></s:textfield> <br/>
-  <label for="register_lead_firstName" class="label">Designation:</label>
-  <s:textfield name="lead.designation" label="Designation"></s:textfield>  <br/>
-  <label for="register_lead_firstName" class="label">Mobile:</label>
-  <s:textfield name="lead.mobile" label="Mobile"></s:textfield><br/>
-  <label for="register_lead_firstName" class="label">Web Site:</label>
-<s:textfield name="lead.website" label="Website"></s:textfield><br/>
-<label for="register_lead_firstName" class="label">Fax:</label>
-<s:textfield name="lead.fax" label="Fax"></s:textfield>  <br/>
-<s:submit value="back" float="left"></s:submit>  
- 
-  
-
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        Lead Form
+                        <small>Control panel</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li class="active">Lead</li>
+                    </ol>
+                </section>
+				
+ <!--<div class="bs-example"> -->
+  <div class="container">
+    <form id="leadForm">
+        <div class="row">
+			<div class="col-xs-2">
+                <label for="lead.firstName" class="control-label" style="font-weight: normal;" style="font-weight: normal;">First Name</label>
+				<input type="text" class="form-control" id="lead.firstName" name="firstName" placeholder="First Name">
+            </div>
+           
+			<div class="col-xs-2">
+                <label for="lead.lastName" class="control-label" style="font-weight: normal;" style="font-weight: normal;">Last Name</label>
+				<input type="text" class="form-control" id="lead.lastName" name="lastName" placeholder="Last Name">
+            </div>
+           <div class="col-xs-2">
+                <label for="lead.company" class="control-label" style="font-weight: normal;">Company</label>
+				<input type="text" class="form-control" placeholder="Company" id="company" name="company">
+            </div>
+           
+        </div>
+        
+        <div class="row">
+			<div class="col-xs-2">
+                <label for="lead.primaryEmail" class="control-label" style="font-weight: normal;">Primary Email</label>
+				<input type="email" class="form-control" id="lead.primaryEmail" name="primaryEmail" placeholder="Email">
+            </div>
+           
+			<div class="col-xs-2">
+                <label for="lead.primaryPhone" class="control-label" style="font-weight: normal;">Phone</label>
+				<input type="text" class="form-control" id="lead.primaryPhone" name="primaryPhone" placeholder="Phone">
+            </div>
+           <div class="col-xs-2">
+                <label for="lead.company" class="control-label" style="font-weight: normal;">Company</label>
+				<input type="text" class="form-control" id="lead.company" name="company" placeholder="Company">
+            </div>
+           
+        </div>
+        
+        <div class="row">
+			<div class="col-xs-2">
+                <label for="lead.firstName" class="control-label" style="font-weight: normal;">Designation</label>
+				<input type="text" class="form-control" id="lead.designation" placeholder="Designation">
+            </div>
+           
+			<div class="col-xs-2">
+                <label for="lead.website" class="control-label" style="font-weight: normal;">Website</label>
+				<input type="url" class="form-control" placeholder="Website">
+            </div>
+           <div class="col-xs-2">
+                <label for="lead.fax" class="control-label" style="font-weight: normal;">Fax</label>
+				<input type="text" class="form-control" placeholder="Fax">
+            </div>
+           
+        </div>
+		
+        <div class="row">
+			<div class="col-xs-2">
+                <label for="lead.firstName" class="control-label" style="font-weight: normal;">~Number of Employers</label>
+				<input type="text" class="form-control" id="lead.designation" placeholder="No.Employers">
+            </div>
+           
+			<div class="col-xs-2">
+                <label for="lead.website" class="control-label" style="font-weight: normal;">Industry</label>
+				<input type="text" class="form-control" placeholder="Industry">
+            </div>
+           <div class="col-xs-2">
+                <label for="lead.fax" class="control-label" style="font-weight: normal;">Lead Source</label>
+				<input type="text" class="form-control" placeholder="Source">
+            </div>
+           
+        </div>
+		
+        <div class="row">
+			<div class="col-xs-2">
+                <label for="lead.firstName" class="control-label" style="font-weight: normal;">Lead Status</label>
+				<input type="text" class="form-control" id="lead.designation" placeholder="Status">
+            </div>
+           
+			<div class="col-xs-2">
+                <label for="lead.website" class="control-label" style="font-weight: normal;">Rating</label>
+				<input type="text" class="form-control" placeholder="Rating">
+            </div>
+           <div class="col-xs-2">
+               
+            </div>
+           
+        </div>
+		
+		<b><hr></b>
+		<h4>
+	<u><ul>Address<ul></u>
+			
+		</h4>
+		
+		<div class="row">
+			<div class="col-xs-2">
+                <label for="lead.firstName" class="control-label" style="font-weight: normal;">City</label>
+				<input type="text" class="form-control" id="lead.designation" placeholder="City"	>
+            </div>
+           
+			<div class="col-xs-2">
+                <label for="lead.website" class="control-label" style="font-weight: normal;">Street</label>
+				<input type="text" class="form-control" placeholder="Street">
+            </div>
+           <div class="col-xs-2">
+                <label for="lead.fax" class="control-label" style="font-weight: normal;" style="font-weight: normal;">Building</label>
+				<input type="text" class="form-control" placeholder="Building">
+            </div>
+           
+        </div>
+		<br>
+		<div class="row">
+			<div class="col-xs-2">
+                <label for="lead.firstName" class="control-label" style="font-weight: normal;">Office Number</label>
+				<input type="text" class="form-control" id="lead.designation" placeholder="Off or Res No">
+            </div>
+           
+			<div class="col-xs-2">
+                <label for="lead.website" class="control-label" style="font-weight: normal;">Zip</label>
+				<input type="text" class="form-control" placeholder="Zip or Pin">
+            </div>
+           <div class="col-xs-2">
+                <label for="lead.fax" class="control-label" style="font-weight: normal;">State</label>
+				<input type="text" class="form-control" placeholder="State">
+            </div>
+           
+        </div>
+		<br>
+		<div class="row">
+			<div class="col-xs-2">
+                <label for="lead.firstName" class="control-label" style="font-weight: normal;">Country</label>
+				<input type="text" class="form-control" id="lead.designation" placeholder="Country">
+            </div>
+           
+			<div class="col-xs-2">
+              
+            </div>
+           <div class="col-xs-2">
+              
+            </div>
+           
+        </div>
+		<br>
+		<div class="row">
+			<div class="col-xs-2">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+           
+			<div class="col-xs-4">
+              
+            </div>
+           <div class="col-xs-2">
+              
+            </div>
+           
+        </div>
+    </form>
+</div>
+<script>
+		$(document).ready(function() {
+			$('#leadForm').bootstrapValidator({
+				// To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+				feedbackIcons: {
+					valid: 'glyphicon glyphicon-ok',
+					invalid: 'glyphicon glyphicon-remove',
+					validating: 'glyphicon glyphicon-refresh'
+				},
+				fields: {
+					firstName: {
+						validators: {
+							notEmpty: {
+								message: 'The gender is required'
+							},
+							stringLength: {
+								min: 6,
+								max: 30,
+								message: 'The username must be more than 6 and less than 30 characters long'
+							}
+						}
+					},
+					lastName: {
+						validators: {
+							notEmpty: {
+								message: 'The gender is required'
+							}
+						}
+					},
+					company: {
+						validators: {
+							notEmpty: {
+								message: 'The gender is required'
+							}
+						}
+					},
+					primaryEmail: {
+						validators: {
+							notEmpty: {
+								message: 'The email address is required and cannot be empty'
+							},
+							emailAddress: {
+								message: 'The email address is not a valid'
+							}
+						}
+            },
+				}
+			});
+		});
+		</script>
                </aside><!-- /.right-side -->
 			 
         </div><!-- ./wrapper -->
@@ -435,8 +688,7 @@
         <!-- add new calendar event modal -->
 
 
-        <!-- jQuery 2.0.2 -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        
         <!-- jQuery UI 1.10.3 -->
         <script src="js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
         <!-- Bootstrap -->
@@ -465,7 +717,7 @@
         
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
         <script src="js/AdminLTE/dashboard.js" type="text/javascript"></script>        
+		
 
-</s:form>  
     </body>
 </html>

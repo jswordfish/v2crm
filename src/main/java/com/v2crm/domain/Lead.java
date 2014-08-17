@@ -38,10 +38,23 @@ public class Lead extends Base{
 
     @Enumerated(EnumType.STRING)
     Industry industry;
+    
+    @Enumerated(EnumType.STRING)
+    LeadSource leadSource;
+    
+    @Enumerated(EnumType.STRING)
+    LeadStatus leadStatus;
+    
+    @Enumerated(EnumType.STRING)
+    Rating rating;
 	
     @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
     @JoinColumn(name="address_id",insertable=true, updatable=true)
     Address address;
+    
+    @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+    @JoinColumn(name="organization_id",insertable=true, updatable=true)
+    Organization organization;
 	
 
 	
@@ -163,6 +176,46 @@ public class Lead extends Base{
 
 	public void setAddress(Address address) {
 		this.address = address;
+	}
+
+
+	public LeadSource getLeadSource() {
+		return leadSource;
+	}
+
+
+	public void setLeadSource(LeadSource leadSource) {
+		this.leadSource = leadSource;
+	}
+
+
+	public LeadStatus getLeadStatus() {
+		return leadStatus;
+	}
+
+
+	public void setLeadStatus(LeadStatus leadStatus) {
+		this.leadStatus = leadStatus;
+	}
+
+
+	public Rating getRating() {
+		return rating;
+	}
+
+
+	public void setRating(Rating rating) {
+		this.rating = rating;
+	}
+
+
+	public Organization getOrganization() {
+		return organization;
+	}
+
+
+	public void setOrganization(Organization organization) {
+		this.organization = organization;
 	}
     
     

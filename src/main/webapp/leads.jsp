@@ -37,9 +37,16 @@
          <script src="js/jquery-1.8.2.js"></script> 
 		    <link href="css/basic.css" rel="stylesheet" type="text/css" />
 		    <script> 
+		    function goToLeadForm(){
+		    	window.location="EditLead";
+		    }
+		    
+		    
 		    $(function(){
 		    //  $("#leadsTableContent").load("displayStudentList"); 
 		    });
+		    
+		    
 		 </script> 
     </head>
     <body class="skin-blue">
@@ -403,6 +410,7 @@
                         <th>Organization Name</th>
 						<th>Search By Condition(s)</th>
 						<th>Get All</th>
+						<th>Create Lead</th>
                     </tr>
                     <tr>
                         <td><input type="text" name="firstName" class="form-control" placeholder="First Name"/></td>
@@ -411,7 +419,8 @@
                         <td><input type="text" name="industry" class="form-control" placeholder="Industry"/></td>
                         <td><input type="text" name="assignedBy" class="form-control" placeholder="Assigned By"/></td>
 						 <td><button class="btn btn-info"><i class="fa fa-download"></i> Search Leads</button></td>
-						  <td><button class="btn btn-warning"><i class="fa fa-bug"></i> Get All Leads</button></td>
+						 <td><button class="btn btn-warning"><i class="fa fa-bug"></i> Get All Leads</button></td>
+						 <td><button class="btn btn-info"  onclick="goToLeadForm()"><i class="fa fa-download"></i> Create Lead</button></td>
                     </tr>
                    
                 </table><!-- /.table -->

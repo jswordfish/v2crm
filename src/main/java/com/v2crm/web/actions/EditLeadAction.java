@@ -7,16 +7,34 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.Preparable;
+import com.v2crm.domain.Industry;
 import com.v2crm.domain.Lead;
+import com.v2crm.domain.LeadSource;
+import com.v2crm.domain.LeadStatus;
+import com.v2crm.domain.Rating;
+import com.v2crm.domain.State;
 import com.v2crm.services.LeadService;
 import com.v2crm.util.SpringUtil;
 
 public class EditLeadAction extends ActionSupport implements ServletRequestAware{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	Logger logger = LoggerFactory.getLogger(LeadAction.class);
 	private LeadService leadService;
 	
 	private Lead lead;
+	
+	private LeadSource leadSources[] = LeadSource.values();
+	
+	private LeadStatus leadStatuss[] = LeadStatus.values();
+	
+	private Rating ratings[] = Rating.values();
+	
+	Industry industries[] = Industry.values();
+	
+	State states[] = State.values();
 	
 	HttpServletRequest httpServletRequest;
 	
@@ -42,6 +60,76 @@ public class EditLeadAction extends ActionSupport implements ServletRequestAware
 	
 	public Lead getLead(){
 		return this.lead;
+	}
+
+
+	public LeadService getLeadService() {
+		return leadService;
+	}
+
+
+	public void setLeadService(LeadService leadService) {
+		this.leadService = leadService;
+	}
+
+
+	public LeadSource[] getLeadSources() {
+		return leadSources;
+	}
+
+
+	public void setLeadSources(LeadSource[] leadSources) {
+		this.leadSources = leadSources;
+	}
+
+
+	public LeadStatus[] getLeadStatuss() {
+		return leadStatuss;
+	}
+
+
+	public void setLeadStatuss(LeadStatus[] leadStatuss) {
+		this.leadStatuss = leadStatuss;
+	}
+
+
+	public Rating[] getRatings() {
+		return ratings;
+	}
+
+
+	public void setRatings(Rating[] ratings) {
+		this.ratings = ratings;
+	}
+
+
+	public Industry[] getIndustries() {
+		return industries;
+	}
+
+
+	public void setIndustries(Industry[] industries) {
+		this.industries = industries;
+	}
+
+
+	public State[] getStates() {
+		return states;
+	}
+
+
+	public void setStates(State[] states) {
+		this.states = states;
+	}
+
+
+	public HttpServletRequest getHttpServletRequest() {
+		return httpServletRequest;
+	}
+
+
+	public void setHttpServletRequest(HttpServletRequest httpServletRequest) {
+		this.httpServletRequest = httpServletRequest;
 	}
 
 	
