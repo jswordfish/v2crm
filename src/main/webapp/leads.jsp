@@ -39,6 +39,7 @@
 		    <script> 
 		    function goToLeadForm(){
 		    	window.location="EditLead";
+		    	
 		    }
 		    
 		    

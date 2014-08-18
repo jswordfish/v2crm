@@ -20,6 +20,11 @@
                   method="deleteLead">
 		   <result name="delete_success">/leads.jsp</result>
 		</action>
+		<action name="SaveLead" class="com.v2crm.web.actions.SaveLeadAction" 
+                  method="save">
+		   <result name="save_success" type="redirect">DisplayLeads</result>
+		   <result name="save_failure">/leadForm.jsp</result>
+		</action>
       
     </package>
 

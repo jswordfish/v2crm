@@ -6,9 +6,13 @@ import java.util.Map;
 
 import javax.persistence.EntityManager;
 
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.v2crm.dao.JPADAO;
 import com.v2crm.exceptions.CRMException;
 import com.v2crm.services.CRMService;
+@Transactional(propagation= Propagation.REQUIRED, rollbackFor=CRMException.class)
 public class CRMServiceImpl<K,E> implements CRMService{
 	private JPADAO dao;
 

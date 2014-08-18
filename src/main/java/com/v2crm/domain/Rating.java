@@ -1,7 +1,7 @@
 package com.v2crm.domain;
 
 public enum Rating {
-Hot("Hot"), Warm("Warm"), Cold("Cold");
+VeryHot("VeryHot"), Hot("Hot"), Warm("Warm"), NotSoWarm("NotSoWarm"),Cold("Cold"), NotApplicable("NotApplicable");
 	private String msg;
 	Rating(String mg){
 		this.msg = mg;

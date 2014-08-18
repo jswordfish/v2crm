@@ -13,23 +13,23 @@ public class Lead extends Base{
 	@Transient
 	private static final long serialVersionUID = 1L;
 
-	String firstName;
+	String firstName = "";
     
-    String lastName;
+    String lastName = "";
     
-    String company;
+    String company = "";
     
-    String primaryEmail;
+    String primaryEmail = "";
     
-    String primaryPhone;
+    String primaryPhone = "";
     
-    String designation;
+    String designation = "";
     
-    String mobile;
+    String mobile = "";
     
-    String website;
+    String website = "";
     
-    String fax;
+    String fax = "";
     
     int numOfEmployers;
 
@@ -37,20 +37,20 @@ public class Lead extends Base{
   
 
     @Enumerated(EnumType.STRING)
-    Industry industry;
+    Industry industry = Industry.NotSpecified;
     
     @Enumerated(EnumType.STRING)
-    LeadSource leadSource;
+    LeadSource leadSource = LeadSource.ColdCall;
     
     @Enumerated(EnumType.STRING)
-    LeadStatus leadStatus;
+    LeadStatus leadStatus = LeadStatus.NotContacted;
     
     @Enumerated(EnumType.STRING)
-    Rating rating;
+    Rating rating = Rating.Warm;
 	
     @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
     @JoinColumn(name="address_id",insertable=true, updatable=true)
-    Address address;
+    Address address = new Address();
     
     @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
     @JoinColumn(name="organization_id",insertable=true, updatable=true)
@@ -61,6 +61,7 @@ public class Lead extends Base{
 
 	public String getFirstName() {
 		return firstName;
+		
 	}
 
 

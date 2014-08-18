@@ -4,6 +4,16 @@
 <%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
 
 <%@ page import="com.v2crm.domain.*" %>
+<%
+
+Lead lead = (Lead) request.getAttribute("lead");
+if(lead == null){
+	lead = new Lead();
+}
+
+session.setAttribute("lead", lead);
+%>
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -14,6 +24,7 @@
 
     <!-- Include FontAwesome CSS if you want to use feedback icons provided by FontAwesome -->
     <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/thvsjsp.css" th:href="@{css/thvsjsp.css}"/>
 
     <!-- BootstrapValidator CSS -->
     <link rel="stylesheet" href="css/bootstrapValidator.min.css"/>
@@ -475,21 +486,23 @@ input:-ms-input-placeholder {
                 </section>
 				
  <!--<div class="bs-example"> -->
+ 
+
   <div class="container">
-    <form id="leadForm">
+    <form id="leadForm" action="SaveLead">
         <div class="row">
 			<div class="col-xs-2">
                 <label for="lead.firstName" class="control-label" style="font-weight: normal;" style="font-weight: normal;">First Name</label>
-				<input type="text" class="form-control" id="lead.firstName" name="firstName" placeholder="First Name">
+				<input type="text" class="form-control" id="lead.firstName" name="firstName" placeholder="First Name" value="<%= lead.getFirstName() %>">
             </div>
            
 			<div class="col-xs-2">
                 <label for="lead.lastName" class="control-label" style="font-weight: normal;" style="font-weight: normal;">Last Name</label>
-				<input type="text" class="form-control" id="lead.lastName" name="lastName" placeholder="Last Name">
+				<input type="text" class="form-control" id="lead.lastName" name="lastName" placeholder="Last Name" value="<%= lead.getLastName() %>">
             </div>
            <div class="col-xs-2">
                 <label for="lead.company" class="control-label" style="font-weight: normal;">Company</label>
-				<input type="text" class="form-control" placeholder="Company" id="company" name="company">
+				<input type="text" class="form-control" placeholder="Company" id="company" name="company" value="<%= lead.getCompany() %>">
             </div>
            
         </div>
@@ -497,33 +510,33 @@ input:-ms-input-placeholder {
         <div class="row">
 			<div class="col-xs-2">
                 <label for="lead.primaryEmail" class="control-label" style="font-weight: normal;">Primary Email</label>
-				<input type="email" class="form-control" id="lead.primaryEmail" name="primaryEmail" placeholder="Email">
+				<input type="email" class="form-control" id="lead.primaryEmail" name="primaryEmail" placeholder="Email" value="<%= lead.getPrimaryEmail() %>">
             </div>
            
 			<div class="col-xs-2">
                 <label for="lead.primaryPhone" class="control-label" style="font-weight: normal;">Phone</label>
-				<input type="text" class="form-control" id="lead.primaryPhone" name="primaryPhone" placeholder="Phone">
+				<input type="text" class="form-control" id="lead.primaryPhone" name="primaryPhone" placeholder="Phone" value="<%= lead.getPrimaryPhone() %>">
             </div>
            <div class="col-xs-2">
-                <label for="lead.company" class="control-label" style="font-weight: normal;">Company</label>
-				<input type="text" class="form-control" id="lead.company" name="company" placeholder="Company">
+                <label for="lead.company" class="control-label" style="font-weight: normal;">Designation</label>
+				<input type="text" class="form-control" id="lead.designation" name="designation" placeholder="Designation" value="<%= lead.getDesignation() %>">
             </div>
            
         </div>
         
         <div class="row">
 			<div class="col-xs-2">
-                <label for="lead.firstName" class="control-label" style="font-weight: normal;">Designation</label>
-				<input type="text" class="form-control" id="lead.designation" placeholder="Designation">
+                <label for="lead.firstName" class="control-label" style="font-weight: normal;">Mobile</label>
+				<input type="text" class="form-control" id="lead.mobile" name="mobile" placeholder="Mobile" value="<%= lead.getMobile() %>">
             </div>
            
 			<div class="col-xs-2">
                 <label for="lead.website" class="control-label" style="font-weight: normal;">Website</label>
-				<input type="url" class="form-control" placeholder="Website">
+				<input type="url" class="form-control" placeholder="Website" name="website" value="<%= lead.getWebsite() %>">
             </div>
            <div class="col-xs-2">
                 <label for="lead.fax" class="control-label" style="font-weight: normal;">Fax</label>
-				<input type="text" class="form-control" placeholder="Fax">
+				<input type="text" class="form-control" placeholder="Fax" id = "lead.fax" name="fax" value="<%= lead.getFax() %>">
             </div>
            
         </div>
@@ -531,29 +544,65 @@ input:-ms-input-placeholder {
         <div class="row">
 			<div class="col-xs-2">
                 <label for="lead.firstName" class="control-label" style="font-weight: normal;">~Number of Employers</label>
-				<input type="text" class="form-control" id="lead.designation" placeholder="No.Employers">
+				<input type="text" class="form-control" id="lead.noOfEmployers" name="noOfEmployers" placeholder="No.Employers" value="<%= lead.getNumOfEmployers() %>">
             </div>
            
 			<div class="col-xs-2">
-                <label for="lead.website" class="control-label" style="font-weight: normal;">Industry</label>
-				<input type="text" class="form-control" placeholder="Industry">
+                <label for="lead.industry" class="control-label" style="font-weight: normal;">Industry</label>
+				<select name='industry'>  <option value="none">Select</option>  
+				<% 
+				Industry inds[] = Industry.values(); 
+				for(int i=0;i<inds.length;i++){
+				%>
+				<option value="<%=inds[i].getMsg().trim()%>" <% if(lead.getIndustry().getMsg().trim().equals(inds[i].getMsg().trim())) {  %>selected<% } %>><%=inds[i].getMsg()%>
+				</option> <%
+ 				}
+     			%>
+				</select>
             </div>
-           <div class="col-xs-2">
-                <label for="lead.fax" class="control-label" style="font-weight: normal;">Lead Source</label>
-				<input type="text" class="form-control" placeholder="Source">
+			
+			<div class="col-xs-2">
+                <label for="leadSource" class="control-label" style="font-weight: normal;">Lead Source</label>
+				<select name='leadSource'>  <option value="none">Select</option>  
+				<% 
+				LeadSource sources[] = LeadSource.values(); 
+				for(int i=0;i<sources.length;i++){
+				%>
+				<option value="<%=sources[i].getMsg().trim()%>" <% if(lead.getLeadSource().getMsg().trim().equals(sources[i].getMsg().trim())) {  %>selected<% } %>><%=sources[i].getMsg()%>
+				</option> <%
+ 				}
+     			%>
+				</select>
             </div>
-           
-        </div>
-		
+          
+	    </div>
         <div class="row">
 			<div class="col-xs-2">
-                <label for="lead.firstName" class="control-label" style="font-weight: normal;">Lead Status</label>
-				<input type="text" class="form-control" id="lead.designation" placeholder="Status">
+                <label for="lead.leadStatus" class="control-label" style="font-weight: normal;">Lead Status</label>
+				<select name='leadStatus'>  <option value="none">Select</option>  
+				<% 
+				LeadStatus leadStatuss[] = LeadStatus.values(); 
+				for(int i=0;i<leadStatuss.length;i++){
+				%>
+				<option value="<%=leadStatuss[i].getMsg().trim()%>" <% if(lead.getLeadStatus().getMsg().trim().equals(leadStatuss[i].getMsg().trim())) {  %>selected<% } %>><%=leadStatuss[i].getMsg()%>
+				</option> <%
+ 				}
+     			%>
+				</select>
             </div>
            
 			<div class="col-xs-2">
-                <label for="lead.website" class="control-label" style="font-weight: normal;">Rating</label>
-				<input type="text" class="form-control" placeholder="Rating">
+                <label for="lead.rating" class="control-label" style="font-weight: normal;">Lead Rating</label>
+				<select name='rating'>  <option value="none">Select</option>  
+				<% 
+				Rating ratings[] = Rating.values(); 
+				for(int i=0;i<ratings.length;i++){
+				%>
+				<option value="<%=ratings[i].getMsg().trim()%>" <% if(lead.getRating().getMsg().trim().equals(ratings[i].getMsg().trim())) {  %>selected<% } %>><%=ratings[i].getMsg()%>
+				</option> <%
+ 				}
+     			%>
+				</select>
             </div>
            <div class="col-xs-2">
                
@@ -561,7 +610,7 @@ input:-ms-input-placeholder {
            
         </div>
 		
-		<b><hr></b>
+		<b><hr></b><br>
 		<h4>
 	<u><ul>Address<ul></u>
 			
@@ -569,42 +618,51 @@ input:-ms-input-placeholder {
 		
 		<div class="row">
 			<div class="col-xs-2">
-                <label for="lead.firstName" class="control-label" style="font-weight: normal;">City</label>
-				<input type="text" class="form-control" id="lead.designation" placeholder="City"	>
+                <label for="city" class="control-label" style="font-weight: normal;">City</label>
+				<input type="text" class="form-control" id="lead.city" name="city" placeholder="City" value="<%= lead.getAddress().getCity() %>"	>
             </div>
            
 			<div class="col-xs-2">
-                <label for="lead.website" class="control-label" style="font-weight: normal;">Street</label>
-				<input type="text" class="form-control" placeholder="Street">
+                <label for="street" class="control-label" style="font-weight: normal;">Street</label>
+				<input type="text" class="form-control" placeholder="Street" name="street" value="<%= lead.getAddress().getStreet() %>">
             </div>
            <div class="col-xs-2">
-                <label for="lead.fax" class="control-label" style="font-weight: normal;" style="font-weight: normal;">Building</label>
-				<input type="text" class="form-control" placeholder="Building">
+                <label for="building" class="control-label" style="font-weight: normal;" style="font-weight: normal;">Building</label>
+				<input type="text" class="form-control" placeholder="Building" name="building" value="<%= lead.getAddress().getBldg() %>">
             </div>
            
         </div>
 		<br>
 		<div class="row">
 			<div class="col-xs-2">
-                <label for="lead.firstName" class="control-label" style="font-weight: normal;">Office Number</label>
-				<input type="text" class="form-control" id="lead.designation" placeholder="Off or Res No">
-            </div>
+                <label for="officeNumber" class="control-label" style="font-weight: normal;">Office Number</label>
+				<input type="text" class="form-control" id="officeNumber" name="officeNumber" placeholder="Off or Res No" value="<%= lead.getAddress().getOfficeNumber() %>">
+             </div>
            
 			<div class="col-xs-2">
-                <label for="lead.website" class="control-label" style="font-weight: normal;">Zip</label>
-				<input type="text" class="form-control" placeholder="Zip or Pin">
+                <label for="zip" class="control-label" style="font-weight: normal;">Zip</label>
+				<input type="text" class="form-control" placeholder="Zip or Pin" name="zip" value="<%= lead.getAddress().getPin() %>">
             </div>
            <div class="col-xs-2">
-                <label for="lead.fax" class="control-label" style="font-weight: normal;">State</label>
-				<input type="text" class="form-control" placeholder="State">
+                <label for="state" class="control-label" style="font-weight: normal;">State</label>
+				<select name='state'>  <option value="none">Select</option>  
+				<% 
+				State states[] = State.values(); 
+				for(int i=0;i<states.length;i++){
+				%>
+				<option value="<%=states[i].getMsg().trim()%>" <% if(lead.getAddress().getState().getMsg().trim().equals(states[i].getMsg().trim())) {  %>selected<% } %>><%=states[i].getMsg()%>
+				</option> <%
+ 				}
+     			%>
+				</select>
             </div>
            
         </div>
 		<br>
 		<div class="row">
 			<div class="col-xs-2">
-                <label for="lead.firstName" class="control-label" style="font-weight: normal;">Country</label>
-				<input type="text" class="form-control" id="lead.designation" placeholder="Country">
+                <label for="country" class="control-label" style="font-weight: normal;">Country</label>
+				<input type="text" class="form-control" id="country" placeholder="Country" name="country" value="<%= lead.getAddress().getCountry() %>">
             </div>
            
 			<div class="col-xs-2">

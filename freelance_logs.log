@@ -358,3 +358,35 @@ Caused by: com.mchange.v2.resourcepool.TimeoutException: A client timed out whil
 2014-07-31 19:55:06 INFO  TransactionalTestExecutionListener:296 - Committed transaction after test execution for test context [DefaultTestContext@4da5ac56 testClass = CRMServiceTest, testInstance = com.v2.services.test.CRMServiceTest@37d569ed, testMethod = testLeadCreation@CRMServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1c1d633e testClass = CRMServiceTest, locations = '{classpath:appContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
 2014-07-31 19:55:06 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@58a8f7: startup date [Thu Jul 31 19:55:00 IST 2014]; root of context hierarchy
 2014-07-31 19:55:06 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-18 20:01:39 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appContext.xml]
+2014-08-18 20:01:39 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@6ab345e1: startup date [Mon Aug 18 20:01:39 IST 2014]; root of context hierarchy
+2014-08-18 20:01:39 INFO  MLog:80 - MLog clients using log4j logging.
+2014-08-18 20:01:40 INFO  C3P0Registry:204 - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2014-08-18 20:01:40 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-18 20:01:40 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-08-18 20:01:40 INFO  Version:41 - HHH000412: Hibernate Core {4.0.1.Final}
+2014-08-18 20:01:40 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-08-18 20:01:40 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-08-18 20:01:40 INFO  Ejb3Configuration:526 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-08-18 20:01:40 INFO  ConnectionProviderInitiator:186 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-08-18 20:01:40 INFO  AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 5000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1hx931sso7l11cpoag3|4d1e23e2, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1hx931sso7l11cpoag3|4d1e23e2, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://192.168.3.21:3306/v2crm, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 10, maxIdleTime -> 180, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 25, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 6, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2014-08-18 20:01:40 INFO  Dialect:121 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-08-18 20:01:40 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-08-18 20:01:40 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-08-18 20:01:40 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-08-18 20:01:41 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-08-18 20:01:41 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-08-18 20:01:41 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-08-18 20:01:41 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Address
+2014-08-18 20:01:41 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Lead
+2014-08-18 20:01:41 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Organization
+2014-08-18 20:01:41 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Address
+2014-08-18 20:01:41 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Lead
+2014-08-18 20:01:41 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Organization
+2014-08-18 20:01:46 INFO  SchemaUpdate:240 - HHH000232: Schema update complete
+2014-08-18 20:01:46 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@19074c78]; rollback [false]
+2014-08-18 20:01:48 INFO  TransactionalTestExecutionListener:296 - Committed transaction after test execution for test context [DefaultTestContext@2d0da9f8 testClass = CRMServiceTest, testInstance = com.v2.services.test.CRMServiceTest@5c11efe3, testMethod = testLeadCreation@CRMServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1d9c4f4e testClass = CRMServiceTest, locations = '{classpath:appContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2014-08-18 20:01:48 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@6ab345e1: startup date [Mon Aug 18 20:01:39 IST 2014]; root of context hierarchy
+2014-08-18 20:01:48 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'

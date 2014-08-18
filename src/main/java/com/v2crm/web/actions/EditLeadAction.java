@@ -42,8 +42,11 @@ public class EditLeadAction extends ActionSupport implements ServletRequestAware
 
 	public String editLead(){
 		leadService = (LeadService)SpringUtil.getSpringUtil().getService("leadService");
-		Long leadId = Long.parseLong(httpServletRequest.getParameter("id"));
-		lead = (Lead) leadService.find(leadId);
+		if(httpServletRequest.getParameter("id") != null){
+			Long leadId = Long.parseLong(httpServletRequest.getParameter("id"));
+			lead = (Lead) leadService.find(leadId);
+		}
+		
 		httpServletRequest.setAttribute("lead", lead);
 	    return "edit_success";
 	}

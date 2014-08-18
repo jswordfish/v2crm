@@ -6,21 +6,18 @@ public enum State {
 	Karnataka("Karnataka"), Kerala("Kerala"), MadhyaPradesh("MadhyaPradesh"), Maharashtra("Maharashtra"), Manipur("Manipur"), Meghalaya("Meghalaya"),
 	Mizoram("Mizoram"), Nagaland("Nagaland"), Odisha("Odisha"), Punjab("Punjab"), Rajasthan("Rajasthan"),
 	Sikkim("Sikkim"), TamilNadu("TamilNadu"), Telangana("Telangana"), Tripura("Tripura"), UttarPradesh("UttarPradesh"), Uttarakhand("Uttarakhand"),
-	WestBengal("WestBengal");
+	WestBengal("WestBengal"), NotSpecified("NotSpecified");
 	
-	String code;
+	String msg;
 	
 	private State(String cod){
-		this.code = cod;
+		this.msg = cod;
 	}
 
-	public String getCode() {
-		return code;
+	public String getMsg() {
+		return msg;
 	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
+	
 	
 	
 

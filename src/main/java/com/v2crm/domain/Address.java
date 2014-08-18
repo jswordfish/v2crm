@@ -7,20 +7,20 @@ import javax.persistence.Enumerated;
 @Entity
 public class Address extends Base{
 
-	private String city;
+	private String city = "";
 	
-	private String street;
+	private String street = "";
 	
-	private String bldg;
+	private String bldg = "";
 	
-	private String officeNumber;
+	private String officeNumber = "";
 	
-	private String pin;
+	private String pin = "";
 	
 	@Enumerated(EnumType.STRING)
-	private State state = State.Maharashtra;
+	private State state = State.NotSpecified;
 	
-	private String country;
+	private String country = "";
 
 	public String getCity() {
 		return city;
