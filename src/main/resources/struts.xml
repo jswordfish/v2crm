@@ -25,6 +25,57 @@
 		   <result name="save_success" type="redirect">DisplayLeads</result>
 		   <result name="save_failure">/leadForm.jsp</result>
 		</action>
+		
+		<action name="DisplayOrganizations" class="com.v2crm.web.actions.OrganizationAction" 
+                  method="display">
+		   <result name="success">/organizations.jsp</result>
+		   
+		</action>
+		
+		<action name="EditOrganization" class="com.v2crm.web.actions.OrganizationAction" 
+                  method="edit">
+		   <result name="edit_success">/organizationForm.jsp</result>
+		   
+		</action>
+		
+		<action name="DeleteOrganization" class="com.v2crm.web.actions.OrganizationAction" 
+                  method="delete">
+		   <result name="delete_success">/organizations.jsp</result>
+		   
+		</action>
+		
+		<action name="SaveOrganization" class="com.v2crm.web.actions.OrganizationAction" 
+                  method="save">
+		   <result name="save_success" type="redirect">DisplayOrganizations</result>
+		   <result name="save_failure">/organizationForm.jsp</result>
+		   
+		</action>
+		
+		<!-- Actions classes for Contact Entity -->
+		<action name="DisplayContacts" class="com.v2crm.web.actions.ContactAction" 
+                  method="display">
+		   <result name="success">/contacts.jsp</result>
+		   
+		</action>
+		
+		<action name="EditContact" class="com.v2crm.web.actions.ContactAction" 
+                  method="edit">
+		   <result name="edit_success">/contactForm.jsp</result>
+		   
+		</action>
+		
+		<action name="DeleteContact" class="com.v2crm.web.actions.ContactAction" 
+                  method="delete">
+		   <result name="delete_success">/contacts.jsp</result>
+		   
+		</action>
+		
+		<action name="SaveContact" class="com.v2crm.web.actions.ContactAction" 
+                  method="save">
+		   <result name="save_success" type="redirect">DisplayContacts</result>
+		   <result name="save_failure">/contactForm.jsp</result>
+		   
+		</action>
       
     </package>
 

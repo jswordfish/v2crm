@@ -331,24 +331,23 @@
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="pages/leads.jsp">
-                                <i class="fa fa-th"></i> <span>Leads</span> <small class="badge pull-right bg-green">new</small>
+                         <li>
+                            <a href="DisplayLeads">
+                                <i class="fa fa-th"></i> <span>Leads</span> <small class="badge pull-right bg-green">View</small>
                             </a>
                         </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-bar-chart-o"></i>
-                                <span>Organizations</span>
-                                <small class="badge pull-right bg-green">new</small>
+                        <li>
+							<a href="DisplayOrganizations">
+                                <i class="fa fa-th"></i> <span>Organizations</span> <small class="badge pull-right bg-green">View</small>
                             </a>
+                            
                            
                         </li>
                         <li class="treeview">
-                            <a href="#">
+                            <a href="DisplayContacts">
                                 <i class="fa fa-laptop"></i>
                                 <span>Contacts</span>
-                                <small class="badge pull-right bg-green">new</small>
+                                <small class="badge pull-right bg-green">View</small>
                             </a>
                             
                         </li>
@@ -409,8 +408,9 @@
                         <th>Last Name</th>
                         <th>Industry</th>
                         <th>Organization Name</th>
-						<th>Search By Condition(s)</th>
-						<th>Get All</th>
+						<th>Assigned By</th>
+						<th>Get All Leads</th>
+						<th>Search Leads</th>
 						<th>Create Lead</th>
                     </tr>
                     <tr>
@@ -420,7 +420,7 @@
                         <td><input type="text" name="industry" class="form-control" placeholder="Industry"/></td>
                         <td><input type="text" name="assignedBy" class="form-control" placeholder="Assigned By"/></td>
 						 <td><button class="btn btn-info"><i class="fa fa-download"></i> Search Leads</button></td>
-						 <td><button class="btn btn-warning"><i class="fa fa-bug"></i> Get All Leads</button></td>
+						 <td><button class="btn btn-warning"><i class="fa fa-bug"></i> Get Leads</button></td>
 						 <td><button class="btn btn-info"  onclick="goToLeadForm()"><i class="fa fa-download"></i> Create Lead</button></td>
                     </tr>
                    

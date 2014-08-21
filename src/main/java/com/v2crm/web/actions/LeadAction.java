@@ -45,7 +45,11 @@ public class LeadAction extends ActionSupport implements ServletRequestAware {
 
 
 	public String deleteLead(){
+		leadService = (LeadService)SpringUtil.getSpringUtil().getService("leadService");
 		String leadId = httpServletRequest.getParameter("id");
+		if(leadId != null){
+			
+		}
 		leadService.delete(Long.parseLong(leadId));
 		List<Lead> leads = leadService.findAll();
 		
