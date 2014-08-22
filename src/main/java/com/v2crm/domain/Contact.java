@@ -246,7 +246,7 @@ public class Contact extends Base{
 	}
 
 	public String getDob() {
-		DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+		DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
 		if(getDateOfBirth() != null ){
 			String formattedDate = formatter.format(getDateOfBirth());
 			return formattedDate;

@@ -567,7 +567,7 @@ input:-ms-input-placeholder {
 			
 			<div class="col-xs-2">
                 <label for="contact.department" class="control-label" style="font-weight: normal;">Department</label>
-				<input type="text" class="form-control" id="contact.department" name="messengerID" placeholder="Department" value="<%= contact.getDepartment() %>">
+				<input type="text" class="form-control" id="contact.department" name="department" placeholder="Department" value="<%= contact.getDepartment() %>">
             </div>
           
 	    </div>

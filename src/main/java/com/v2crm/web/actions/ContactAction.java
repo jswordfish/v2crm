@@ -111,18 +111,33 @@ public class ContactAction extends ActionSupport implements ServletRequestAware 
 				dt = dt.trim();
 			}
 			if(dt != "" && dt != null){
-				Date date = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(dt);
+				Date date = new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH).parse(dt);
 				contact.setDateOfBirth(date);
 			}
 			
 			contact.setMessengerType(MessengerType.valueOf(httpServletRequest.getParameter("messengerType")));
 			contact.setMessengerID(httpServletRequest.getParameter("messengerID"));
 			
-			contact.setReference((Boolean.getBoolean(httpServletRequest.getParameter("reference"))));
+			
+			String ref = httpServletRequest.getParameter("reference").trim();
+				if(ref.equalsIgnoreCase("true")){
+					contact.setReference(true);
+				}else{
+					contact.setReference(false);
+				}
+			
 			contact.setReportsTo(httpServletRequest.getParameter("reportsTo"));
 			contact.setFax(httpServletRequest.getParameter("fax"));
 			
-			contact.setDoNotCall((Boolean.getBoolean(httpServletRequest.getParameter("doNotCall"))));
+			
+			String dnc = httpServletRequest.getParameter("doNotCall");
+				if(dnc.equalsIgnoreCase("true")){
+					contact.setDoNotCall(true);
+				}
+				else{
+					contact.setDoNotCall(false);
+				}
+			
 			contact.setDepartment(httpServletRequest.getParameter("department"));
 			contact.setContactSource(LeadSource.valueOf(httpServletRequest.getParameter("contactSource")));
 			
