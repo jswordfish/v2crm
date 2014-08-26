@@ -407,26 +407,27 @@ input:-ms-input-placeholder {
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
-                         <li>
+                        <li>
                             <a href="DisplayLeads">
-                                <i class="fa fa-th"></i> <span>Leads</span> <small class="badge pull-right bg-green">View</small>
+                                <i class="fa fa-th"></i> <span>Leads</span> <small class="badge pull-right bg-green">new</small>
                             </a>
                         </li>
                         <li>
 							<a href="DisplayOrganizations">
-                                <i class="fa fa-th"></i> <span>Organizations</span> <small class="badge pull-right bg-green">View</small>
+                                <i class="fa fa-th"></i> <span>Organizations</span> <small class="badge pull-right bg-green">new</small>
                             </a>
                             
                            
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="DisplayContacts">
                                 <i class="fa fa-laptop"></i>
                                 <span>Contacts</span>
-                                <small class="badge pull-right bg-green">View</small>
+                                <small class="badge pull-right bg-green">new</small>
                             </a>
                             
                         </li>
+                        
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-edit"></i> <span>Oppurtunities</span>

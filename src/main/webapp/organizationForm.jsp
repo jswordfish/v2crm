@@ -414,8 +414,8 @@ input:-ms-input-placeholder {
                             
                            
                         </li>
-                        <li class="treeview">
-                            <a href="#">
+                        <li>
+                            <a href="DisplayContacts">
                                 <i class="fa fa-laptop"></i>
                                 <span>Contacts</span>
                                 <small class="badge pull-right bg-green">new</small>

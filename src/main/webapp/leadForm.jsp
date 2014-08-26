@@ -397,23 +397,23 @@ input:-ms-input-placeholder {
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li>
+                       <li>
                             <a href="DisplayLeads">
-                                <i class="fa fa-th"></i> <span>Leads</span> <small class="badge pull-right bg-green">View</small>
+                                <i class="fa fa-th"></i> <span>Leads</span> <small class="badge pull-right bg-green">new</small>
                             </a>
                         </li>
                         <li>
 							<a href="DisplayOrganizations">
-                                <i class="fa fa-th"></i> <span>Organizations</span> <small class="badge pull-right bg-green">View</small>
+                                <i class="fa fa-th"></i> <span>Organizations</span> <small class="badge pull-right bg-green">new</small>
                             </a>
                             
                            
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="DisplayContacts">
                                 <i class="fa fa-laptop"></i>
                                 <span>Contacts</span>
-                                <small class="badge pull-right bg-green">View</small>
+                                <small class="badge pull-right bg-green">new</small>
                             </a>
                             
                         </li>

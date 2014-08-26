@@ -343,11 +343,11 @@
                             
                            
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="DisplayContacts">
                                 <i class="fa fa-laptop"></i>
                                 <span>Contacts</span>
-                                <small class="badge pull-right bg-green">View</small>
+                                <small class="badge pull-right bg-green">new</small>
                             </a>
                             
                         </li>
@@ -425,7 +425,36 @@
                     </tr>
                    
                 </table><!-- /.table -->
-				 
+				 <table  style="border:1px solid black;width:90%">
+			 <tr>
+			 <td style="border:1px solid black;"><A HREF="#A">A</A>  </td> 
+			 <td style="border:1px solid black;"><A HREF="#B">B</A></td>
+			 <td style="border:1px solid black;"><A HREF="#C">C</A></td>
+			 <td style="border:1px solid black;"><A HREF="#D">D</A></td>
+			 <td style="border:1px solid black;"><A HREF="#E">E</A></td>
+			 <td style="border:1px solid black;"><A HREF="#F">F</A></td>
+			 <td style="border:1px solid black;"><A HREF="#G">G</A></td>
+			 <td style="border:1px solid black;"><A HREF="#H">H</A></td>
+			 <td style="border:1px solid black;"><A HREF="#I">I</A></td>
+			 <td style="border:1px solid black;"><A HREF="#J">J</A></td>
+			 <td style="border:1px solid black;"><A HREF="#K">K</A></td>
+			 <td style="border:1px solid black;"><A HREF="#L">L</A></td>
+			 <td style="border:1px solid black;"><A HREF="#M">M</A></td>
+			 <td style="border:1px solid black;"><A HREF="#N">N</A></td>
+			 <td style="border:1px solid black;"><A HREF="#O">O</A></td>
+			 <td style="border:1px solid black;"><A HREF="#P">P</A></td>
+			 <td style="border:1px solid black;"><A HREF="#Q">Q</A></td>
+			 <td style="border:1px solid black;"><A HREF="#R">R</A></td>
+			 <td style="border:1px solid black;"><A HREF="#S">S</A></td>
+			 <td style="border:1px solid black;"><A HREF="#T">T</A></td>
+			 <td style="border:1px solid black;"><A HREF="#U">U</A></td>
+			 <td style="border:1px solid black;"><A HREF="#V">V</A></td>
+			 <td style="border:1px solid black;"><A HREF="#W">W</A></td>
+			 <td style="border:1px solid black;"><A HREF="#X">X</A></td>
+			 <td style="border:1px solid black;"><A HREF="#Y">Y</A></td>
+			 <td style="border:1px solid black;"><A HREF="#Z">Z</A></td>
+		   </tr>
+		   </table>
 	            
 				<div>
 				<display:table id="contactsTable" decorator="com.v2crm.web.displaytag.decorators.DisplayTableDecorator" partialList="true"  size="20" name="data" pagesize="10"  requestURI="">
