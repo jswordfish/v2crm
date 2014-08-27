@@ -3,10 +3,14 @@ package com.v2crm.web.displaytag.decorators;
 import org.displaytag.decorator.TableDecorator;
 
 import com.v2crm.domain.Base;
+import com.v2crm.domain.Campaign;
+import com.v2crm.domain.Oppurtunity;
 import com.v2crm.domain.Organization;
 
 public class DisplayTableDecorator extends TableDecorator{
-	
+	/**
+	 * Lead Entity
+	**/
 	public String getEditLink(){
 		Base base = (Base)getCurrentRowObject();
 		return "<A HREF=\"EditLead?id="+base.getId()+"\"><img src=\"images/Edit.png\"></A>";
@@ -18,6 +22,10 @@ public class DisplayTableDecorator extends TableDecorator{
 		return "<A HREF=\"DeleteLead?id="+base.getId()+"\"><img src=\"images/Delete.png\"></A>";
 		//return "<a href=\"images/Edit.png?index=" + lIndex + "\"\>" + lObject.getId() + "\</a\>";
 	}
+	
+	/**
+	 * Organization Entity
+	**/
 	
 	public String getOrganizationType(){
 		Organization org = (Organization)getCurrentRowObject();
@@ -58,6 +66,11 @@ public class DisplayTableDecorator extends TableDecorator{
 		//return "<a href=\"images/Edit.png?index=" + lIndex + "\"\>" + lObject.getId() + "\</a\>";
 	}
 	
+	
+	/**
+	 * Contact Entity
+	**/
+	
 	public String getEditLinkForContact(){
 		Base base = (Base)getCurrentRowObject();
 		return "<A HREF=\"EditContact?id="+base.getId()+"\"><img src=\"images/Edit.png\"></A>";
@@ -71,6 +84,98 @@ public class DisplayTableDecorator extends TableDecorator{
 	}
 	
 	
+	/**
+	 * Campaign Entity
+	**/
+	
+	public String getCampaignType(){
+		Campaign campaign = (Campaign)getCurrentRowObject();
+		if(campaign != null){
+			return campaign.getCampaignType().getMsg();
+			
+		}
+		return "";
+	}
+	
+	
+	
+	public String getCampaignResponseType(){
+		Campaign campaign = (Campaign)getCurrentRowObject();
+		if(campaign != null){
+			return campaign.getCampaignResponseType().getMsg();
+			
+		}
+		return "";
+	}
+	
+	public String getCampaignStatus(){
+		Campaign campaign = (Campaign)getCurrentRowObject();
+		if(campaign != null){
+			return campaign.getCampaignStatus().getMsg();
+			
+		}
+		return "";
+	}
+	
+	public String getEditCampaignLink(){
+		Base base = (Base)getCurrentRowObject();
+		return "<A HREF=\"EditCampaign?id="+base.getId()+"\"><img src=\"images/Edit.png\"></A>";
+	}
+	
+	public String getDeleteCampaignLink(){
+		Base base = (Base)getCurrentRowObject();
+		return "<A HREF=\"DeleteCampaign?id="+base.getId()+"\"><img src=\"images/Delete.png\"></A>";
+	}
+	
+	/**
+	 * Oppurtunity Entity
+	**/
+	public String getOppurtunitySalesStage(){
+		Oppurtunity oppurtunity = (Oppurtunity)getCurrentRowObject();
+		if(oppurtunity != null){
+			return oppurtunity.getSalesStage().getMsg();
+			
+		}
+		return "";
+	}
+	
+	public String getOppurtunityStrategy(){
+		Oppurtunity oppurtunity = (Oppurtunity)getCurrentRowObject();
+		if(oppurtunity != null){
+			return oppurtunity.getOppurtunityStrategy().getMsg();
+			
+		}
+		return "";
+	}
+	
+	public String getOppurtunityType(){
+		Oppurtunity oppurtunity = (Oppurtunity)getCurrentRowObject();
+		if(oppurtunity != null){
+			return oppurtunity.getOppurtunityType().getMsg();
+			
+		}
+		return "";
+	}
+	
+	public String getContactForOppurtunity(){
+		Oppurtunity oppurtunity = (Oppurtunity)getCurrentRowObject();
+		if(oppurtunity != null){
+			if(oppurtunity.getContact() != null){
+				return oppurtunity.getContact().getFirstName() +" "+oppurtunity.getContact().getLastName();
+			}
+		}
+		return "";
+	}
+	
+	public String getEditOppurtunityLink(){
+		Base base = (Base)getCurrentRowObject();
+		return "<A HREF=\"EditOppurtunity?id="+base.getId()+"\"><img src=\"images/Edit.png\"></A>";
+	}
+	
+	public String getDeleteOppurtunityLink(){
+		Base base = (Base)getCurrentRowObject();
+		return "<A HREF=\"DeleteOppurtunity?id="+base.getId()+"\"><img src=\"images/Delete.png\"></A>";
+	}
 
 }
 

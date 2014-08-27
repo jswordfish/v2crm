@@ -1,41 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
-<%@ taglib prefix="sj" uri="/struts-jquery-tags" %>
-<%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
-
-<%@ page import="com.v2crm.domain.*" %>
-<%
-
-Lead lead = (Lead) request.getAttribute("lead");
-if(lead == null){
-	lead = new Lead();
-}
-
-session.setAttribute("lead", lead);
-%>
-
+<%@taglib prefix="s" uri="/struts-tags"%>
+<%@taglib prefix="display" uri="http://displaytag.sf.net"%>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Jatin Sutaria | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-  <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css"/>
-
-    <!-- Include FontAwesome CSS if you want to use feedback icons provided by FontAwesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="css/thvsjsp.css" th:href="@{css/thvsjsp.css}"/>
-
-    <!-- BootstrapValidator CSS -->
-    <link rel="stylesheet" href="css/bootstrapValidator.min.css"/>
-
-    <!-- jQuery and Bootstrap JS -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-    <!-- BootstrapValidator JS -->
-    <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
-	 <!-- Ionicons -->
+		<link href="css/displaytag.css" rel="stylesheet" type="text/css" />
+  
+        <!-- bootstrap 3.0.2 -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- font Awesome -->
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Ionicons -->
         <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
         <!-- Morris chart -->
         <link href="css/morris/morris.css" rel="stylesheet" type="text/css" />
@@ -49,7 +26,6 @@ session.setAttribute("lead", lead);
         <link href="css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
         <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
-		
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,69 +33,22 @@ session.setAttribute("lead", lead);
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
-        <style type="text/css">
-		 .bs-example{
-			margin: 20px;
-		  }
-		  
-		  
-
-		.bs-example  input[type="text"] {
-		   height: 24px;
-		   font-size: 15px;
-		   line-height: 24px;
-		}
-		.bs-example  input::-webkit-input-placeholder {
-	color: rgba(255,0,255,1); /* white color with alpha = 1 (alpha = opacity varies on a scale of 0 to 1 with decimal values in between) */
-	text-transform: capitalize;
-	font-size: 12px;
-	font-style: italic;
-	font-weight: lighter;
-	letter-spacing: 0.1em;
-	line-height: 18px;
-	padding: 0px 10px;
-	text-align: left;
-	text-decoration: blink; /* blink property doesn't work in chrome right now */
-}
-input::-moz-placeholder {
-	color: rgba(255,0,255,1);
-	text-transform: capitalize;
-	font-size: 12px;
-	font-style: italic;
-	font-weight: normal;
-	letter-spacing: 0.1em;
-	line-height: 25px;
-	padding: 0px 10px;
-	text-align: left;
-	text-decoration: blink;
-}
-input:-moz-placeholder {   /* Older versions of Firefox */
-	color: rgba(255,0,255,1);    /* alpha property doesn't properly work Firefox */
-	text-transform: capitalize;
-	font-size: 12px;
-	font-style: italic;
-	font-weight: normal;
-	letter-spacing: 0.1em;
-	line-height: 18px;
-	padding: 0px 10px;
-	text-align: left;
-	text-decoration: blink;
-}
-input:-ms-input-placeholder { 
-	color: rgba(255,0,255,1);
-	text-transform: capitalize;
-	font-size: 12px;
-	font-style: italic;
-	font-weight: normal;
-	letter-spacing: 0.1em;
-	line-height: 18px;
-	padding: 0px 10px;
-	text-align: left;
-	text-decoration: blink;
-}
-
-		</style>
-         
+        
+         <script src="js/jquery-1.8.2.js"></script> 
+		    <link href="css/basic.css" rel="stylesheet" type="text/css" />
+		    <script> 
+		    function goToCampaignForm(){
+		    	window.location="EditCampaign";
+		    	
+		    }
+		    
+		    
+		    $(function(){
+		    //  $("#leadsTableContent").load("displayStudentList"); 
+		    });
+		    
+		    
+		 </script> 
     </head>
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
@@ -397,7 +326,12 @@ input:-ms-input-placeholder {
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                       <li>
+                        <li class="active">
+                            <a href="index.html">
+                                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                            </a>
+                        </li>
+                         <li>
                             <a href="DisplayLeads">
                                 <i class="fa fa-th"></i> <span>Leads</span> <small class="badge pull-right bg-green">new</small>
                             </a>
@@ -411,14 +345,6 @@ input:-ms-input-placeholder {
                         </li>
                         <li>
                             <a href="DisplayContacts">
-                                <i class="fa fa-laptop"></i>
-                                <span>Contacts</span>
-                                <small class="badge pull-right bg-green">new</small>
-                            </a>
-                            
-                        </li>
-                        <li>
-                            <a href="#">
                                 <i class="fa fa-laptop"></i>
                                 <span>Contacts</span>
                                 <small class="badge pull-right bg-green">new</small>
@@ -482,272 +408,74 @@ input:-ms-input-placeholder {
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">
            
-                <!-- Content Header (Page header) -->
-                <section class="content-header">
-                    <h1>
-                        Lead Form
-                        <small>Control panel</small>
-                    </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Lead</li>
-                    </ol>
-                </section>
+                <!-- .table - Uses sparkline charts-->
+                <table class="table table-striped">
+                    <tr>
+                        <th>Campaign Name</th>
+                        <th>Owned By</th>
+                        <th>Campaign Type</th>
+                        <th>Campaign Status</th>
+						<th>Campaign Response Type</th>
+						<th>Get All Campaigns</th>
+						<th>Search Campaigns</th>
+						<th>Create Campaign</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="campaignName" class="form-control" placeholder="Campaign Name"/></td>
+                        <td><input type="text" name="ownedBy" class="form-control" placeholder="Owned By"/></td>
+                        <td><input type="text" name="campaignType" class="form-control" placeholder="Campaign Type"/></td>
+                        <td><input type="text" name="campaignStatus" class="form-control" placeholder="Campaign Status"/></td>
+                        <td><input type="text" name="campaignResponseType" class="form-control" placeholder="Campaign Response Type"/></td>
+						 <td><button class="btn btn-info"><i class="fa fa-download"></i> Search Campaigns</button></td>
+						 <td><button class="btn btn-warning"><i class="fa fa-bug"></i> Get Campaigns</button></td>
+						 <td><button class="btn btn-info"  onclick="goToCampaignForm()"><i class="fa fa-download"></i> Create Campaign</button></td>
+                    </tr>
+                   
+                </table><!-- /.table -->
+				 
+	            <table  style="border:1px solid black;width:90%">
+			 <tr>
+			 <td style="border:1px solid black;"><A HREF="#A">A</A>  </td> 
+			 <td style="border:1px solid black;"><A HREF="#B">B</A></td>
+			 <td style="border:1px solid black;"><A HREF="#C">C</A></td>
+			 <td style="border:1px solid black;"><A HREF="#D">D</A></td>
+			 <td style="border:1px solid black;"><A HREF="#E">E</A></td>
+			 <td style="border:1px solid black;"><A HREF="#F">F</A></td>
+			 <td style="border:1px solid black;"><A HREF="#G">G</A></td>
+			 <td style="border:1px solid black;"><A HREF="#H">H</A></td>
+			 <td style="border:1px solid black;"><A HREF="#I">I</A></td>
+			 <td style="border:1px solid black;"><A HREF="#J">J</A></td>
+			 <td style="border:1px solid black;"><A HREF="#K">K</A></td>
+			 <td style="border:1px solid black;"><A HREF="#L">L</A></td>
+			 <td style="border:1px solid black;"><A HREF="#M">M</A></td>
+			 <td style="border:1px solid black;"><A HREF="#N">N</A></td>
+			 <td style="border:1px solid black;"><A HREF="#O">O</A></td>
+			 <td style="border:1px solid black;"><A HREF="#P">P</A></td>
+			 <td style="border:1px solid black;"><A HREF="#Q">Q</A></td>
+			 <td style="border:1px solid black;"><A HREF="#R">R</A></td>
+			 <td style="border:1px solid black;"><A HREF="#S">S</A></td>
+			 <td style="border:1px solid black;"><A HREF="#T">T</A></td>
+			 <td style="border:1px solid black;"><A HREF="#U">U</A></td>
+			 <td style="border:1px solid black;"><A HREF="#V">V</A></td>
+			 <td style="border:1px solid black;"><A HREF="#W">W</A></td>
+			 <td style="border:1px solid black;"><A HREF="#X">X</A></td>
+			 <td style="border:1px solid black;"><A HREF="#Y">Y</A></td>
+			 <td style="border:1px solid black;"><A HREF="#Z">Z</A></td>
+		   </tr>
+		   </table>
+	            
+				<div>
+				<display:table id="campaignsTable" decorator="com.v2crm.web.displaytag.decorators.DisplayTableDecorator" partialList="true"  size="20" name="data" pagesize="10"  requestURI="">
+				<display:column property="campaignName" title="First Name"/>
+				<display:column property="ownedBy" title="Last Name"/>
+				<display:column property="campaignType" title="Company"/>
+				<display:column property="campaignStatus" title="Industry"/>
+				<display:column property="campaignResponseType" title="Industry"/>
 				
- <!--<div class="bs-example"> -->
- 
-
-  <div class="container">
-    <form id="leadForm" action="SaveLead">
-        <div class="row">
-			<div class="col-xs-2">
-                <label for="lead.firstName" class="control-label" style="font-weight: normal;" style="font-weight: normal;">First Name</label>
-				<input type="text" class="form-control" id="lead.firstName" name="firstName" placeholder="First Name" value="<%= lead.getFirstName() %>">
-            </div>
-           
-			<div class="col-xs-2">
-                <label for="lead.lastName" class="control-label" style="font-weight: normal;" style="font-weight: normal;">Last Name</label>
-				<input type="text" class="form-control" id="lead.lastName" name="lastName" placeholder="Last Name" value="<%= lead.getLastName() %>">
-            </div>
-           <div class="col-xs-2">
-                <label for="lead.company" class="control-label" style="font-weight: normal;">Company</label>
-				<input type="text" class="form-control" placeholder="Company" id="company" name="company" value="<%= lead.getCompany() %>">
-            </div>
-           
-        </div>
-        
-        <div class="row">
-			<div class="col-xs-2">
-                <label for="lead.primaryEmail" class="control-label" style="font-weight: normal;">Primary Email</label>
-				<input type="email" class="form-control" id="lead.primaryEmail" name="primaryEmail" placeholder="Email" value="<%= lead.getPrimaryEmail() %>">
-            </div>
-           
-			<div class="col-xs-2">
-                <label for="lead.primaryPhone" class="control-label" style="font-weight: normal;">Phone</label>
-				<input type="text" class="form-control" id="lead.primaryPhone" name="primaryPhone" placeholder="Phone" value="<%= lead.getPrimaryPhone() %>">
-            </div>
-           <div class="col-xs-2">
-                <label for="lead.company" class="control-label" style="font-weight: normal;">Designation</label>
-				<input type="text" class="form-control" id="lead.designation" name="designation" placeholder="Designation" value="<%= lead.getDesignation() %>">
-            </div>
-           
-        </div>
-        
-        <div class="row">
-			<div class="col-xs-2">
-                <label for="lead.firstName" class="control-label" style="font-weight: normal;">Mobile</label>
-				<input type="text" class="form-control" id="lead.mobile" name="mobile" placeholder="Mobile" value="<%= lead.getMobile() %>">
-            </div>
-           
-			<div class="col-xs-2">
-                <label for="lead.website" class="control-label" style="font-weight: normal;">Website</label>
-				<input type="url" class="form-control" placeholder="Website" name="website" value="<%= lead.getWebsite() %>">
-            </div>
-           <div class="col-xs-2">
-                <label for="lead.fax" class="control-label" style="font-weight: normal;">Fax</label>
-				<input type="text" class="form-control" placeholder="Fax" id = "lead.fax" name="fax" value="<%= lead.getFax() %>">
-            </div>
-           
-        </div>
-		
-        <div class="row">
-			<div class="col-xs-2">
-                <label for="lead.firstName" class="control-label" style="font-weight: normal;">~Number of Employers</label>
-				<input type="text" class="form-control" id="lead.noOfEmployers" name="noOfEmployers" placeholder="No.Employers" value="<%= lead.getNumOfEmployers() %>">
-            </div>
-           
-			<div class="col-xs-2">
-                <label for="lead.industry" class="control-label" style="font-weight: normal;">Industry</label>
-				<select name='industry'>  <option value="none">Select</option>  
-				<% 
-				Industry inds[] = Industry.values(); 
-				for(int i=0;i<inds.length;i++){
-				%>
-				<option value="<%=inds[i].getMsg().trim()%>" <% if(lead.getIndustry().getMsg().trim().equals(inds[i].getMsg().trim())) {  %>selected<% } %>><%=inds[i].getMsg()%>
-				</option> <%
- 				}
-     			%>
-				</select>
-            </div>
-			
-			<div class="col-xs-2">
-                <label for="leadSource" class="control-label" style="font-weight: normal;">Lead Source</label>
-				<select name='leadSource'>  <option value="none">Select</option>  
-				<% 
-				LeadSource sources[] = LeadSource.values(); 
-				for(int i=0;i<sources.length;i++){
-				%>
-				<option value="<%=sources[i].getMsg().trim()%>" <% if(lead.getLeadSource().getMsg().trim().equals(sources[i].getMsg().trim())) {  %>selected<% } %>><%=sources[i].getMsg()%>
-				</option> <%
- 				}
-     			%>
-				</select>
-            </div>
-          
-	    </div>
-        <div class="row">
-			<div class="col-xs-2">
-                <label for="lead.leadStatus" class="control-label" style="font-weight: normal;">Lead Status</label>
-				<select name='leadStatus'>  <option value="none">Select</option>  
-				<% 
-				LeadStatus leadStatuss[] = LeadStatus.values(); 
-				for(int i=0;i<leadStatuss.length;i++){
-				%>
-				<option value="<%=leadStatuss[i].getMsg().trim()%>" <% if(lead.getLeadStatus().getMsg().trim().equals(leadStatuss[i].getMsg().trim())) {  %>selected<% } %>><%=leadStatuss[i].getMsg()%>
-				</option> <%
- 				}
-     			%>
-				</select>
-            </div>
-           
-			<div class="col-xs-2">
-                <label for="lead.rating" class="control-label" style="font-weight: normal;">Lead Rating</label>
-				<select name='rating'>  <option value="none">Select</option>  
-				<% 
-				Rating ratings[] = Rating.values(); 
-				for(int i=0;i<ratings.length;i++){
-				%>
-				<option value="<%=ratings[i].getMsg().trim()%>" <% if(lead.getRating().getMsg().trim().equals(ratings[i].getMsg().trim())) {  %>selected<% } %>><%=ratings[i].getMsg()%>
-				</option> <%
- 				}
-     			%>
-				</select>
-            </div>
-           <div class="col-xs-2">
-               
-            </div>
-           
-        </div>
-		
-		<b><hr></b><br>
-		<h4>
-	<u><ul>Address<ul></u>
-			
-		</h4>
-		
-		<div class="row">
-			<div class="col-xs-2">
-                <label for="city" class="control-label" style="font-weight: normal;">City</label>
-				<input type="text" class="form-control" id="lead.city" name="city" placeholder="City" value="<%= lead.getAddress().getCity() %>"	>
-            </div>
-           
-			<div class="col-xs-2">
-                <label for="street" class="control-label" style="font-weight: normal;">Street</label>
-				<input type="text" class="form-control" placeholder="Street" name="street" value="<%= lead.getAddress().getStreet() %>">
-            </div>
-           <div class="col-xs-2">
-                <label for="building" class="control-label" style="font-weight: normal;" style="font-weight: normal;">Building</label>
-				<input type="text" class="form-control" placeholder="Building" name="building" value="<%= lead.getAddress().getBldg() %>">
-            </div>
-           
-        </div>
-		<br>
-		<div class="row">
-			<div class="col-xs-2">
-                <label for="officeNumber" class="control-label" style="font-weight: normal;">Office Number</label>
-				<input type="text" class="form-control" id="officeNumber" name="officeNumber" placeholder="Off or Res No" value="<%= lead.getAddress().getOfficeNumber() %>">
-             </div>
-           
-			<div class="col-xs-2">
-                <label for="zip" class="control-label" style="font-weight: normal;">Zip</label>
-				<input type="text" class="form-control" placeholder="Zip or Pin" name="zip" value="<%= lead.getAddress().getPin() %>">
-            </div>
-           <div class="col-xs-2">
-                <label for="state" class="control-label" style="font-weight: normal;">State</label>
-				<select name='state'>  <option value="none">Select</option>  
-				<% 
-				State states[] = State.values(); 
-				for(int i=0;i<states.length;i++){
-				%>
-				<option value="<%=states[i].getMsg().trim()%>" <% if(lead.getAddress().getState().getMsg().trim().equals(states[i].getMsg().trim())) {  %>selected<% } %>><%=states[i].getMsg()%>
-				</option> <%
- 				}
-     			%>
-				</select>
-            </div>
-           
-        </div>
-		<br>
-		<div class="row">
-			<div class="col-xs-2">
-                <label for="country" class="control-label" style="font-weight: normal;">Country</label>
-				<input type="text" class="form-control" id="country" placeholder="Country" name="country" value="<%= lead.getAddress().getCountry() %>">
-            </div>
-           
-			<div class="col-xs-2">
-              
-            </div>
-           <div class="col-xs-2">
-              
-            </div>
-           
-        </div>
-		<br>
-		<div class="row">
-			<div class="col-xs-2">
-                <button type="submit" class="btn btn-primary">Save</button>
-            </div>
-           
-			<div class="col-xs-4">
-              
-            </div>
-           <div class="col-xs-2">
-              
-            </div>
-           
-        </div>
-    </form>
-</div>
-<script>
-		$(document).ready(function() {
-			$('#leadForm').bootstrapValidator({
-				// To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-				feedbackIcons: {
-					valid: 'glyphicon glyphicon-ok',
-					invalid: 'glyphicon glyphicon-remove',
-					validating: 'glyphicon glyphicon-refresh'
-				},
-				fields: {
-					firstName: {
-						validators: {
-							notEmpty: {
-								message: 'The gender is required'
-							},
-							stringLength: {
-								min: 6,
-								max: 30,
-								message: 'The username must be more than 6 and less than 30 characters long'
-							}
-						}
-					},
-					lastName: {
-						validators: {
-							notEmpty: {
-								message: 'The gender is required'
-							}
-						}
-					},
-					company: {
-						validators: {
-							notEmpty: {
-								message: 'The gender is required'
-							}
-						}
-					},
-					primaryEmail: {
-						validators: {
-							notEmpty: {
-								message: 'The email address is required and cannot be empty'
-							},
-							emailAddress: {
-								message: 'The email address is not a valid'
-							}
-						}
-            },
-				}
-			});
-		});
-		</script>
+				 <display:column property="editCampaignLink" title="Edit" />
+				 <display:column property="deleteCampaignLink" title="Delete" />
+				</display:table>
+				</div>
                </aside><!-- /.right-side -->
 			 
         </div><!-- ./wrapper -->
@@ -755,7 +483,8 @@ input:-ms-input-placeholder {
         <!-- add new calendar event modal -->
 
 
-        
+        <!-- jQuery 2.0.2 -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <!-- jQuery UI 1.10.3 -->
         <script src="js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
         <!-- Bootstrap -->
@@ -784,7 +513,6 @@ input:-ms-input-placeholder {
         
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
         <script src="js/AdminLTE/dashboard.js" type="text/javascript"></script>        
-		
 
     </body>
 </html>

@@ -534,3 +534,524 @@ Caused by: com.mchange.v2.resourcepool.TimeoutException: A client timed out whil
 2014-08-23 21:51:39 INFO  TransactionalTestExecutionListener:296 - Committed transaction after test execution for test context [DefaultTestContext@618c44d0 testClass = CRMServiceTest, testInstance = com.v2.services.test.CRMServiceTest@3ff9e5b8, testMethod = testLeadCreation@CRMServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2f58b3d8 testClass = CRMServiceTest, locations = '{classpath:appContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
 2014-08-23 21:51:39 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@4ada629a: startup date [Sat Aug 23 21:51:36 IST 2014]; root of context hierarchy
 2014-08-23 21:51:39 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 14:32:09 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appContext.xml]
+2014-08-27 14:32:10 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@4fa9cba5: startup date [Wed Aug 27 14:32:10 IST 2014]; root of context hierarchy
+2014-08-27 14:32:10 INFO  MLog:80 - MLog clients using log4j logging.
+2014-08-27 14:32:11 INFO  C3P0Registry:204 - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2014-08-27 14:32:11 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 14:32:11 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-08-27 14:32:11 INFO  Version:41 - HHH000412: Hibernate Core {4.0.1.Final}
+2014-08-27 14:32:11 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-08-27 14:32:11 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-08-27 14:32:11 INFO  Ejb3Configuration:526 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-08-27 14:32:12 INFO  ConnectionProviderInitiator:186 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-08-27 14:32:12 INFO  AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 5000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1hx946ar3lg54uy59|aa1e2a5, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1hx946ar3lg54uy59|aa1e2a5, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://192.168.3.21:3306/v2crm, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 10, maxIdleTime -> 180, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 25, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 6, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2014-08-27 14:32:12 INFO  Dialect:121 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-08-27 14:32:12 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-08-27 14:32:12 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-08-27 14:32:12 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-08-27 14:32:13 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-08-27 14:32:13 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-08-27 14:32:13 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-08-27 14:32:14 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.address
+2014-08-27 14:32:14 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, deprecateddate, street, officenumber, state, lastmodifiedby, createdby, createddate, country, lastmodifieddate, version, city, id, pin, description, deprecatedby, bldg]
+2014-08-27 14:32:14 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2014-08-27 14:32:14 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2014-08-27 14:32:14 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.contact
+2014-08-27 14:32:14 INFO  TableMetadata:66 - HHH000037: Columns: [department, designation, lastname, contactsource, lastmodifiedby, dateofbirth, version, lastmodifieddate, officeaddress_id, id, mobilephone, personalemail, officephone, description, messengerid, reportsto, homephone, deprecatedby, deprecated, fax, messengertype, deprecateddate, homeaddress_id, createddate, createdby, firstname, reference, organization_id, donotcall, company, primaryemail]
+2014-08-27 14:32:14 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk9befbc00b82f0585, fk9befbc00a1f97dab, fk9befbc00c441abe8]
+2014-08-27 14:32:14 INFO  TableMetadata:69 - HHH000126: Indexes: [fk9befbc00b82f0585, fk9befbc00c441abe8, fk9befbc00a1f97dab, primary]
+2014-08-27 14:32:14 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.lead
+2014-08-27 14:32:14 INFO  TableMetadata:66 - HHH000037: Columns: [designation, leadsource, lastname, lastmodifiedby, version, lastmodifieddate, id, address_id, description, industry, deprecatedby, deprecated, fax, website, deprecateddate, createddate, createdby, firstname, numofemployers, organization_id, leadstatus, company, rating, primaryphone, mobile, primaryemail]
+2014-08-27 14:32:14 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk24137c927a01c9, fk24137ca1f97dab]
+2014-08-27 14:32:14 INFO  TableMetadata:69 - HHH000126: Indexes: [fk24137c927a01c9, fk24137ca1f97dab, primary]
+2014-08-27 14:32:14 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Oppurtunity
+2014-08-27 14:32:14 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.organization
+2014-08-27 14:32:14 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, fax, website, deprecateddate, orgstatus, lastmodifiedby, createdby, createddate, memberof, lastmodifieddate, version, numofemployers, id, revenuerange, ownership, address_id, orgname, description, organizationtype, company, rating, primaryphone, industry, deprecatedby, primaryemail, mobile]
+2014-08-27 14:32:14 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk50104153927a01c9]
+2014-08-27 14:32:14 INFO  TableMetadata:69 - HHH000126: Indexes: [fk50104153927a01c9, primary]
+2014-08-27 14:32:14 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Oppurtunity
+2014-08-27 14:32:16 INFO  SchemaUpdate:240 - HHH000232: Schema update complete
+2014-08-27 14:32:17 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@79cb958e]; rollback [false]
+2014-08-27 14:32:17 WARN  TestContextManager:414 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@3cc9e3bd] to process 'after' execution for test: method [public void com.v2.services.test.CRMServiceTest.testCampaign()], instance [com.v2.services.test.CRMServiceTest@6a86ac78], exception [java.lang.AssertionError: expected:<true> but was:<false>]
+org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Transaction marked as rollbackOnly
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:524)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:726)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.endTransaction(TransactionalTestExecutionListener.java:595)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.endTransaction(TransactionalTestExecutionListener.java:294)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.afterTestMethod(TransactionalTestExecutionListener.java:189)
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:411)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:91)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: javax.persistence.RollbackException: Transaction marked as rollbackOnly
+	at org.hibernate.ejb.TransactionImpl.commit(TransactionImpl.java:70)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:515)
+	... 25 more
+2014-08-27 14:32:17 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@4fa9cba5: startup date [Wed Aug 27 14:32:10 IST 2014]; root of context hierarchy
+2014-08-27 14:32:17 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 14:33:07 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appContext.xml]
+2014-08-27 14:33:07 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@4fa9cba5: startup date [Wed Aug 27 14:33:07 IST 2014]; root of context hierarchy
+2014-08-27 14:33:07 INFO  MLog:80 - MLog clients using log4j logging.
+2014-08-27 14:33:07 INFO  C3P0Registry:204 - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2014-08-27 14:33:08 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 14:33:08 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-08-27 14:33:08 INFO  Version:41 - HHH000412: Hibernate Core {4.0.1.Final}
+2014-08-27 14:33:08 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-08-27 14:33:08 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-08-27 14:33:08 INFO  Ejb3Configuration:526 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-08-27 14:33:08 INFO  ConnectionProviderInitiator:186 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-08-27 14:33:08 INFO  AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 5000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1hx946asbms1sh4swj|a26c417, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1hx946asbms1sh4swj|a26c417, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://192.168.3.21:3306/v2crm, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 10, maxIdleTime -> 180, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 25, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 6, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2014-08-27 14:33:08 INFO  Dialect:121 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-08-27 14:33:08 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-08-27 14:33:08 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-08-27 14:33:08 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-08-27 14:33:08 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-08-27 14:33:08 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-08-27 14:33:08 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-08-27 14:33:09 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.address
+2014-08-27 14:33:09 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, deprecateddate, street, officenumber, state, lastmodifiedby, createdby, createddate, country, lastmodifieddate, version, city, id, pin, description, deprecatedby, bldg]
+2014-08-27 14:33:09 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2014-08-27 14:33:09 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2014-08-27 14:33:09 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.contact
+2014-08-27 14:33:09 INFO  TableMetadata:66 - HHH000037: Columns: [department, designation, lastname, contactsource, lastmodifiedby, dateofbirth, version, lastmodifieddate, officeaddress_id, id, mobilephone, personalemail, officephone, description, messengerid, reportsto, homephone, deprecatedby, deprecated, fax, messengertype, deprecateddate, homeaddress_id, createddate, createdby, firstname, reference, organization_id, donotcall, company, primaryemail]
+2014-08-27 14:33:09 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk9befbc00b82f0585, fk9befbc00a1f97dab, fk9befbc00c441abe8]
+2014-08-27 14:33:09 INFO  TableMetadata:69 - HHH000126: Indexes: [fk9befbc00b82f0585, fk9befbc00c441abe8, fk9befbc00a1f97dab, primary]
+2014-08-27 14:33:09 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.lead
+2014-08-27 14:33:09 INFO  TableMetadata:66 - HHH000037: Columns: [designation, leadsource, lastname, lastmodifiedby, version, lastmodifieddate, id, address_id, description, industry, deprecatedby, deprecated, fax, website, deprecateddate, createddate, createdby, firstname, numofemployers, organization_id, leadstatus, company, rating, primaryphone, mobile, primaryemail]
+2014-08-27 14:33:09 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk24137c927a01c9, fk24137ca1f97dab]
+2014-08-27 14:33:09 INFO  TableMetadata:69 - HHH000126: Indexes: [fk24137c927a01c9, fk24137ca1f97dab, primary]
+2014-08-27 14:33:09 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.oppurtunity
+2014-08-27 14:33:09 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, deprecateddate, oppurtunitytype, leadsource, salesstage, ecdate, oppurtunityname, lastmodifiedby, createdby, createddate, contact, lastmodifieddate, version, id, amount, organization, description, oppurtunitystrategy, expectedcloseddate, probability, campaign, deprecatedby, primaryemail]
+2014-08-27 14:33:09 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2014-08-27 14:33:09 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2014-08-27 14:33:09 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.organization
+2014-08-27 14:33:09 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, fax, website, deprecateddate, orgstatus, lastmodifiedby, createdby, createddate, memberof, lastmodifieddate, version, numofemployers, id, revenuerange, ownership, address_id, orgname, description, organizationtype, company, rating, primaryphone, industry, deprecatedby, primaryemail, mobile]
+2014-08-27 14:33:09 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk50104153927a01c9]
+2014-08-27 14:33:09 INFO  TableMetadata:69 - HHH000126: Indexes: [fk50104153927a01c9, primary]
+2014-08-27 14:33:09 INFO  SchemaUpdate:240 - HHH000232: Schema update complete
+2014-08-27 14:33:09 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@6195772e]; rollback [false]
+2014-08-27 14:33:09 WARN  TestContextManager:414 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@302b3e2e] to process 'after' execution for test: method [public void com.v2.services.test.CRMServiceTest.testCampaign()], instance [com.v2.services.test.CRMServiceTest@66ff56b6], exception [java.lang.AssertionError: expected:<true> but was:<false>]
+org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Transaction marked as rollbackOnly
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:524)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:726)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.endTransaction(TransactionalTestExecutionListener.java:595)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.endTransaction(TransactionalTestExecutionListener.java:294)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.afterTestMethod(TransactionalTestExecutionListener.java:189)
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:411)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:91)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: javax.persistence.RollbackException: Transaction marked as rollbackOnly
+	at org.hibernate.ejb.TransactionImpl.commit(TransactionImpl.java:70)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:515)
+	... 25 more
+2014-08-27 14:33:09 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@4fa9cba5: startup date [Wed Aug 27 14:33:07 IST 2014]; root of context hierarchy
+2014-08-27 14:33:09 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 14:37:05 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appContext.xml]
+2014-08-27 14:37:05 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@106ac42f: startup date [Wed Aug 27 14:37:05 IST 2014]; root of context hierarchy
+2014-08-27 14:37:05 INFO  MLog:80 - MLog clients using log4j logging.
+2014-08-27 14:37:06 INFO  C3P0Registry:204 - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2014-08-27 14:37:06 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 14:37:06 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-08-27 14:37:06 INFO  Version:41 - HHH000412: Hibernate Core {4.0.1.Final}
+2014-08-27 14:37:06 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-08-27 14:37:06 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-08-27 14:37:06 INFO  Ejb3Configuration:526 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-08-27 14:37:06 INFO  ConnectionProviderInitiator:186 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-08-27 14:37:06 INFO  AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 5000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1hx946axfegn77hiq|7ab8e3f, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1hx946axfegn77hiq|7ab8e3f, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://192.168.3.21:3306/v2crm, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 10, maxIdleTime -> 180, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 25, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 6, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2014-08-27 14:37:06 INFO  Dialect:121 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-08-27 14:37:06 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-08-27 14:37:06 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-08-27 14:37:06 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-08-27 14:37:07 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-08-27 14:37:07 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-08-27 14:37:07 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-08-27 14:37:07 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.address
+2014-08-27 14:37:07 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, deprecateddate, street, officenumber, state, lastmodifiedby, createdby, createddate, country, lastmodifieddate, version, city, id, pin, description, deprecatedby, bldg]
+2014-08-27 14:37:07 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2014-08-27 14:37:07 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2014-08-27 14:37:07 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Campaign
+2014-08-27 14:37:07 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.contact
+2014-08-27 14:37:07 INFO  TableMetadata:66 - HHH000037: Columns: [department, designation, lastname, contactsource, lastmodifiedby, dateofbirth, version, lastmodifieddate, officeaddress_id, id, mobilephone, personalemail, officephone, description, messengerid, reportsto, homephone, deprecatedby, deprecated, fax, messengertype, deprecateddate, homeaddress_id, createddate, createdby, firstname, reference, organization_id, donotcall, company, primaryemail]
+2014-08-27 14:37:07 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk9befbc00b82f0585, fk9befbc00a1f97dab, fk9befbc00c441abe8]
+2014-08-27 14:37:07 INFO  TableMetadata:69 - HHH000126: Indexes: [fk9befbc00b82f0585, fk9befbc00c441abe8, fk9befbc00a1f97dab, primary]
+2014-08-27 14:37:07 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.lead
+2014-08-27 14:37:07 INFO  TableMetadata:66 - HHH000037: Columns: [designation, leadsource, lastname, lastmodifiedby, version, lastmodifieddate, id, address_id, description, industry, deprecatedby, deprecated, fax, website, deprecateddate, createddate, createdby, firstname, numofemployers, organization_id, leadstatus, company, rating, primaryphone, mobile, primaryemail]
+2014-08-27 14:37:07 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk24137c927a01c9, fk24137ca1f97dab]
+2014-08-27 14:37:07 INFO  TableMetadata:69 - HHH000126: Indexes: [fk24137c927a01c9, fk24137ca1f97dab, primary]
+2014-08-27 14:37:07 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.oppurtunity
+2014-08-27 14:37:07 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, deprecateddate, oppurtunitytype, leadsource, salesstage, ecdate, oppurtunityname, lastmodifiedby, createdby, createddate, contact, lastmodifieddate, version, id, amount, organization, description, oppurtunitystrategy, expectedcloseddate, probability, campaign, deprecatedby, primaryemail]
+2014-08-27 14:37:07 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2014-08-27 14:37:07 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2014-08-27 14:37:07 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.organization
+2014-08-27 14:37:07 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, fax, website, deprecateddate, orgstatus, lastmodifiedby, createdby, createddate, memberof, lastmodifieddate, version, numofemployers, id, revenuerange, ownership, address_id, orgname, description, organizationtype, company, rating, primaryphone, industry, deprecatedby, primaryemail, mobile]
+2014-08-27 14:37:07 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk50104153927a01c9]
+2014-08-27 14:37:07 INFO  TableMetadata:69 - HHH000126: Indexes: [fk50104153927a01c9, primary]
+2014-08-27 14:37:07 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Campaign
+2014-08-27 14:37:13 INFO  SchemaUpdate:240 - HHH000232: Schema update complete
+2014-08-27 14:37:13 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@30762031]; rollback [false]
+2014-08-27 14:37:14 INFO  TransactionalTestExecutionListener:296 - Committed transaction after test execution for test context [DefaultTestContext@471d463d testClass = CRMServiceTest, testInstance = com.v2.services.test.CRMServiceTest@52ee7344, testMethod = testCampaign@CRMServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@24d19fe5 testClass = CRMServiceTest, locations = '{classpath:appContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2014-08-27 14:37:14 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@106ac42f: startup date [Wed Aug 27 14:37:05 IST 2014]; root of context hierarchy
+2014-08-27 14:37:14 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 14:46:26 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appContext.xml]
+2014-08-27 14:46:26 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@166828d4: startup date [Wed Aug 27 14:46:26 IST 2014]; root of context hierarchy
+2014-08-27 14:46:26 INFO  MLog:80 - MLog clients using log4j logging.
+2014-08-27 14:46:27 INFO  C3P0Registry:204 - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2014-08-27 14:46:27 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 14:46:27 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-08-27 14:46:27 INFO  Version:41 - HHH000412: Hibernate Core {4.0.1.Final}
+2014-08-27 14:46:27 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-08-27 14:46:27 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-08-27 14:46:27 INFO  Ejb3Configuration:526 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-08-27 14:46:27 INFO  ConnectionProviderInitiator:186 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-08-27 14:46:27 INFO  AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 5000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1hx946b9g8y1oplqeg|1426b13c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1hx946b9g8y1oplqeg|1426b13c, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://192.168.3.21:3306/v2crm, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 10, maxIdleTime -> 180, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 25, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 6, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2014-08-27 14:46:27 INFO  Dialect:121 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-08-27 14:46:27 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-08-27 14:46:27 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-08-27 14:46:27 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-08-27 14:46:28 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-08-27 14:46:28 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-08-27 14:46:28 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-08-27 14:46:28 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Address
+2014-08-27 14:46:28 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Campaign
+2014-08-27 14:46:28 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Contact
+2014-08-27 14:46:28 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Lead
+2014-08-27 14:46:28 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Oppurtunity
+2014-08-27 14:46:28 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Organization
+2014-08-27 14:46:28 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Address
+2014-08-27 14:46:28 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Campaign
+2014-08-27 14:46:28 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Contact
+2014-08-27 14:46:28 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Lead
+2014-08-27 14:46:28 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Oppurtunity
+2014-08-27 14:46:28 INFO  DatabaseMetaData:120 - HHH000262: Table not found: Organization
+2014-08-27 14:46:37 INFO  SchemaUpdate:240 - HHH000232: Schema update complete
+2014-08-27 14:46:38 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@58c32da8]; rollback [false]
+2014-08-27 14:46:39 INFO  TransactionalTestExecutionListener:296 - Committed transaction after test execution for test context [DefaultTestContext@4a24f3eb testClass = CRMServiceTest, testInstance = com.v2.services.test.CRMServiceTest@4009ef54, testMethod = testCampaign@CRMServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4c3f94a4 testClass = CRMServiceTest, locations = '{classpath:appContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2014-08-27 14:46:39 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@166828d4: startup date [Wed Aug 27 14:46:26 IST 2014]; root of context hierarchy
+2014-08-27 14:46:39 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 15:04:43 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appContext.xml]
+2014-08-27 15:04:44 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@4aa6c8ad: startup date [Wed Aug 27 15:04:44 IST 2014]; root of context hierarchy
+2014-08-27 15:04:44 INFO  MLog:80 - MLog clients using log4j logging.
+2014-08-27 15:04:44 INFO  C3P0Registry:204 - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2014-08-27 15:04:44 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 15:04:44 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-08-27 15:04:44 INFO  Version:41 - HHH000412: Hibernate Core {4.0.1.Final}
+2014-08-27 15:04:44 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-08-27 15:04:44 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-08-27 15:04:44 INFO  Ejb3Configuration:526 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-08-27 15:04:45 INFO  ConnectionProviderInitiator:186 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-08-27 15:04:45 INFO  AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 5000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1hx946bwz2l1cov3n4|53b0a58b, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1hx946bwz2l1cov3n4|53b0a58b, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://192.168.3.21:3306/v2crm, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 10, maxIdleTime -> 180, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 25, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 6, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2014-08-27 15:04:45 INFO  Dialect:121 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-08-27 15:04:45 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-08-27 15:04:45 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-08-27 15:04:45 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-08-27 15:04:45 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-08-27 15:04:45 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-08-27 15:04:45 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-08-27 15:04:45 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.address
+2014-08-27 15:04:45 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, deprecateddate, street, officenumber, state, lastmodifiedby, createdby, createddate, country, lastmodifieddate, version, city, id, pin, description, deprecatedby, bldg]
+2014-08-27 15:04:45 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2014-08-27 15:04:45 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2014-08-27 15:04:45 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.campaign
+2014-08-27 15:04:45 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, campaignname, ownedby, deprecateddate, expectedrevenue, campaignresponsetype, lastmodifiedby, campaigntype, createdby, createddate, lastmodifieddate, version, campaignstatus, id, actualrevenue, startdate, edate, description, actualcost, expectedresponsecount, estimatedcost, sdate, enddate, actualresponsecount, deprecatedby]
+2014-08-27 15:04:45 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2014-08-27 15:04:45 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2014-08-27 15:04:45 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.contact
+2014-08-27 15:04:45 INFO  TableMetadata:66 - HHH000037: Columns: [department, designation, lastname, contactsource, lastmodifiedby, dateofbirth, version, lastmodifieddate, officeaddress_id, id, mobilephone, personalemail, officephone, description, messengerid, reportsto, homephone, deprecatedby, deprecated, fax, messengertype, deprecateddate, homeaddress_id, createddate, createdby, firstname, reference, organization_id, donotcall, company, primaryemail]
+2014-08-27 15:04:45 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk9befbc00b82f0585, fk9befbc00a1f97dab, fk9befbc00c441abe8]
+2014-08-27 15:04:45 INFO  TableMetadata:69 - HHH000126: Indexes: [fk9befbc00b82f0585, fk9befbc00c441abe8, fk9befbc00a1f97dab, primary]
+2014-08-27 15:04:45 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.lead
+2014-08-27 15:04:45 INFO  TableMetadata:66 - HHH000037: Columns: [designation, leadsource, lastname, lastmodifiedby, version, lastmodifieddate, id, address_id, description, industry, deprecatedby, deprecated, fax, website, deprecateddate, createddate, createdby, firstname, numofemployers, organization_id, leadstatus, company, rating, primaryphone, mobile, primaryemail]
+2014-08-27 15:04:45 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk24137c927a01c9, fk24137ca1f97dab]
+2014-08-27 15:04:45 INFO  TableMetadata:69 - HHH000126: Indexes: [fk24137c927a01c9, fk24137ca1f97dab, primary]
+2014-08-27 15:04:45 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.oppurtunity
+2014-08-27 15:04:45 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, deprecateddate, oppurtunitytype, leadsource, salesstage, ecdate, oppurtunityname, lastmodifiedby, createdby, createddate, contact, campaign_id, lastmodifieddate, version, id, amount, organization_id, description, oppurtunitystrategy, expectedcloseddate, probability, deprecatedby, primaryemail]
+2014-08-27 15:04:45 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk85ab9beda1f97dab, fk85ab9bedcb5a250b]
+2014-08-27 15:04:45 INFO  TableMetadata:69 - HHH000126: Indexes: [primary, fk85ab9beda1f97dab, fk85ab9bedcb5a250b]
+2014-08-27 15:04:45 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.organization
+2014-08-27 15:04:45 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, fax, website, deprecateddate, orgstatus, lastmodifiedby, createdby, createddate, memberof, lastmodifieddate, version, numofemployers, id, revenuerange, ownership, address_id, orgname, description, organizationtype, company, rating, primaryphone, industry, deprecatedby, primaryemail, mobile]
+2014-08-27 15:04:45 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk50104153927a01c9]
+2014-08-27 15:04:45 INFO  TableMetadata:69 - HHH000126: Indexes: [fk50104153927a01c9, primary]
+2014-08-27 15:04:45 INFO  SchemaUpdate:240 - HHH000232: Schema update complete
+2014-08-27 15:04:46 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@7659bf1]; rollback [false]
+2014-08-27 15:04:46 INFO  TransactionalTestExecutionListener:296 - Committed transaction after test execution for test context [DefaultTestContext@47ad6054 testClass = CRMServiceTest, testInstance = com.v2.services.test.CRMServiceTest@478f4f8f, testMethod = testLeadCreation@CRMServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@11b059fd testClass = CRMServiceTest, locations = '{classpath:appContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2014-08-27 15:04:46 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@4aa6c8ad: startup date [Wed Aug 27 15:04:44 IST 2014]; root of context hierarchy
+2014-08-27 15:04:46 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 15:04:57 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appContext.xml]
+2014-08-27 15:04:57 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@4fbc9499: startup date [Wed Aug 27 15:04:57 IST 2014]; root of context hierarchy
+2014-08-27 15:04:58 INFO  MLog:80 - MLog clients using log4j logging.
+2014-08-27 15:04:58 INFO  C3P0Registry:204 - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2014-08-27 15:04:58 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 15:04:58 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-08-27 15:04:58 INFO  Version:41 - HHH000412: Hibernate Core {4.0.1.Final}
+2014-08-27 15:04:58 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-08-27 15:04:58 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-08-27 15:04:58 INFO  Ejb3Configuration:526 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-08-27 15:04:58 INFO  ConnectionProviderInitiator:186 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-08-27 15:04:58 INFO  AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 5000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1hx946bx9nek4fibe|6e9af2a2, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1hx946bx9nek4fibe|6e9af2a2, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://192.168.3.21:3306/v2crm, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 10, maxIdleTime -> 180, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 25, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 6, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2014-08-27 15:04:59 INFO  Dialect:121 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-08-27 15:04:59 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-08-27 15:04:59 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-08-27 15:04:59 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-08-27 15:04:59 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-08-27 15:04:59 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-08-27 15:04:59 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-08-27 15:04:59 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.address
+2014-08-27 15:04:59 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, deprecateddate, street, officenumber, state, lastmodifiedby, createdby, createddate, country, lastmodifieddate, version, city, id, pin, description, deprecatedby, bldg]
+2014-08-27 15:04:59 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2014-08-27 15:04:59 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2014-08-27 15:04:59 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.campaign
+2014-08-27 15:04:59 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, campaignname, ownedby, deprecateddate, expectedrevenue, campaignresponsetype, lastmodifiedby, campaigntype, createdby, createddate, lastmodifieddate, version, campaignstatus, id, actualrevenue, startdate, edate, description, actualcost, expectedresponsecount, estimatedcost, sdate, enddate, actualresponsecount, deprecatedby]
+2014-08-27 15:04:59 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2014-08-27 15:04:59 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2014-08-27 15:04:59 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.contact
+2014-08-27 15:04:59 INFO  TableMetadata:66 - HHH000037: Columns: [department, designation, lastname, contactsource, lastmodifiedby, dateofbirth, version, lastmodifieddate, officeaddress_id, id, mobilephone, personalemail, officephone, description, messengerid, reportsto, homephone, deprecatedby, deprecated, fax, messengertype, deprecateddate, homeaddress_id, createddate, createdby, firstname, reference, organization_id, donotcall, company, primaryemail]
+2014-08-27 15:04:59 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk9befbc00b82f0585, fk9befbc00a1f97dab, fk9befbc00c441abe8]
+2014-08-27 15:04:59 INFO  TableMetadata:69 - HHH000126: Indexes: [fk9befbc00b82f0585, fk9befbc00c441abe8, fk9befbc00a1f97dab, primary]
+2014-08-27 15:04:59 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.lead
+2014-08-27 15:04:59 INFO  TableMetadata:66 - HHH000037: Columns: [designation, leadsource, lastname, lastmodifiedby, version, lastmodifieddate, id, address_id, description, industry, deprecatedby, deprecated, fax, website, deprecateddate, createddate, createdby, firstname, numofemployers, organization_id, leadstatus, company, rating, primaryphone, mobile, primaryemail]
+2014-08-27 15:04:59 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk24137c927a01c9, fk24137ca1f97dab]
+2014-08-27 15:04:59 INFO  TableMetadata:69 - HHH000126: Indexes: [fk24137c927a01c9, fk24137ca1f97dab, primary]
+2014-08-27 15:04:59 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.oppurtunity
+2014-08-27 15:04:59 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, deprecateddate, oppurtunitytype, leadsource, salesstage, ecdate, oppurtunityname, lastmodifiedby, createdby, createddate, contact, campaign_id, lastmodifieddate, version, id, amount, organization_id, description, oppurtunitystrategy, expectedcloseddate, probability, deprecatedby, primaryemail]
+2014-08-27 15:04:59 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk85ab9beda1f97dab, fk85ab9bedcb5a250b]
+2014-08-27 15:04:59 INFO  TableMetadata:69 - HHH000126: Indexes: [primary, fk85ab9beda1f97dab, fk85ab9bedcb5a250b]
+2014-08-27 15:04:59 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.organization
+2014-08-27 15:04:59 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, fax, website, deprecateddate, orgstatus, lastmodifiedby, createdby, createddate, memberof, lastmodifieddate, version, numofemployers, id, revenuerange, ownership, address_id, orgname, description, organizationtype, company, rating, primaryphone, industry, deprecatedby, primaryemail, mobile]
+2014-08-27 15:04:59 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk50104153927a01c9]
+2014-08-27 15:04:59 INFO  TableMetadata:69 - HHH000126: Indexes: [fk50104153927a01c9, primary]
+2014-08-27 15:04:59 INFO  SchemaUpdate:240 - HHH000232: Schema update complete
+2014-08-27 15:04:59 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@2f36f583]; rollback [false]
+2014-08-27 15:05:00 INFO  TransactionalTestExecutionListener:296 - Committed transaction after test execution for test context [DefaultTestContext@7bdd5f1b testClass = CRMServiceTest, testInstance = com.v2.services.test.CRMServiceTest@28f2525, testMethod = testcreateOrganizations@CRMServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@3cfa173 testClass = CRMServiceTest, locations = '{classpath:appContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2014-08-27 15:05:00 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@4fbc9499: startup date [Wed Aug 27 15:04:57 IST 2014]; root of context hierarchy
+2014-08-27 15:05:00 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 15:05:09 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appContext.xml]
+2014-08-27 15:05:09 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@5e329ba8: startup date [Wed Aug 27 15:05:09 IST 2014]; root of context hierarchy
+2014-08-27 15:05:09 INFO  MLog:80 - MLog clients using log4j logging.
+2014-08-27 15:05:09 INFO  C3P0Registry:204 - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2014-08-27 15:05:10 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 15:05:10 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-08-27 15:05:10 INFO  Version:41 - HHH000412: Hibernate Core {4.0.1.Final}
+2014-08-27 15:05:10 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-08-27 15:05:10 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-08-27 15:05:10 INFO  Ejb3Configuration:526 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-08-27 15:05:10 INFO  ConnectionProviderInitiator:186 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-08-27 15:05:10 INFO  AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 5000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1hx946bxin5eulz32|7e8f362e, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1hx946bxin5eulz32|7e8f362e, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://192.168.3.21:3306/v2crm, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 10, maxIdleTime -> 180, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 25, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 6, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2014-08-27 15:05:10 INFO  Dialect:121 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-08-27 15:05:10 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-08-27 15:05:10 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-08-27 15:05:10 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-08-27 15:05:10 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-08-27 15:05:10 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-08-27 15:05:10 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-08-27 15:05:10 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.address
+2014-08-27 15:05:10 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, deprecateddate, street, officenumber, state, lastmodifiedby, createdby, createddate, country, lastmodifieddate, version, city, id, pin, description, deprecatedby, bldg]
+2014-08-27 15:05:10 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2014-08-27 15:05:10 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2014-08-27 15:05:10 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.campaign
+2014-08-27 15:05:10 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, campaignname, ownedby, deprecateddate, expectedrevenue, campaignresponsetype, lastmodifiedby, campaigntype, createdby, createddate, lastmodifieddate, version, campaignstatus, id, actualrevenue, startdate, edate, description, actualcost, expectedresponsecount, estimatedcost, sdate, enddate, actualresponsecount, deprecatedby]
+2014-08-27 15:05:10 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2014-08-27 15:05:10 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2014-08-27 15:05:11 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.contact
+2014-08-27 15:05:11 INFO  TableMetadata:66 - HHH000037: Columns: [department, designation, lastname, contactsource, lastmodifiedby, dateofbirth, version, lastmodifieddate, officeaddress_id, id, mobilephone, personalemail, officephone, description, messengerid, reportsto, homephone, deprecatedby, deprecated, fax, messengertype, deprecateddate, homeaddress_id, createddate, createdby, firstname, reference, organization_id, donotcall, company, primaryemail]
+2014-08-27 15:05:11 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk9befbc00b82f0585, fk9befbc00a1f97dab, fk9befbc00c441abe8]
+2014-08-27 15:05:11 INFO  TableMetadata:69 - HHH000126: Indexes: [fk9befbc00b82f0585, fk9befbc00c441abe8, fk9befbc00a1f97dab, primary]
+2014-08-27 15:05:11 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.lead
+2014-08-27 15:05:11 INFO  TableMetadata:66 - HHH000037: Columns: [designation, leadsource, lastname, lastmodifiedby, version, lastmodifieddate, id, address_id, description, industry, deprecatedby, deprecated, fax, website, deprecateddate, createddate, createdby, firstname, numofemployers, organization_id, leadstatus, company, rating, primaryphone, mobile, primaryemail]
+2014-08-27 15:05:11 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk24137c927a01c9, fk24137ca1f97dab]
+2014-08-27 15:05:11 INFO  TableMetadata:69 - HHH000126: Indexes: [fk24137c927a01c9, fk24137ca1f97dab, primary]
+2014-08-27 15:05:11 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.oppurtunity
+2014-08-27 15:05:11 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, deprecateddate, oppurtunitytype, leadsource, salesstage, ecdate, oppurtunityname, lastmodifiedby, createdby, createddate, contact, campaign_id, lastmodifieddate, version, id, amount, organization_id, description, oppurtunitystrategy, expectedcloseddate, probability, deprecatedby, primaryemail]
+2014-08-27 15:05:11 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk85ab9beda1f97dab, fk85ab9bedcb5a250b]
+2014-08-27 15:05:11 INFO  TableMetadata:69 - HHH000126: Indexes: [primary, fk85ab9beda1f97dab, fk85ab9bedcb5a250b]
+2014-08-27 15:05:11 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.organization
+2014-08-27 15:05:11 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, fax, website, deprecateddate, orgstatus, lastmodifiedby, createdby, createddate, memberof, lastmodifieddate, version, numofemployers, id, revenuerange, ownership, address_id, orgname, description, organizationtype, company, rating, primaryphone, industry, deprecatedby, primaryemail, mobile]
+2014-08-27 15:05:11 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk50104153927a01c9]
+2014-08-27 15:05:11 INFO  TableMetadata:69 - HHH000126: Indexes: [fk50104153927a01c9, primary]
+2014-08-27 15:05:11 INFO  SchemaUpdate:240 - HHH000232: Schema update complete
+2014-08-27 15:05:11 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@50278304]; rollback [false]
+2014-08-27 15:05:11 INFO  TransactionalTestExecutionListener:296 - Committed transaction after test execution for test context [DefaultTestContext@49ddb58d testClass = CRMServiceTest, testInstance = com.v2.services.test.CRMServiceTest@7aba61dd, testMethod = testcreateContact@CRMServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@626f331d testClass = CRMServiceTest, locations = '{classpath:appContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2014-08-27 15:05:11 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@5e329ba8: startup date [Wed Aug 27 15:05:09 IST 2014]; root of context hierarchy
+2014-08-27 15:05:11 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 15:05:28 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appContext.xml]
+2014-08-27 15:05:28 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@17d902d3: startup date [Wed Aug 27 15:05:28 IST 2014]; root of context hierarchy
+2014-08-27 15:05:29 INFO  MLog:80 - MLog clients using log4j logging.
+2014-08-27 15:05:29 INFO  C3P0Registry:204 - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2014-08-27 15:05:29 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 15:05:29 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-08-27 15:05:29 INFO  Version:41 - HHH000412: Hibernate Core {4.0.1.Final}
+2014-08-27 15:05:29 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-08-27 15:05:29 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-08-27 15:05:29 INFO  Ejb3Configuration:526 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-08-27 15:05:29 INFO  ConnectionProviderInitiator:186 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-08-27 15:05:29 INFO  AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 5000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1hx946bxxmi10ks5lf|70cca65d, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1hx946bxxmi10ks5lf|70cca65d, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://192.168.3.21:3306/v2crm, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 10, maxIdleTime -> 180, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 25, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 6, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2014-08-27 15:05:30 INFO  Dialect:121 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-08-27 15:05:30 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-08-27 15:05:30 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-08-27 15:05:30 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-08-27 15:05:30 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-08-27 15:05:30 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-08-27 15:05:30 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-08-27 15:05:30 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.address
+2014-08-27 15:05:30 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, deprecateddate, street, officenumber, state, lastmodifiedby, createdby, createddate, country, lastmodifieddate, version, city, id, pin, description, deprecatedby, bldg]
+2014-08-27 15:05:30 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2014-08-27 15:05:30 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2014-08-27 15:05:30 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.campaign
+2014-08-27 15:05:30 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, campaignname, ownedby, deprecateddate, expectedrevenue, campaignresponsetype, lastmodifiedby, campaigntype, createdby, createddate, lastmodifieddate, version, campaignstatus, id, actualrevenue, startdate, edate, description, actualcost, expectedresponsecount, estimatedcost, sdate, enddate, actualresponsecount, deprecatedby]
+2014-08-27 15:05:30 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2014-08-27 15:05:30 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2014-08-27 15:05:30 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.contact
+2014-08-27 15:05:30 INFO  TableMetadata:66 - HHH000037: Columns: [department, designation, lastname, contactsource, lastmodifiedby, dateofbirth, version, lastmodifieddate, officeaddress_id, id, mobilephone, personalemail, officephone, description, messengerid, reportsto, homephone, deprecatedby, deprecated, fax, messengertype, deprecateddate, homeaddress_id, createddate, createdby, firstname, reference, organization_id, donotcall, company, primaryemail]
+2014-08-27 15:05:30 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk9befbc00b82f0585, fk9befbc00a1f97dab, fk9befbc00c441abe8]
+2014-08-27 15:05:30 INFO  TableMetadata:69 - HHH000126: Indexes: [fk9befbc00b82f0585, fk9befbc00c441abe8, fk9befbc00a1f97dab, primary]
+2014-08-27 15:05:30 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.lead
+2014-08-27 15:05:30 INFO  TableMetadata:66 - HHH000037: Columns: [designation, leadsource, lastname, lastmodifiedby, version, lastmodifieddate, id, address_id, description, industry, deprecatedby, deprecated, fax, website, deprecateddate, createddate, createdby, firstname, numofemployers, organization_id, leadstatus, company, rating, primaryphone, mobile, primaryemail]
+2014-08-27 15:05:30 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk24137c927a01c9, fk24137ca1f97dab]
+2014-08-27 15:05:30 INFO  TableMetadata:69 - HHH000126: Indexes: [fk24137c927a01c9, fk24137ca1f97dab, primary]
+2014-08-27 15:05:30 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.oppurtunity
+2014-08-27 15:05:30 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, deprecateddate, oppurtunitytype, leadsource, salesstage, ecdate, oppurtunityname, lastmodifiedby, createdby, createddate, contact, campaign_id, lastmodifieddate, version, id, amount, organization_id, description, oppurtunitystrategy, expectedcloseddate, probability, deprecatedby, primaryemail]
+2014-08-27 15:05:30 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk85ab9beda1f97dab, fk85ab9bedcb5a250b]
+2014-08-27 15:05:30 INFO  TableMetadata:69 - HHH000126: Indexes: [primary, fk85ab9beda1f97dab, fk85ab9bedcb5a250b]
+2014-08-27 15:05:30 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.organization
+2014-08-27 15:05:30 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, fax, website, deprecateddate, orgstatus, lastmodifiedby, createdby, createddate, memberof, lastmodifieddate, version, numofemployers, id, revenuerange, ownership, address_id, orgname, description, organizationtype, company, rating, primaryphone, industry, deprecatedby, primaryemail, mobile]
+2014-08-27 15:05:30 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk50104153927a01c9]
+2014-08-27 15:05:30 INFO  TableMetadata:69 - HHH000126: Indexes: [fk50104153927a01c9, primary]
+2014-08-27 15:05:30 INFO  SchemaUpdate:240 - HHH000232: Schema update complete
+2014-08-27 15:05:31 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@6a7819f5]; rollback [false]
+2014-08-27 15:06:06 WARN  SqlExceptionHelper:143 - SQL Error: 1406, SQLState: 22001
+2014-08-27 15:06:06 ERROR SqlExceptionHelper:144 - Data truncation: Data too long for column 'contact' at row 1
+2014-08-27 15:06:06 WARN  TestContextManager:414 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@115c8f0e] to process 'after' execution for test: method [public void com.v2.services.test.CRMServiceTest.testOppurtunity()], instance [com.v2.services.test.CRMServiceTest@53b3e909], exception [java.lang.AssertionError: expected:<true> but was:<false>]
+org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Transaction marked as rollbackOnly
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:524)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:726)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.endTransaction(TransactionalTestExecutionListener.java:595)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.endTransaction(TransactionalTestExecutionListener.java:294)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.afterTestMethod(TransactionalTestExecutionListener.java:189)
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:411)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:91)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: javax.persistence.RollbackException: Transaction marked as rollbackOnly
+	at org.hibernate.ejb.TransactionImpl.commit(TransactionImpl.java:70)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:515)
+	... 25 more
+2014-08-27 15:06:06 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@17d902d3: startup date [Wed Aug 27 15:05:28 IST 2014]; root of context hierarchy
+2014-08-27 15:06:06 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 15:07:17 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appContext.xml]
+2014-08-27 15:07:17 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@31e3bb9e: startup date [Wed Aug 27 15:07:17 IST 2014]; root of context hierarchy
+2014-08-27 15:07:17 INFO  MLog:80 - MLog clients using log4j logging.
+2014-08-27 15:07:17 INFO  C3P0Registry:204 - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2014-08-27 15:07:17 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-08-27 15:07:17 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-08-27 15:07:17 INFO  Version:41 - HHH000412: Hibernate Core {4.0.1.Final}
+2014-08-27 15:07:17 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-08-27 15:07:17 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-08-27 15:07:17 INFO  Ejb3Configuration:526 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-08-27 15:07:18 INFO  ConnectionProviderInitiator:186 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-08-27 15:07:18 INFO  AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 5000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1hx946c0988cf6bjk|6c2e46eb, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1hx946c0988cf6bjk|6c2e46eb, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://192.168.3.21:3306/v2crm, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 10, maxIdleTime -> 180, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 25, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 6, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> SELECT 1, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2014-08-27 15:07:18 INFO  Dialect:121 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-08-27 15:07:18 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-08-27 15:07:18 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-08-27 15:07:18 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-08-27 15:07:18 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-08-27 15:07:18 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-08-27 15:07:18 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-08-27 15:07:18 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.address
+2014-08-27 15:07:18 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, deprecateddate, street, officenumber, state, lastmodifiedby, createdby, createddate, country, lastmodifieddate, version, city, id, pin, description, deprecatedby, bldg]
+2014-08-27 15:07:18 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2014-08-27 15:07:18 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2014-08-27 15:07:18 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.campaign
+2014-08-27 15:07:18 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, campaignname, ownedby, deprecateddate, expectedrevenue, campaignresponsetype, lastmodifiedby, campaigntype, createdby, createddate, lastmodifieddate, version, campaignstatus, id, actualrevenue, startdate, edate, description, actualcost, expectedresponsecount, estimatedcost, sdate, enddate, actualresponsecount, deprecatedby]
+2014-08-27 15:07:18 INFO  TableMetadata:68 - HHH000108: Foreign keys: []
+2014-08-27 15:07:18 INFO  TableMetadata:69 - HHH000126: Indexes: [primary]
+2014-08-27 15:07:18 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.contact
+2014-08-27 15:07:18 INFO  TableMetadata:66 - HHH000037: Columns: [department, designation, lastname, contactsource, lastmodifiedby, dateofbirth, version, lastmodifieddate, officeaddress_id, id, mobilephone, personalemail, officephone, description, messengerid, reportsto, homephone, deprecatedby, deprecated, fax, messengertype, deprecateddate, homeaddress_id, createddate, createdby, firstname, reference, organization_id, donotcall, company, primaryemail]
+2014-08-27 15:07:18 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk9befbc00b82f0585, fk9befbc00a1f97dab, fk9befbc00c441abe8]
+2014-08-27 15:07:18 INFO  TableMetadata:69 - HHH000126: Indexes: [fk9befbc00b82f0585, fk9befbc00c441abe8, fk9befbc00a1f97dab, primary]
+2014-08-27 15:07:18 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.lead
+2014-08-27 15:07:18 INFO  TableMetadata:66 - HHH000037: Columns: [designation, leadsource, lastname, lastmodifiedby, version, lastmodifieddate, id, address_id, description, industry, deprecatedby, deprecated, fax, website, deprecateddate, createddate, createdby, firstname, numofemployers, organization_id, leadstatus, company, rating, primaryphone, mobile, primaryemail]
+2014-08-27 15:07:18 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk24137c927a01c9, fk24137ca1f97dab]
+2014-08-27 15:07:18 INFO  TableMetadata:69 - HHH000126: Indexes: [fk24137c927a01c9, fk24137ca1f97dab, primary]
+2014-08-27 15:07:18 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.oppurtunity
+2014-08-27 15:07:18 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, deprecateddate, oppurtunitytype, leadsource, salesstage, ecdate, oppurtunityname, lastmodifiedby, createdby, createddate, contact, campaign_id, lastmodifieddate, version, id, amount, organization_id, description, oppurtunitystrategy, expectedcloseddate, probability, deprecatedby, primaryemail]
+2014-08-27 15:07:18 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk85ab9beda1f97dab, fk85ab9bedcb5a250b]
+2014-08-27 15:07:18 INFO  TableMetadata:69 - HHH000126: Indexes: [primary, fk85ab9beda1f97dab, fk85ab9bedcb5a250b]
+2014-08-27 15:07:18 INFO  TableMetadata:65 - HHH000261: Table found: v2crm.organization
+2014-08-27 15:07:18 INFO  TableMetadata:66 - HHH000037: Columns: [deprecated, fax, website, deprecateddate, orgstatus, lastmodifiedby, createdby, createddate, memberof, lastmodifieddate, version, numofemployers, id, revenuerange, ownership, address_id, orgname, description, organizationtype, company, rating, primaryphone, industry, deprecatedby, primaryemail, mobile]
+2014-08-27 15:07:18 INFO  TableMetadata:68 - HHH000108: Foreign keys: [fk50104153927a01c9]
+2014-08-27 15:07:18 INFO  TableMetadata:69 - HHH000126: Indexes: [fk50104153927a01c9, primary]
+2014-08-27 15:07:20 INFO  SchemaUpdate:240 - HHH000232: Schema update complete
+2014-08-27 15:07:20 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@4f69e953]; rollback [false]
+2014-08-27 15:07:21 INFO  TransactionalTestExecutionListener:296 - Committed transaction after test execution for test context [DefaultTestContext@195508fd testClass = CRMServiceTest, testInstance = com.v2.services.test.CRMServiceTest@1dc12709, testMethod = testOppurtunity@CRMServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@73e9cf21 testClass = CRMServiceTest, locations = '{classpath:appContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2014-08-27 15:07:21 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@31e3bb9e: startup date [Wed Aug 27 15:07:17 IST 2014]; root of context hierarchy
+2014-08-27 15:07:21 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'

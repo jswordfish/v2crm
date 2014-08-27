@@ -1,5 +1,9 @@
 package com.v2.services.test;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,14 +14,24 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.v2crm.domain.Address;
+import com.v2crm.domain.Campaign;
+import com.v2crm.domain.CampaignResponseType;
+import com.v2crm.domain.CampaignStatus;
+import com.v2crm.domain.CampaignType;
 import com.v2crm.domain.Contact;
 import com.v2crm.domain.Industry;
 import com.v2crm.domain.Lead;
+import com.v2crm.domain.Oppurtunity;
+import com.v2crm.domain.OppurtunityStrategy;
+import com.v2crm.domain.OppurtunityType;
 import com.v2crm.domain.Organization;
 import com.v2crm.domain.OwnerShip;
 import com.v2crm.domain.State;
 import com.v2crm.exceptions.CRMException;
+import com.v2crm.services.CampaignService;
+import com.v2crm.services.ContactService;
 import com.v2crm.services.LeadService;
+import com.v2crm.services.OppurtunityService;
 import com.v2crm.services.OrganizationService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -29,6 +43,15 @@ public class CRMServiceTest {
 	
 	@Autowired
 	OrganizationService organizationService;
+	
+	@Autowired
+	CampaignService campaignService;
+	
+	@Autowired
+	OppurtunityService oppurtunityService;
+	
+	@Autowired
+	ContactService contactService;
 	
 	@Test
 	@Rollback(value=false)
@@ -94,6 +117,100 @@ public class CRMServiceTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			Assert.assertTrue(false);
+		}
+	}
+	
+	
+	@Test
+	@Rollback(value=false)
+	public void testcreateContact(){
+		try {
+			
+				Contact contact = new Contact();
+				contact.setCompany("Def Enterprises");
+				contact.setFirstName("jatin");
+				contact.setLastName("sutaria");
+				contactService.save(contact);
+			
+			
+		} catch (CRMException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Assert.assertTrue(false);
+		}
+	}
+	
+	
+	
+	@Test
+	@Rollback(value=false)
+	public void testCampaign(){
+		try {
+			for(int i=0;i<25;i++){
+				Campaign campaign = new Campaign();
+				campaign.setActualCost(434343l);
+				campaign.setActualResponseCount(35);
+				campaign.setActualRevenue(24242l);
+				campaign.setCampaignName("Conference At Atlanta"+i);
+				campaign.setCampaignResponseType(CampaignResponseType.Good);
+				campaign.setCampaignStatus(CampaignStatus.Active);
+				campaign.setCampaignType(CampaignType.Conference);
+				//campaign.setEndDate(endDate);
+				campaign.setEstimatedCost(432424l);
+				campaign.setOwnedBy("Jatin");
+				campaign.setExpectedResponseCount(200);
+				campaignService.save(campaign);
+			}
+			Assert.assertEquals(true, true);
+		} catch (CRMException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Assert.assertEquals(true, false);
+		}
+		
+	}
+	
+	@Test
+	@Rollback(value=false)
+	public void testOppurtunity(){
+		String fieldQry = "Campaign.findCampaignByName";
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("campaignName", "Conference At Atlanta1");
+		List<Campaign> campaigns = campaignService.findByNamedQueryAndNamedParams(fieldQry, params);
+		Campaign campaign = campaigns.get(0);
+
+		
+		fieldQry = "Organization.findOrganizationByName";
+		params = new HashMap<String, String>();
+		params.put("orgName", "Abc Electronics1");
+		List<Organization> organizations = organizationService.findByNamedQueryAndNamedParams(fieldQry, params);
+		Organization org = organizations.get(0);
+		
+		fieldQry = "Contact.findContactByName";
+		params = new HashMap<String, String>();
+		params.put("firstName", "jatin");
+		params.put("lastName", "sutaria");
+		List<Contact> contacts = contactService.findByNamedQueryAndNamedParams(fieldQry, params);
+		Contact contact = contacts.get(0);
+
+		try {
+			for(int i=0;i<25;i++){
+				Oppurtunity oppurtunity = new Oppurtunity();
+				oppurtunity.setAmount(2121l);
+				oppurtunity.setCampaign(campaign);
+				oppurtunity.setContact(contact);
+				oppurtunity.setOrganization(org);
+				oppurtunity.setOppurtunityStrategy(OppurtunityStrategy.Strategic);
+				oppurtunity.setOppurtunityType(OppurtunityType.NewBusiness);
+				oppurtunity.setOppurtunityName("Oppurtunity"+i);
+				oppurtunityService.save(oppurtunity);
+				//oppurtunity.s
+			}
+			Assert.assertEquals(true, true);
+		} catch (CRMException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Assert.assertEquals(true, false);
 		}
 	}
 	

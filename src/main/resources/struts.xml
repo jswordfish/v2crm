@@ -76,6 +76,59 @@
 		   <result name="save_failure">/contactForm.jsp</result>
 		   
 		</action>
+		
+		<!-- Actions classes for Campaign Entity -->
+		<action name="DisplayCampaigns" class="com.v2crm.web.actions.CampaignAction" 
+                  method="display">
+		   <result name="success">/campaigns.jsp</result>
+		   
+		</action>
+		
+		<action name="EditCampaign" class="com.v2crm.web.actions.CampaignAction" 
+                  method="edit">
+		   <result name="edit_success">/campaignForm.jsp</result>
+		   
+		</action>
+		
+		<action name="DeleteCampaign" class="com.v2crm.web.actions.CampaignAction" 
+                  method="delete">
+		   <result name="delete_success">/campaigns.jsp</result>
+		   
+		</action>
+		
+		<action name="SaveCampaign" class="com.v2crm.web.actions.CampaignAction" 
+                  method="save">
+		   <result name="save_success" type="redirect">DisplayContacts</result>
+		   <result name="save_failure">/campaignForm.jsp</result>
+		   
+		</action>
+		
+		
+		<!-- Actions classes for Oppurtunity Entity -->
+		<action name="DisplayOppurtunities" class="com.v2crm.web.actions.OppurtunityAction" 
+                  method="display">
+		   <result name="success">/oppurtunities.jsp</result>
+		   
+		</action>
+		
+		<action name="EditOppurtunity" class="com.v2crm.web.actions.OppurtunityAction" 
+                  method="edit">
+		   <result name="edit_success">/oppurtunityForm.jsp</result>
+		   
+		</action>
+		
+		<action name="DeleteOppurtunity" class="com.v2crm.web.actions.OppurtunityAction" 
+                  method="delete">
+		   <result name="delete_success">/oppurtunities.jsp</result>
+		   
+		</action>
+		
+		<action name="SaveOppurtunity" class="com.v2crm.web.actions.OppurtunityAction" 
+                  method="save">
+		   <result name="save_success" type="redirect">DisplayOppurtunities</result>
+		   <result name="save_failure">/oppurtunityForm.jsp</result>
+		   
+		</action>
       
     </package>
 

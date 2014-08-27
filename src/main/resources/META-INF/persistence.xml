@@ -13,6 +13,8 @@ Persistence unit for the JPA tutorial of the Hibernate Getting Started Guide
 <class>com.v2crm.domain.Organization</class>
 <class>com.v2crm.domain.Contact</class>
 <class>com.v2crm.domain.Address</class>
+<class>com.v2crm.domain.Campaign</class>
+<class>com.v2crm.domain.Oppurtunity</class>
 
  
 	<properties>

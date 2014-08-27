@@ -4,35 +4,53 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Oppurtunity extends Base{
 
 private String oppurtunityName;
 
+@OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+@JoinColumn(name="organization_id",insertable=true, updatable=true)
 private Organization organization;
 
 private Long amount;
 
+@OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+@JoinColumn(name="contact_id",insertable=true, updatable=true)
 private Contact contact;
 
 private Date expectedClosedDate;
 
-private String eCDate;
+private String expClosureDate;
 
-private SalesStage salesStage;
 
-private LeadSource leadSource;
 
-private OppurtunityType oppurtunityType;
+@Enumerated(EnumType.STRING)
+private SalesStage salesStage = SalesStage.Proposal;
 
-private OppurtunityStrategy oppurtunityStrategy;
+@Enumerated(EnumType.STRING)
+private LeadSource leadSource = LeadSource.CustomerInquiryByPhone;
+
+@Enumerated(EnumType.STRING)
+private OppurtunityType oppurtunityType = OppurtunityType.NewBusiness;
+
+@Enumerated(EnumType.STRING)
+private OppurtunityStrategy oppurtunityStrategy = OppurtunityStrategy.CanLeadToMore;
 
 private Integer probability;
 
 private String primaryEmail;
 
+@OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+@JoinColumn(name="campaign_id",insertable=true, updatable=true)
 private Campaign campaign;
 
 public String getOppurtunityName() {
@@ -131,7 +149,9 @@ public void setCampaign(Campaign campaign) {
 	this.campaign = campaign;
 }
 
-public String geteCDate() {
+
+
+public String getExpClosureDate() {
 	DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
 	if(getExpectedClosedDate() != null ){
 		String formattedDate = formatter.format(getExpectedClosedDate());
@@ -139,7 +159,5 @@ public String geteCDate() {
 	}
 	return "";
 }
-
-
 
 }

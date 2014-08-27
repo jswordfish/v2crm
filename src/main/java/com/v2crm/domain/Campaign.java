@@ -4,6 +4,15 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+@Entity
+@NamedQueries({
+@NamedQuery(name="Campaign.findCampaignByName", query="SELECT campaign FROM Campaign campaign WHERE campaign.campaignName = :campaignName"),
+})
 public class Campaign extends Base{
 
 	private String ownedBy = "";
@@ -12,24 +21,27 @@ public class Campaign extends Base{
 	
 	private Date startDate;
 	
-	private String sDate;
+	private String startDt;
 	
-	private String eDate;
+	private String endDt;
 	
 	private Date endDate;
 	
-	private Long estimatedCost;
+	private Long estimatedCost = 0l;
 	
-	private Long actualCost ;
+	private Long actualCost = 0l ;
 	
-	private Long expectedRevenue;
+	private Long expectedRevenue = 0l;
 	
-	private Long actualRevenue;
+	private Long actualRevenue = 0l;
 	
+	@Enumerated(EnumType.STRING)
 	private CampaignType campaignType = CampaignType.Others;
 	
+	@Enumerated(EnumType.STRING)
 	private CampaignStatus campaignStatus = CampaignStatus.Draft;
 	
+	@Enumerated(EnumType.STRING)
 	private CampaignResponseType campaignResponseType = CampaignResponseType.NotApplicable;
 	
 	private Integer expectedResponseCount;
@@ -140,7 +152,9 @@ public class Campaign extends Base{
 		this.actualResponseCount = actualResponseCount;
 	}
 
-	public String getsDate() {
+	
+
+	public String getStartDt() {
 		DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
 		if(getStartDate() != null ){
 			String formattedDate = formatter.format(getStartDate());
@@ -149,7 +163,7 @@ public class Campaign extends Base{
 		return "";
 	}
 
-	public String geteDate() {
+	public String getEndDt() {
 		DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
 		if(getEndDate() != null ){
 			String formattedDate = formatter.format(getEndDate());
@@ -157,6 +171,7 @@ public class Campaign extends Base{
 		}
 		return "";
 	}
+	
 	
 	
 }

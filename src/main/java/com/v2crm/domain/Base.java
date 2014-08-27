@@ -28,7 +28,7 @@ public class Base implements Serializable { //TODO - Revisit all the attributes 
     protected Integer version;
     
     @Column(nullable = true)
-    private String description;
+    private String description = "";
     
     @Column(length = 55, nullable = true)
     protected String createdBy;

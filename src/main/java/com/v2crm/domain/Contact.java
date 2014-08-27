@@ -13,9 +13,14 @@ import javax.persistence.FetchType;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 @Entity
+@NamedQueries({
+@NamedQuery(name="Contact.findContactByName", query="SELECT contact FROM Contact contact WHERE contact.firstName = :firstName AND contact.lastName = :lastName"),
+})
 public class Contact extends Base{
 	@Transient
 	private static final long serialVersionUID = 1L;

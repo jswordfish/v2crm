@@ -6,12 +6,12 @@
 <%@ page import="com.v2crm.domain.*" %>
 <%
 
-Lead lead = (Lead) request.getAttribute("lead");
-if(lead == null){
-	lead = new Lead();
+Campaign campaign = (Campaign) request.getAttribute("campaign");
+if(campaign == null){
+	campaign = new Campaign();
 }
 
-session.setAttribute("lead", lead);
+session.setAttribute("campaign", campaign);
 %>
 
 <html>
@@ -19,8 +19,13 @@ session.setAttribute("lead", lead);
         <meta charset="UTF-8">
         <title>Jatin Sutaria | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-  <!-- Bootstrap CSS -->
+		 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+		
+   
     <link rel="stylesheet" href="css/bootstrap.css"/>
+    
 
     <!-- Include FontAwesome CSS if you want to use feedback icons provided by FontAwesome -->
     <link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -30,7 +35,7 @@ session.setAttribute("lead", lead);
     <link rel="stylesheet" href="css/bootstrapValidator.min.css"/>
 
     <!-- jQuery and Bootstrap JS -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+   
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
     <!-- BootstrapValidator JS -->
@@ -397,7 +402,12 @@ input:-ms-input-placeholder {
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                       <li>
+                        <li class="active">
+                            <a href="index.html">
+                                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="DisplayLeads">
                                 <i class="fa fa-th"></i> <span>Leads</span> <small class="badge pull-right bg-green">new</small>
                             </a>
@@ -417,14 +427,7 @@ input:-ms-input-placeholder {
                             </a>
                             
                         </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-laptop"></i>
-                                <span>Contacts</span>
-                                <small class="badge pull-right bg-green">new</small>
-                            </a>
-                            
-                        </li>
+                        
                         <li>
                             <a href="DisplayCampaigns">
                                 <i class="fa fa-edit"></i> <span>Campaigns</span>
@@ -485,7 +488,7 @@ input:-ms-input-placeholder {
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Lead Form
+                        Campaign Form
                         <small>Control panel</small>
                     </h1>
                     <ol class="breadcrumb">
@@ -498,72 +501,93 @@ input:-ms-input-placeholder {
  
 
   <div class="container">
-    <form id="leadForm" action="SaveLead">
+    <form id="campaignForm" action="SaveCampaign">
         <div class="row">
 			<div class="col-xs-2">
-                <label for="lead.firstName" class="control-label" style="font-weight: normal;" style="font-weight: normal;">First Name</label>
-				<input type="text" class="form-control" id="lead.firstName" name="firstName" placeholder="First Name" value="<%= lead.getFirstName() %>">
+                <label for="campaignName" class="control-label" style="font-weight: normal;" style="font-weight: normal;">Campaign Name</label>
+				<input type="text" class="form-control" id="campaignName" name="campaignName" placeholder="Campaign Name" value="<%= campaign.getCampaignName() %>">
             </div>
            
 			<div class="col-xs-2">
-                <label for="lead.lastName" class="control-label" style="font-weight: normal;" style="font-weight: normal;">Last Name</label>
-				<input type="text" class="form-control" id="lead.lastName" name="lastName" placeholder="Last Name" value="<%= lead.getLastName() %>">
+                <label for="ownedBy" class="control-label" style="font-weight: normal;" style="font-weight: normal;">OwnedBy</label>
+				<input type="text" class="form-control" id="ownedBy" name="ownedBy" placeholder="Owned By" value="<%= campaign.getOwnedBy() %>">
             </div>
+           
            <div class="col-xs-2">
-                <label for="lead.company" class="control-label" style="font-weight: normal;">Company</label>
-				<input type="text" class="form-control" placeholder="Company" id="company" name="company" value="<%= lead.getCompany() %>">
+                <label for="estimatedCost" class="control-label" style="font-weight: normal;">Estimated Cost</label>
+				<input type="text" class="form-control" id="estimatedCost" name="estimatedCost" placeholder="Estimated Cost" value="<%= campaign.getEstimatedCost() %>">
             </div>
            
         </div>
-        
+        <br>
         <div class="row">
-			<div class="col-xs-2">
-                <label for="lead.primaryEmail" class="control-label" style="font-weight: normal;">Primary Email</label>
-				<input type="email" class="form-control" id="lead.primaryEmail" name="primaryEmail" placeholder="Email" value="<%= lead.getPrimaryEmail() %>">
+			 <div class="col-xs-2">
+                <label for="startDate" class="control-label" style="font-weight: normal;">Campaign Start Date</label>
+				<input type="text" class="form-control" placeholder="Campaign Start Date" id = "startDate" name="startDate" value="<%= campaign.getStartDt() %>">
             </div>
            
-			<div class="col-xs-2">
-                <label for="lead.primaryPhone" class="control-label" style="font-weight: normal;">Phone</label>
-				<input type="text" class="form-control" id="lead.primaryPhone" name="primaryPhone" placeholder="Phone" value="<%= lead.getPrimaryPhone() %>">
+		<div class="col-xs-2">
+                <label for="endDate" class="control-label" style="font-weight: normal;">Campaign End Date</label>
+				<input type="text" class="form-control" placeholder="Campaign End Date" id = "endDate" name="endDate" value="<%= campaign.getEndDt() %>">
             </div>
-           <div class="col-xs-2">
-                <label for="lead.company" class="control-label" style="font-weight: normal;">Designation</label>
-				<input type="text" class="form-control" id="lead.designation" name="designation" placeholder="Designation" value="<%= lead.getDesignation() %>">
+           
+            <div class="col-xs-2">
+                <label for="actualCost" class="control-label" style="font-weight: normal;">Actual Cost</label>
+				<input type="text" class="form-control" id="actualCost" name="actualCost" placeholder="Actual Cost" value="<%= campaign.getActualCost() %>">
             </div>
            
         </div>
-        
+        <br>
         <div class="row">
 			<div class="col-xs-2">
-                <label for="lead.firstName" class="control-label" style="font-weight: normal;">Mobile</label>
-				<input type="text" class="form-control" id="lead.mobile" name="mobile" placeholder="Mobile" value="<%= lead.getMobile() %>">
+                <label for="expectedRevenue" class="control-label" style="font-weight: normal;">Expected Revenue</label>
+				<input type="text" class="form-control" id="expectedRevenue" name="expectedRevenue" placeholder="Actual Cost" value="<%= campaign.getExpectedRevenue() %>">
             </div>
            
 			<div class="col-xs-2">
-                <label for="lead.website" class="control-label" style="font-weight: normal;">Website</label>
-				<input type="url" class="form-control" placeholder="Website" name="website" value="<%= lead.getWebsite() %>">
-            </div>
-           <div class="col-xs-2">
-                <label for="lead.fax" class="control-label" style="font-weight: normal;">Fax</label>
-				<input type="text" class="form-control" placeholder="Fax" id = "lead.fax" name="fax" value="<%= lead.getFax() %>">
-            </div>
-           
-        </div>
-		
-        <div class="row">
-			<div class="col-xs-2">
-                <label for="lead.firstName" class="control-label" style="font-weight: normal;">~Number of Employers</label>
-				<input type="text" class="form-control" id="lead.noOfEmployers" name="noOfEmployers" placeholder="No.Employers" value="<%= lead.getNumOfEmployers() %>">
+                <label for="actualRevenue" class="control-label" style="font-weight: normal;">Actual Revenue</label>
+				<input type="text" class="form-control" placeholder="actualRevenue" name="actualRevenue" value="<%= campaign.getActualRevenue() %>">
             </div>
            
 			<div class="col-xs-2">
-                <label for="lead.industry" class="control-label" style="font-weight: normal;">Industry</label>
-				<select name='industry'>  <option value="none">Select</option>  
+                <label for="campaignType" class="control-label" style="font-weight: normal;">Select Campaign Type</label>
+				<select name='campaignType' class="form-control">  <option value="none">Select</option>  
 				<% 
-				Industry inds[] = Industry.values(); 
-				for(int i=0;i<inds.length;i++){
+				CampaignType cTypes[] = CampaignType.values(); 
+				for(int i=0;i<cTypes.length;i++){
 				%>
-				<option value="<%=inds[i].getMsg().trim()%>" <% if(lead.getIndustry().getMsg().trim().equals(inds[i].getMsg().trim())) {  %>selected<% } %>><%=inds[i].getMsg()%>
+				<option value="<%=cTypes[i].getMsg().trim()%>" <% if(campaign.getCampaignType().getMsg().trim().equals(cTypes[i].getMsg().trim())) {  %>selected<% } %>><%=cTypes[i].getMsg()%>
+				</option> <%
+ 				}
+     			%>
+				</select>
+            </div>
+           
+        </div>
+		<br>
+        <div class="row">
+			<div class="col-xs-2">
+                <label for="campaignStatus" class="control-label" style="font-weight: normal;">Select Campaign Status</label>
+				<select name='campaignStatus' class="form-control">  <option value="none">Select</option>  
+				<% 
+				CampaignStatus cStatuss[] = CampaignStatus.values(); 
+				for(int i=0;i<cStatuss.length;i++){
+				%>
+				<option value="<%=cStatuss[i].getMsg().trim()%>" <% if(campaign.getCampaignStatus().getMsg().trim().equals(cStatuss[i].getMsg().trim())) {  %>selected<% } %>><%=cStatuss[i].getMsg()%>
+				</option> <%
+ 				}
+     			%>
+				</select>
+            </div>
+           
+			<div class="col-xs-2">
+                <label for="campaignResponseType" class="control-label" style="font-weight: normal;">Select Response Type</label>
+				<select name='campaignResponseType' class="form-control">  <option value="none">Select</option>  
+				<% 
+				CampaignResponseType cRTypes[] = CampaignResponseType.values(); 
+				for(int i=0;i<cRTypes.length;i++){
+				%>
+				<option value="<%=cRTypes[i].getMsg().trim()%>" <% if(campaign.getCampaignResponseType().getMsg().trim().equals(cRTypes[i].getMsg().trim())) {  %>selected<% } %>><%=cRTypes[i].getMsg()%>
 				</option> <%
  				}
      			%>
@@ -571,118 +595,29 @@ input:-ms-input-placeholder {
             </div>
 			
 			<div class="col-xs-2">
-                <label for="leadSource" class="control-label" style="font-weight: normal;">Lead Source</label>
-				<select name='leadSource'>  <option value="none">Select</option>  
-				<% 
-				LeadSource sources[] = LeadSource.values(); 
-				for(int i=0;i<sources.length;i++){
-				%>
-				<option value="<%=sources[i].getMsg().trim()%>" <% if(lead.getLeadSource().getMsg().trim().equals(sources[i].getMsg().trim())) {  %>selected<% } %>><%=sources[i].getMsg()%>
-				</option> <%
- 				}
-     			%>
-				</select>
+                <label for="expectedResponseCount" class="control-label" style="font-weight: normal;">Expected Response Count</label>
+				<input type="text" class="form-control" id="expectedResponseCount" name="expectedResponseCount" placeholder="ExpectedResponseCount" value="<%= campaign.getExpectedResponseCount() %>">
             </div>
           
 	    </div>
+		<br>
         <div class="row">
-			<div class="col-xs-2">
-                <label for="lead.leadStatus" class="control-label" style="font-weight: normal;">Lead Status</label>
-				<select name='leadStatus'>  <option value="none">Select</option>  
-				<% 
-				LeadStatus leadStatuss[] = LeadStatus.values(); 
-				for(int i=0;i<leadStatuss.length;i++){
-				%>
-				<option value="<%=leadStatuss[i].getMsg().trim()%>" <% if(lead.getLeadStatus().getMsg().trim().equals(leadStatuss[i].getMsg().trim())) {  %>selected<% } %>><%=leadStatuss[i].getMsg()%>
-				</option> <%
- 				}
-     			%>
-				</select>
-            </div>
-           
-			<div class="col-xs-2">
-                <label for="lead.rating" class="control-label" style="font-weight: normal;">Lead Rating</label>
-				<select name='rating'>  <option value="none">Select</option>  
-				<% 
-				Rating ratings[] = Rating.values(); 
-				for(int i=0;i<ratings.length;i++){
-				%>
-				<option value="<%=ratings[i].getMsg().trim()%>" <% if(lead.getRating().getMsg().trim().equals(ratings[i].getMsg().trim())) {  %>selected<% } %>><%=ratings[i].getMsg()%>
-				</option> <%
- 				}
-     			%>
-				</select>
-            </div>
-           <div class="col-xs-2">
-               
-            </div>
-           
-        </div>
-		
-		<b><hr></b><br>
-		<h4>
-	<u><ul>Address<ul></u>
 			
-		</h4>
+           
+			<div class="col-xs-2">
+                <label for="actualResponseCount" class="control-label" style="font-weight: normal;">Actual Response Count</label>
+				<input type="text" class="form-control" id="actualResponseCount" name="actualResponseCount" placeholder="Actual Response Count" value="<%= campaign.getActualResponseCount() %>">
+            </div>
+            
+           <div class="col-xs-4">
+                <label for="description" class="control-label" style="font-weight: normal;">Description</label>
+				<input type="text" class="form-control" id="description" name="description" placeholder="description" value="<%= campaign.getDescription() %>">
+            </div>
+           
+        </div>
+     
+        <br>
 		
-		<div class="row">
-			<div class="col-xs-2">
-                <label for="city" class="control-label" style="font-weight: normal;">City</label>
-				<input type="text" class="form-control" id="lead.city" name="city" placeholder="City" value="<%= lead.getAddress().getCity() %>"	>
-            </div>
-           
-			<div class="col-xs-2">
-                <label for="street" class="control-label" style="font-weight: normal;">Street</label>
-				<input type="text" class="form-control" placeholder="Street" name="street" value="<%= lead.getAddress().getStreet() %>">
-            </div>
-           <div class="col-xs-2">
-                <label for="building" class="control-label" style="font-weight: normal;" style="font-weight: normal;">Building</label>
-				<input type="text" class="form-control" placeholder="Building" name="building" value="<%= lead.getAddress().getBldg() %>">
-            </div>
-           
-        </div>
-		<br>
-		<div class="row">
-			<div class="col-xs-2">
-                <label for="officeNumber" class="control-label" style="font-weight: normal;">Office Number</label>
-				<input type="text" class="form-control" id="officeNumber" name="officeNumber" placeholder="Off or Res No" value="<%= lead.getAddress().getOfficeNumber() %>">
-             </div>
-           
-			<div class="col-xs-2">
-                <label for="zip" class="control-label" style="font-weight: normal;">Zip</label>
-				<input type="text" class="form-control" placeholder="Zip or Pin" name="zip" value="<%= lead.getAddress().getPin() %>">
-            </div>
-           <div class="col-xs-2">
-                <label for="state" class="control-label" style="font-weight: normal;">State</label>
-				<select name='state'>  <option value="none">Select</option>  
-				<% 
-				State states[] = State.values(); 
-				for(int i=0;i<states.length;i++){
-				%>
-				<option value="<%=states[i].getMsg().trim()%>" <% if(lead.getAddress().getState().getMsg().trim().equals(states[i].getMsg().trim())) {  %>selected<% } %>><%=states[i].getMsg()%>
-				</option> <%
- 				}
-     			%>
-				</select>
-            </div>
-           
-        </div>
-		<br>
-		<div class="row">
-			<div class="col-xs-2">
-                <label for="country" class="control-label" style="font-weight: normal;">Country</label>
-				<input type="text" class="form-control" id="country" placeholder="Country" name="country" value="<%= lead.getAddress().getCountry() %>">
-            </div>
-           
-			<div class="col-xs-2">
-              
-            </div>
-           <div class="col-xs-2">
-              
-            </div>
-           
-        </div>
-		<br>
 		<div class="row">
 			<div class="col-xs-2">
                 <button type="submit" class="btn btn-primary">Save</button>
@@ -698,9 +633,11 @@ input:-ms-input-placeholder {
         </div>
     </form>
 </div>
+
+
 <script>
 		$(document).ready(function() {
-			$('#leadForm').bootstrapValidator({
+			$('#campaignForm').bootstrapValidator({
 				// To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
 				feedbackIcons: {
 					valid: 'glyphicon glyphicon-ok',
@@ -752,12 +689,23 @@ input:-ms-input-placeholder {
 			 
         </div><!-- ./wrapper -->
 
-        <!-- add new calendar event modal -->
-
-
+        <script type="text/javascript">
+            // When the document is ready
+            $(document).ready(function () {
+                
+             $( "#startDate" ).datepicker();
+             
+             $( "#endDate" ).datepicker();
+  
+				
+            
+            });
+			
+			
+        </script>
         
         <!-- jQuery UI 1.10.3 -->
-        <script src="js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
+       
         <!-- Bootstrap -->
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <!-- Morris.js charts -->

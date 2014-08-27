@@ -6,10 +6,15 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 
 @Entity
+@NamedQueries({
+@NamedQuery(name="Organization.findOrganizationByName", query="SELECT org FROM Organization org WHERE org.orgName = :orgName"),
+})
 public class Organization extends Base{
 
 	@Transient
