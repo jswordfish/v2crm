@@ -466,11 +466,11 @@
 	            
 				<div>
 				<display:table id="campaignsTable" decorator="com.v2crm.web.displaytag.decorators.DisplayTableDecorator" partialList="true"  size="20" name="data" pagesize="10"  requestURI="">
-				<display:column property="campaignName" title="First Name"/>
-				<display:column property="ownedBy" title="Last Name"/>
-				<display:column property="campaignType" title="Company"/>
-				<display:column property="campaignStatus" title="Industry"/>
-				<display:column property="campaignResponseType" title="Industry"/>
+				<display:column property="campaignName" title="Campaign Name"/>
+				<display:column property="ownedBy" title="Owned By"/>
+				<display:column property="campaignType" title="Campaign Type"/>
+				<display:column property="campaignStatus" title="Status"/>
+				<display:column property="campaignResponseType" title="Response Type"/>
 				
 				 <display:column property="editCampaignLink" title="Edit" />
 				 <display:column property="deleteCampaignLink" title="Delete" />

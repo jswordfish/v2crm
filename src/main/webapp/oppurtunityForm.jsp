@@ -500,7 +500,7 @@ input:-ms-input-placeholder {
  <!--<div class="bs-example"> -->
  
 
-  <div >
+  <div>
     <form id="oppurtunityForm" action="SaveOppurtunity">
         <div class="row">
 			<div class="col-xs-2">
@@ -509,7 +509,7 @@ input:-ms-input-placeholder {
             </div>
            
 			<div class="col-xs-2">
-                <label for="amount" class="control-label" style="font-weight: normal;" style="font-weight: normal;"><b>*~Amount</b></label>
+                <label for="amount" class="control-label" style="font-weight: normal;" style="font-weight: normal;"><b>*Amount</b></label>
 				<input type="text" class="form-control" id="amount" name="amount" placeholder="amount" value="<%= oppurtunity.getAmount() %>">
             </div>
            
@@ -598,8 +598,6 @@ input:-ms-input-placeholder {
 				<input type="text" class="form-control" id="campaign" name="campaign" placeholder="Search campaign" value="later">
             </div>
           
-		    </div>
-		   
 		    <div class="col-xs-2">
 	               
 	            </div>
@@ -612,7 +610,7 @@ input:-ms-input-placeholder {
 	     </div>
 	     <br>
         <hr>
-        <br>
+        
 	     <div class="row">
 				 <div class="col-xs-6">
 	                <label for="description" class="control-label" style="font-weight: normal;">Oppurtunity Description</label>
@@ -638,7 +636,7 @@ input:-ms-input-placeholder {
 </div>
 
 
-<script>
+		<script>
 		$(document).ready(function() {
 			$('#oppurtunityForm').bootstrapValidator({
 				// To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
@@ -659,13 +657,6 @@ input:-ms-input-placeholder {
 							}
 						}
 					},
-					expectedClosedDate: {
-						validators: {
-							notEmpty: {
-								message: '<font color="red">Required!</font>'
-							}
-						}
-					},
 					amount: {
 						validators: {
 							integer: {
@@ -674,6 +665,17 @@ input:-ms-input-placeholder {
 							stringLength: {
 								min: 3,
 								message: '<font color="red">Atleast in thousands please!</font>'
+							}
+						}
+					},
+					probability: {
+						validators: {
+							integer: {
+								message: '<font color="red">Not a number!</font>'
+							},
+							stringLength: {
+								max: 2,
+								message: '<font color="red">Should not be 100 or more!</font>'
 							}
 						}
 					},
@@ -686,7 +688,7 @@ input:-ms-input-placeholder {
 								message: '<font color="red">The email address is not a valid</font>'
 							}
 						}
-            },
+					}
 				}
 			});
 		});

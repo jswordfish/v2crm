@@ -92,6 +92,7 @@ public class CampaignAction extends ActionSupport implements ServletRequestAware
 		try {
 			campaignService = (CampaignService)SpringUtil.getSpringUtil().getService("campaignService");
 			Campaign campaign = (Campaign) httpServletRequest.getSession().getAttribute("campaign");
+			campaign.setOwnedBy(httpServletRequest.getParameter("ownedBy"));
 			campaign.setActualCost(Long.parseLong(httpServletRequest.getParameter("actualCost")));
 			campaign.setActualResponseCount(Integer.parseInt(httpServletRequest.getParameter("actualResponseCount")));
 			campaign.setActualRevenue(Long.parseLong(httpServletRequest.getParameter("actualRevenue")));
