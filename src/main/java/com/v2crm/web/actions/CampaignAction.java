@@ -112,7 +112,7 @@ public class CampaignAction extends ActionSupport implements ServletRequestAware
 			}
 			
 			campaign.setEstimatedCost(Long.parseLong(httpServletRequest.getParameter("estimatedCost")));
-			String cnt1  =httpServletRequest.getParameter("expectedResponseCost");
+			String cnt1  =httpServletRequest.getParameter("expectedResponseCount");
 			campaign.setExpectedResponseCount((int)Long.parseLong(cnt1));
 			String cnt2 = httpServletRequest.getParameter("expectedRevenue");
 			campaign.setExpectedRevenue(Long.parseLong(cnt2));

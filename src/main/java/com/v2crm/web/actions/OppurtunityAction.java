@@ -107,13 +107,13 @@ public class OppurtunityAction extends ActionSupport implements ServletRequestAw
 			
 			oppurtunity.setLeadSource(LeadSource.valueOf(httpServletRequest.getParameter("leadSource")));
 			oppurtunity.setOppurtunityName(httpServletRequest.getParameter("oppurtunityName"));
-			oppurtunity.setOppurtunityStrategy(OppurtunityStrategy.CanLeadToMore);
+			oppurtunity.setOppurtunityStrategy(OppurtunityStrategy.valueOf(httpServletRequest.getParameter("oppurtunityStrategy")));
 			
-			oppurtunity.setOppurtunityType(OppurtunityType.NewBusiness);
+			oppurtunity.setOppurtunityType(OppurtunityType.valueOf(httpServletRequest.getParameter("oppurtunityType")));
 			oppurtunity.setPrimaryEmail(httpServletRequest.getParameter("primaryEmail"));
 			oppurtunity.setProbability(Integer.parseInt(httpServletRequest.getParameter("probability")));
 			
-			oppurtunity.setSalesStage(SalesStage.Negotiation);
+			oppurtunity.setSalesStage(SalesStage.valueOf(httpServletRequest.getParameter("salesStage")));
 			oppurtunity.setOppurtunityName(httpServletRequest.getParameter("oppurtunityName"));
 			oppurtunity.setOppurtunityType(OppurtunityType.valueOf(httpServletRequest.getParameter("oppurtunityType")));
 		

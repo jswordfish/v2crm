@@ -44,9 +44,9 @@ public class Campaign extends Base{
 	@Enumerated(EnumType.STRING)
 	private CampaignResponseType campaignResponseType = CampaignResponseType.NotApplicable;
 	
-	private Integer expectedResponseCount;
+	private Integer expectedResponseCount = 0;
 	
-	private Integer actualResponseCount;
+	private Integer actualResponseCount = 0;
 
 	public String getOwnedBy() {
 		return ownedBy;

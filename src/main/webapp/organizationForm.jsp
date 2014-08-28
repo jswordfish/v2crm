@@ -498,7 +498,7 @@ input:-ms-input-placeholder {
     <form id="orgForm" action="SaveOrganization">
         <div class="row">
 			<div class="col-xs-2">
-                <label for="organization.orgName" class="control-label" style="font-weight: normal;" style="font-weight: normal;">Organization Name</label>
+                <label for="organization.orgName" class="control-label" style="font-weight: normal;" style="font-weight: normal;"><b>*Organization Name</b></label>
 				<input type="text" class="form-control" id="organization.firstName" name="orgName" placeholder="Org Name" value="<%= organization.getOrgName() %>">
             </div>
            
@@ -525,12 +525,12 @@ input:-ms-input-placeholder {
         
         <div class="row">
 			<div class="col-xs-2">
-                <label for="organization.primaryEmail" class="control-label" style="font-weight: normal;">Primary Email</label>
+                <label for="organization.primaryEmail" class="control-label" style="font-weight: normal;"><b>*Primary Email</b></label>
 				<input type="email" class="form-control" id="organization.primaryEmail" name="primaryEmail" placeholder="Email" value="<%= organization.getPrimaryEmail() %>">
             </div>
            
 			<div class="col-xs-2">
-                <label for="organization.primaryPhone" class="control-label" style="font-weight: normal;">Phone</label>
+                <label for="organization.primaryPhone" class="control-label" style="font-weight: normal;"><b>*Phone</b></label>
 				<input type="text" class="form-control" id="organization.primaryPhone" name="primaryPhone" placeholder="Phone" value="<%= organization.getPrimaryPhone() %>">
             </div>
             
@@ -721,25 +721,40 @@ input:-ms-input-placeholder {
 					orgName: {
 						validators: {
 							notEmpty: {
-								message: 'Required'
+								message: '<font color="red">Required!</font>'
 							},
 							stringLength: {
 								min: 2,
-								max: 30,
-								message: 'The Organization name must be more than 2 and less than 30 characters long'
+								message: '<font color="red">The Organization name must be more than 2 characters long</font>'
 							}
+						}
+					},
+					primaryPhone: {
+						validators: {
+							notEmpty: {
+								message: '<font color="red">Required!</font>'
+							},
+							
 						}
 					},
 					primaryEmail: {
 						validators: {
 							notEmpty: {
-								message: 'The email address is required and cannot be empty'
+								message: '<font color="red">The email address is required and cannot be empty</font>'
 							},
 							emailAddress: {
-								message: 'The email address is not a valid'
+								message: '<font color="red">The email address is not a valid</font>'
 							}
 						}
-            },
+					},
+					noOfEmployers: {
+						validators: {
+							integer: {
+								message: '<font color="red">Not a number!</font>'
+							}
+							
+						}
+					}
 				}
 			});
 		});

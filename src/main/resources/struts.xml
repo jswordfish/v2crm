@@ -98,7 +98,7 @@
 		
 		<action name="SaveCampaign" class="com.v2crm.web.actions.CampaignAction" 
                   method="save">
-		   <result name="save_success" type="redirect">DisplayContacts</result>
+		   <result name="save_success" type="redirect">DisplayCampaigns</result>
 		   <result name="save_failure">/campaignForm.jsp</result>
 		   
 		</action>

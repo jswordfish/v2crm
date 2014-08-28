@@ -15,13 +15,13 @@ import javax.persistence.OneToOne;
 @Entity
 public class Oppurtunity extends Base{
 
-private String oppurtunityName;
+private String oppurtunityName = "";
 
 @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
 @JoinColumn(name="organization_id",insertable=true, updatable=true)
 private Organization organization;
 
-private Long amount;
+private Long amount = 0l;
 
 @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
 @JoinColumn(name="contact_id",insertable=true, updatable=true)
@@ -45,9 +45,9 @@ private OppurtunityType oppurtunityType = OppurtunityType.NewBusiness;
 @Enumerated(EnumType.STRING)
 private OppurtunityStrategy oppurtunityStrategy = OppurtunityStrategy.CanLeadToMore;
 
-private Integer probability;
+private Integer probability = 0;
 
-private String primaryEmail;
+private String primaryEmail = "";
 
 @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
 @JoinColumn(name="campaign_id",insertable=true, updatable=true)

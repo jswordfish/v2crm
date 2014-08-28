@@ -500,16 +500,16 @@ input:-ms-input-placeholder {
  <!--<div class="bs-example"> -->
  
 
-  <div class="container">
-    <form id="orgForm" action="SaveOppurtunity">
+  <div >
+    <form id="oppurtunityForm" action="SaveOppurtunity">
         <div class="row">
 			<div class="col-xs-2">
-                <label for="oppurtunityName" class="control-label" style="font-weight: normal;" style="font-weight: normal;">Oppurtunity Name</label>
+                <label for="oppurtunityName" class="control-label" style="font-weight: normal;" style="font-weight: normal;"><b>*Oppurtunity Name</b></label>
 				<input type="text" class="form-control" id="oppurtunityName" name="oppurtunityName" placeholder="Oppurtunity Name" value="<%= oppurtunity.getOppurtunityName() %>">
             </div>
            
 			<div class="col-xs-2">
-                <label for="amount" class="control-label" style="font-weight: normal;" style="font-weight: normal;">~Amount</label>
+                <label for="amount" class="control-label" style="font-weight: normal;" style="font-weight: normal;"><b>*~Amount</b></label>
 				<input type="text" class="form-control" id="amount" name="amount" placeholder="amount" value="<%= oppurtunity.getAmount() %>">
             </div>
            
@@ -519,11 +519,11 @@ input:-ms-input-placeholder {
             </div>
            
         </div>
-        
+        <br>
         <div class="row">
 			 <div class="col-xs-2">
-                <label for="expectedClosedDate" class="control-label" style="font-weight: normal;">Expected Closure Date</label>
-				<input type="text" class="form-control" placeholder="ExpectedClosedDate" id = "expectedClosedDate" name="expectedClosedDate" value="<%= oppurtunity.getStartDt() %>">
+                <label for="expectedClosedDate" class="control-label" style="font-weight: normal;"><b>*Expected Closure Date</b></label>
+				<input type="text" class="form-control" placeholder="ExpectedClosedDate" id = "expectedClosedDate" name="expectedClosedDate" value="<%= oppurtunity.getExpClosureDate() %>">
             </div>
            
 		<div class="col-xs-2">
@@ -545,7 +545,7 @@ input:-ms-input-placeholder {
 				<select name='leadSource' class="form-control">  <option value="none">Select</option>  
 				<% 
 				LeadSource sources[] = LeadSource.values(); 
-				for(int i=0;i<sStages.length;i++){
+				for(int i=0;i<sources.length;i++){
 				%>
 				<option value="<%=sources[i].getMsg().trim()%>" <% if(oppurtunity.getLeadSource().getMsg().trim().equals(sources[i].getMsg().trim())) {  %>selected<% } %>><%=sources[i].getMsg()%>
 				</option> <%
@@ -555,7 +555,7 @@ input:-ms-input-placeholder {
             </div>
            
         </div>
-        
+        <br>
         <div class="row">
 			<div class="col-xs-2">
                 <label for="oppurtunityType" class="control-label" style="font-weight: normal;">Select Sales Stage</label>
@@ -586,52 +586,39 @@ input:-ms-input-placeholder {
             </div>
            
 			<div class="col-xs-2">
-                <label for="probability" class="control-label" style="font-weight: normal;">~Probability</label>
-				<input type="text" class="form-control" placeholder="probability" id = "probability" name="probability" value="<%= oppurtunity.getProbability() %>">
-            </div>
-           
-        </div>
-		
-        <div class="row">
-			<div class="col-xs-2">
-                <label for="primaryEmail" class="control-label" style="font-weight: normal;">Primary Email</label>
+                <label for="primaryEmail" class="control-label" style="font-weight: normal;"><b>*Primary Email</b></label>
 				<input type="text" class="form-control" placeholder="primaryEmail" id = "primaryEmail" name="primaryEmail" value="<%= oppurtunity.getPrimaryEmail() %>">
             </div>
            
-			<div class="col-xs-2">
-                <label for="campaignResponseType" class="control-label" style="font-weight: normal;">Select Campaign Response Type</label>
-				<select name='campaignResponseType' class="form-control">  <option value="none">Select</option>  
-				<% 
-				CampaignResponseType cRTypes[] = CampaignResponseType.values(); 
-				for(int i=0;i<cRTypes.length;i++){
-				%>
-				<option value="<%=cRTypes[i].getMsg().trim()%>" <% if(campaign.getCampaignResponseType().getMsg().trim().equals(cRTypes[i].getMsg().trim())) {  %>selected<% } %>><%=cRTypes[i].getMsg()%>
-				</option> <%
- 				}
-     			%>
-				</select>
-            </div>
-			
+        </div>
+		<br>
+        <div class="row">
 			<div class="col-xs-2">
                 <label for="campaign" class="control-label" style="font-weight: normal;">Campaign</label>
 				<input type="text" class="form-control" id="campaign" name="campaign" placeholder="Search campaign" value="later">
             </div>
           
+		    </div>
+		   
+		    <div class="col-xs-2">
+	               
+	            </div>
+	           
+				<div class="col-xs-2">
+	               
+	            </div>
+	           
+	           
+	     </div>
+	     <br>
+        <hr>
+        <br>
+	     <div class="row">
+				 <div class="col-xs-6">
+	                <label for="description" class="control-label" style="font-weight: normal;">Oppurtunity Description</label>
+					<input type="text" class="form-control" id="description" name="description" placeholder="description" value="<%= oppurtunity.getDescription() %>">
+	            </div>
 	    </div>
-	    
-	    <div class="row">
-			 <div class="col-xs-4">
-                <label for="description" class="control-label" style="font-weight: normal;">Description</label>
-				<input type="text" class="form-control" id="description" name="description" placeholder="description" value="<%= oppurtunity.getDescription() %>">
-            </div>
-           
-			
-           <div class="col-xs-2">
-              
-            </div>
-           
-        </div>
-	    
          <br>
 		
 		<div class="row">
@@ -653,7 +640,7 @@ input:-ms-input-placeholder {
 
 <script>
 		$(document).ready(function() {
-			$('#contactForm').bootstrapValidator({
+			$('#oppurtunityForm').bootstrapValidator({
 				// To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
 				feedbackIcons: {
 					valid: 'glyphicon glyphicon-ok',
@@ -661,39 +648,42 @@ input:-ms-input-placeholder {
 					validating: 'glyphicon glyphicon-refresh'
 				},
 				fields: {
-					firstName: {
+					oppurtunityName: {
 						validators: {
 							notEmpty: {
-								message: 'The gender is required'
+								message: '<font color="red">Required!</font>'
 							},
 							stringLength: {
-								min: 6,
-								max: 30,
-								message: 'The username must be more than 6 and less than 30 characters long'
+								min: 3,
+								message: '<font color="red">Atleast 3 characters long!</font>'
 							}
 						}
 					},
-					lastName: {
+					expectedClosedDate: {
 						validators: {
 							notEmpty: {
-								message: 'The gender is required'
+								message: '<font color="red">Required!</font>'
 							}
 						}
 					},
-					company: {
+					amount: {
 						validators: {
-							notEmpty: {
-								message: 'The gender is required'
+							integer: {
+								message: '<font color="red">Not a number!</font>'
+							},
+							stringLength: {
+								min: 3,
+								message: '<font color="red">Atleast in thousands please!</font>'
 							}
 						}
 					},
 					primaryEmail: {
 						validators: {
 							notEmpty: {
-								message: 'The email address is required and cannot be empty'
+								message: '<font color="red">The email address is required and cannot be empty</font>'
 							},
 							emailAddress: {
-								message: 'The email address is not a valid'
+								message: '<font color="red">The email address is not a valid</font>'
 							}
 						}
             },

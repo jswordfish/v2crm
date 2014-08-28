@@ -504,17 +504,17 @@ input:-ms-input-placeholder {
     <form id="campaignForm" action="SaveCampaign">
         <div class="row">
 			<div class="col-xs-2">
-                <label for="campaignName" class="control-label" style="font-weight: normal;" style="font-weight: normal;">Campaign Name</label>
+                <label for="campaignName" class="control-label" style="font-weight: normal;" style="font-weight: normal;"><b>*Campaign Name</b></label>
 				<input type="text" class="form-control" id="campaignName" name="campaignName" placeholder="Campaign Name" value="<%= campaign.getCampaignName() %>">
             </div>
            
 			<div class="col-xs-2">
-                <label for="ownedBy" class="control-label" style="font-weight: normal;" style="font-weight: normal;">OwnedBy</label>
+                <label for="ownedBy" class="control-label" style="font-weight: normal;" style="font-weight: normal;"><b>*OwnedBy</b></label>
 				<input type="text" class="form-control" id="ownedBy" name="ownedBy" placeholder="Owned By" value="<%= campaign.getOwnedBy() %>">
             </div>
            
            <div class="col-xs-2">
-                <label for="estimatedCost" class="control-label" style="font-weight: normal;">Estimated Cost</label>
+                <label for="estimatedCost" class="control-label" style="font-weight: normal;"><b>*Estimated Cost</b></label>
 				<input type="text" class="form-control" id="estimatedCost" name="estimatedCost" placeholder="Estimated Cost" value="<%= campaign.getEstimatedCost() %>">
             </div>
            
@@ -522,7 +522,7 @@ input:-ms-input-placeholder {
         <br>
         <div class="row">
 			 <div class="col-xs-2">
-                <label for="startDate" class="control-label" style="font-weight: normal;">Campaign Start Date</label>
+                <label for="startDate" class="control-label" style="font-weight: normal;"><b>*Campaign Start Date</b></label>
 				<input type="text" class="form-control" placeholder="Campaign Start Date" id = "startDate" name="startDate" value="<%= campaign.getStartDt() %>">
             </div>
            
@@ -540,7 +540,7 @@ input:-ms-input-placeholder {
         <br>
         <div class="row">
 			<div class="col-xs-2">
-                <label for="expectedRevenue" class="control-label" style="font-weight: normal;">Expected Revenue</label>
+                <label for="expectedRevenue" class="control-label" style="font-weight: normal;"><b>*Expected Revenue</b></label>
 				<input type="text" class="form-control" id="expectedRevenue" name="expectedRevenue" placeholder="Actual Cost" value="<%= campaign.getExpectedRevenue() %>">
             </div>
            
@@ -610,10 +610,21 @@ input:-ms-input-placeholder {
             </div>
             
            <div class="col-xs-4">
-                <label for="description" class="control-label" style="font-weight: normal;">Description</label>
-				<input type="text" class="form-control" id="description" name="description" placeholder="description" value="<%= campaign.getDescription() %>">
+              
+            </div>
+           <div class="col-xs-2">
+              
             </div>
            
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="row">
+        <div class="col-xs-6">
+                <label for="description" class="control-label" style="font-weight: normal;">Campaign Description</label>
+				<input type="text" class="form-control" id="description" name="description" placeholder="description" value="<%= campaign.getDescription() %>">
+            </div>
         </div>
      
         <br>
@@ -645,42 +656,75 @@ input:-ms-input-placeholder {
 					validating: 'glyphicon glyphicon-refresh'
 				},
 				fields: {
-					firstName: {
+					campaignName: {
 						validators: {
 							notEmpty: {
-								message: 'The gender is required'
+								message: '<font color="red">Required!</font>'
 							},
 							stringLength: {
-								min: 6,
-								max: 30,
-								message: 'The username must be more than 6 and less than 30 characters long'
+								min: 2,
+								message: '<font color="red">The Organization name must be more than 2 characters long</font>'
 							}
 						}
 					},
-					lastName: {
+					ownedBy: {
 						validators: {
 							notEmpty: {
-								message: 'The gender is required'
-							}
-						}
-					},
-					company: {
-						validators: {
-							notEmpty: {
-								message: 'The gender is required'
-							}
-						}
-					},
-					primaryEmail: {
-						validators: {
-							notEmpty: {
-								message: 'The email address is required and cannot be empty'
+								message: '<font color="red">Required!</font>'
 							},
-							emailAddress: {
-								message: 'The email address is not a valid'
+							stringLength: {
+								min: 2,
+								message: '<font color="red">Atleast 2 digits long</font>'
+							}
+							
+						}
+					},
+					estimatedCost: {
+						validators: {
+							integer: {
+								message: '<font color="red">Not a Number!</font>'
+							},
+							stringLength: {
+								min: 2,
+								message: '<font color="red">Atleast 2 digits long</font>'
 							}
 						}
-            },
+					},
+					expectedRevenue: {
+						validators: {
+							integer: {
+								message: '<font color="red">Not a Number!</font>'
+							},
+							stringLength: {
+								min: 2,
+								message: '<font color="red">Atleast 2 digits long</font>'
+							}
+						}
+					},
+					actualCost: {
+					validators: {
+							integer: {
+								message: '<font color="red">Not a Number!</font>'
+							}
+							
+						}
+					},
+					actualRevenue: {
+					validators: {
+							integer: {
+								message: '<font color="red">Not a Number!</font>'
+							}
+							
+						}
+					},
+					expectedResponseCount: {
+					validators: {
+							integer: {
+								message: '<font color="red">Not a Number!</font>'
+							}
+							
+						}
+					}
 				}
 			});
 		});

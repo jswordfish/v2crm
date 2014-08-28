@@ -501,16 +501,16 @@ input:-ms-input-placeholder {
     <form id="leadForm" action="SaveLead">
         <div class="row">
 			<div class="col-xs-2">
-                <label for="lead.firstName" class="control-label" style="font-weight: normal;" style="font-weight: normal;">First Name</label>
+                <label for="lead.firstName" class="control-label" style="font-weight: normal;" style="font-weight: normal;"><b>*First Name<b></label>
 				<input type="text" class="form-control" id="lead.firstName" name="firstName" placeholder="First Name" value="<%= lead.getFirstName() %>">
             </div>
            
 			<div class="col-xs-2">
-                <label for="lead.lastName" class="control-label" style="font-weight: normal;" style="font-weight: normal;">Last Name</label>
+                <label for="lead.lastName" class="control-label" style="font-weight: normal;" style="font-weight: normal;"><b>*Last Name</b></label>
 				<input type="text" class="form-control" id="lead.lastName" name="lastName" placeholder="Last Name" value="<%= lead.getLastName() %>">
             </div>
            <div class="col-xs-2">
-                <label for="lead.company" class="control-label" style="font-weight: normal;">Company</label>
+                <label for="lead.company" class="control-label" style="font-weight: normal;"><b>*Company<b></label>
 				<input type="text" class="form-control" placeholder="Company" id="company" name="company" value="<%= lead.getCompany() %>">
             </div>
            
@@ -518,12 +518,12 @@ input:-ms-input-placeholder {
         
         <div class="row">
 			<div class="col-xs-2">
-                <label for="lead.primaryEmail" class="control-label" style="font-weight: normal;">Primary Email</label>
+                <label for="lead.primaryEmail" class="control-label" style="font-weight: normal;"><b>*Primary Email</b></label>
 				<input type="email" class="form-control" id="lead.primaryEmail" name="primaryEmail" placeholder="Email" value="<%= lead.getPrimaryEmail() %>">
             </div>
            
 			<div class="col-xs-2">
-                <label for="lead.primaryPhone" class="control-label" style="font-weight: normal;">Phone</label>
+                <label for="lead.primaryPhone" class="control-label" style="font-weight: normal;"><b>*Phone</b></label>
 				<input type="text" class="form-control" id="lead.primaryPhone" name="primaryPhone" placeholder="Phone" value="<%= lead.getPrimaryPhone() %>">
             </div>
            <div class="col-xs-2">
@@ -711,39 +711,53 @@ input:-ms-input-placeholder {
 					firstName: {
 						validators: {
 							notEmpty: {
-								message: 'The gender is required'
+								message: '<font color="red">Required!</font>'
 							},
 							stringLength: {
-								min: 6,
-								max: 30,
-								message: 'The username must be more than 6 and less than 30 characters long'
+								min: 2,
+								message: '<font color="red">The username must be more than 2 characters</font>'
 							}
 						}
 					},
 					lastName: {
 						validators: {
 							notEmpty: {
-								message: 'The gender is required'
+								message: '<font color="red">Required!</font>'
 							}
 						}
 					},
 					company: {
 						validators: {
 							notEmpty: {
-								message: 'The gender is required'
+								message: '<font color="red">Required!</font>'
+							}
+						}
+					},
+					primaryPhone: {
+						validators: {
+							notEmpty: {
+								message: '<font color="red">Required!</font>'
 							}
 						}
 					},
 					primaryEmail: {
 						validators: {
 							notEmpty: {
-								message: 'The email address is required and cannot be empty'
+								message: '<font color="red">The email address is required and cannot be empty</font>'
 							},
 							emailAddress: {
-								message: 'The email address is not a valid'
+								message: '<font color="red">The email address is not a valid</font>'
 							}
 						}
-            },
+					},
+					noOfEmployers: {
+						validators: {
+							integer: {
+								message: '<font color="red">Not a number!</font>'
+							}
+							
+						}
+					},
 				}
 			});
 		});
