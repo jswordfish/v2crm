@@ -25,7 +25,7 @@
  
 
 	
-	<bean id="dataSource" class = "com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+	<bean id="dataSourceC3P0" class = "com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
         <property name="driverClass" value="com.mysql.jdbc.Driver" />
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/v2crm" />
         <property name="user" value="root" />
@@ -50,6 +50,21 @@
 		<property name="preferredTestQuery" value="SELECT 1" />
 	    <property name="testConnectionOnCheckin" value="true" />
  </bean>
+ 
+ <bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
+        <property name="driverClass" value="com.mysql.jdbc.Driver" />
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/v2crm" />
+        <property name="username" value="root"/>
+        <property name="password" value=""/>
+        <property name="idleConnectionTestPeriod" value="60"/>
+        <property name="idleMaxAge" value="240"/>
+        <property name="maxConnectionsPerPartition" value="3"/>
+        <property name="minConnectionsPerPartition" value="1"/>
+        <property name="partitionCount" value="1"/>
+        <property name="acquireIncrement" value="5"/>
+        <property name="statementsCacheSize" value="100"/>
+        <property name="releaseHelperThreads" value="3"/>
+    </bean>
 	
 	<bean id="entityManagerFactoryNonJTA"
        class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">

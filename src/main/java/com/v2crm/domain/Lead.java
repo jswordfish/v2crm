@@ -1,27 +1,36 @@
 package com.v2crm.domain;
 
 import javax.persistence.CascadeType;
-import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Transient;
+
+import org.hibernate.search.annotations.Analyze;
+import org.hibernate.search.annotations.Field;
+import org.hibernate.search.annotations.FieldBridge;
+import org.hibernate.search.annotations.Indexed;
+import org.hibernate.search.annotations.Store;
+import org.hibernate.search.bridge.builtin.EnumBridge;
 @Entity
+@Indexed
 public class Lead extends Base{
 	@Transient
 	private static final long serialVersionUID = 1L;
 
+	@Field(index=org.hibernate.search.annotations.Index.YES, analyze=Analyze.YES, store=Store.NO)
 	String firstName = "";
     
+	@Field(index=org.hibernate.search.annotations.Index.YES, analyze=Analyze.YES, store=Store.NO)
     String lastName = "";
     
+	
     String company = "";
     
+    @Field(index=org.hibernate.search.annotations.Index.YES, analyze=Analyze.YES, store=Store.NO)
     String primaryEmail = "";
     
     String primaryPhone = "";
@@ -38,16 +47,19 @@ public class Lead extends Base{
 
     
   
-
+    @Field(bridge=@FieldBridge(impl=EnumBridge.class))
     @Enumerated(EnumType.STRING)
     Industry industry = Industry.NotSpecified;
     
+    @Field(bridge=@FieldBridge(impl=EnumBridge.class))
     @Enumerated(EnumType.STRING)
     LeadSource leadSource = LeadSource.ColdCall;
     
+    @Field(bridge=@FieldBridge(impl=EnumBridge.class))
     @Enumerated(EnumType.STRING)
     LeadStatus leadStatus = LeadStatus.NotContacted;
     
+    @Field(bridge=@FieldBridge(impl=EnumBridge.class))
     @Enumerated(EnumType.STRING)
     Rating rating = Rating.Warm;
 	

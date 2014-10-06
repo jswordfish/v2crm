@@ -10,39 +10,25 @@
  
  
  
- <bean id="pdfboxService" class="com.pdftransformation.services.PDFBoxService" />
+ <bean id="setUpService" class="com.v2crm.webservices.SetUpService" />
  
- <bean id="pdfeditorService" class="com.pdftransformation.services.PDFEditorServices" />
+
  
  
  <bean id="jsonProvider" class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
  </bean> 
  
- <bean id="dispatchProvider" class="org.apache.cxf.jaxrs.provider.RequestDispatcherProvider">
-      <property name="classResources">
-         <map>
-            <entry key="com.pdftransformation.domain.output.Outputs" value="/pdfOutput.jsp"/>
-            <entry key="com.pdftransformation.domain.output.PageOutputs" value="/pdfTemplateEditor.jsp"/>
-         </map>
-      </property>
-      <property name="beanNames">
-          <map>
-             <entry key="com.pdftransformation.domain.output.Outputs" value="outputs"/>
-             <entry key="com.pdftransformation.domain.output.PageOutputs" value="pageOutputs"/>
-          </map>
-      </property>
- </bean>
- 
- <jaxrs:server id="userRestfulWebService" address="/rest/">
+
+ <jaxrs:server id="crmRestfulWebService" address="/rest/">
   
   <jaxrs:serviceBeans>
-    <ref bean="pdfeditorService" />
-    <ref bean="pdfboxService" />
+    <ref bean="setUpService" />
+    
   </jaxrs:serviceBeans>
   
 	<jaxrs:providers>
             <ref bean="jsonProvider"/>
-            <ref bean="dispatchProvider"/>
+           
     </jaxrs:providers>
     
    

@@ -1,0 +1,670 @@
+2014-10-06 18:39:42 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appContext.xml]
+2014-10-06 18:39:43 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@279cb0f1: startup date [Mon Oct 06 18:39:43 IST 2014]; root of context hierarchy
+2014-10-06 18:39:43 WARN  BoneCPConfig:356 - Please use setIdleConnectionTestPeriodInMinutes in place of setIdleConnectionTestPeriod. This method has been deprecated.
+2014-10-06 18:39:43 WARN  BoneCPConfig:455 - Please use setIdleMaxAgeInMinutes in place of setIdleMaxAge. This method has been deprecated.
+2014-10-06 18:39:43 WARN  BoneCPConfig:618 - releaseHelperThreads has been deprecated -- it tends to slow down your application more.
+2014-10-06 18:39:44 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-10-06 18:39:44 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2014-10-06 18:39:44 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-10-06 18:39:44 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2014-10-06 18:39:44 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-10-06 18:39:44 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2014-10-06 18:39:44 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2014-10-06 18:39:45 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-10-06 18:39:45 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-10-06 18:39:45 INFO  Version:43 - HSEARCH000034: Hibernate Search 4.5.1.Final
+2014-10-06 18:39:46 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-10-06 18:39:46 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-10-06 18:39:46 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Address
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Campaign
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Contact
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature_UserTypes
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Lead
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Oppurtunity
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Organization
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: User
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: UserType
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Address
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Campaign
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Contact
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature_UserTypes
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Lead
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Oppurtunity
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Organization
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: User
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: UserType
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Address
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Campaign
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Contact
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature_UserTypes
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Lead
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Oppurtunity
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Organization
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: User
+2014-10-06 18:39:46 INFO  DatabaseMetaData:147 - HHH000262: Table not found: UserType
+2014-10-06 18:39:49 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2014-10-06 18:39:49 WARN  ConfigContext:257 - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+2014-10-06 18:39:50 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@2184e84b]; rollback [true]
+2014-10-06 18:39:50 WARN  SqlExceptionHelper:144 - SQL Error: 1062, SQLState: 23000
+2014-10-06 18:39:50 ERROR SqlExceptionHelper:146 - Duplicate entry 'Admin' for key 2
+2014-10-06 18:39:50 INFO  TransactionalTestExecutionListener:296 - Rolled back transaction after test execution for test context [DefaultTestContext@572a3dd4 testClass = UserServiceTest, testInstance = com.v2.services.test.UserServiceTest@16415601, testMethod = testUserTypeCreation@UserServiceTest, testException = com.v2crm.exceptions.CRMException: com.v2crm.domain.UserType - , mergedContextConfiguration = [MergedContextConfiguration@1b756711 testClass = UserServiceTest, locations = '{classpath:appContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2014-10-06 18:39:50 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@279cb0f1: startup date [Mon Oct 06 18:39:43 IST 2014]; root of context hierarchy
+2014-10-06 18:39:50 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-10-06 18:39:50 INFO  BoneCP:159 - Shutting down connection pool...
+2014-10-06 18:39:50 INFO  BoneCP:188 - Connection pool has been shutdown.
+2014-10-06 18:59:02 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appCtx1.xml]
+2014-10-06 18:59:02 ERROR TestContextManager:329 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@496833a4] to prepare test instance [com.v2.services.test.UserServiceTest@581679a2]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 49 in XML document from class path resource [appCtx1.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 49; columnNumber: 57; The prefix "context" for element "context:component-scan" is not bound.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:398)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:335)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:251)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadBeanDefinitions(AbstractGenericContextLoader.java:235)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:118)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 49; columnNumber: 57; The prefix "context" for element "context:component-scan" is not bound.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:286)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2768)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:116)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:511)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:846)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:775)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:123)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:242)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:345)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:428)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	... 38 more
+2014-10-06 19:00:11 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appCtx1.xml]
+2014-10-06 19:00:11 ERROR TestContextManager:329 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2b8ba7dc] to prepare test instance [com.v2.services.test.UserServiceTest@5db972d9]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 11 in XML document from class path resource [appCtx1.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 11; columnNumber: 58; The prefix "context" for element "context:component-scan" is not bound.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:398)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:335)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:251)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadBeanDefinitions(AbstractGenericContextLoader.java:235)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:118)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 11; columnNumber: 58; The prefix "context" for element "context:component-scan" is not bound.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:286)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2768)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:116)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:511)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:846)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:775)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:123)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:242)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:345)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:428)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	... 38 more
+2014-10-06 19:02:42 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appCtx1.xml]
+2014-10-06 19:02:42 ERROR TestContextManager:329 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@691a0e79] to prepare test instance [com.v2.services.test.UserServiceTest@2dac5fd7]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 10 in XML document from class path resource [appCtx1.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 11; Attribute name "http:" associated with an element type "beans" must be followed by the ' = ' character.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:398)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:335)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:251)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadBeanDefinitions(AbstractGenericContextLoader.java:235)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:118)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 11; Attribute name "http:" associated with an element type "beans" must be followed by the ' = ' character.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1388)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanAttribute(XMLNSDocumentScannerImpl.java:415)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:253)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3116)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:880)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:116)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:511)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:846)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:775)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:123)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:242)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:345)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:428)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	... 38 more
+2014-10-06 19:03:39 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appCtx1.xml]
+2014-10-06 19:03:39 ERROR TestContextManager:329 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5db972d9] to prepare test instance [com.v2.services.test.UserServiceTest@3a2334a1]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 14 in XML document from class path resource [appCtx1.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 14; columnNumber: 58; The prefix "context" for element "context:component-scan" is not bound.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:398)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:335)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:251)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadBeanDefinitions(AbstractGenericContextLoader.java:235)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:118)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 14; columnNumber: 58; The prefix "context" for element "context:component-scan" is not bound.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:286)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2768)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:116)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:511)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:846)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:775)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:123)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:242)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:345)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:428)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	... 38 more
+2014-10-06 19:04:56 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appCtx1.xml]
+2014-10-06 19:04:56 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@54e94480: startup date [Mon Oct 06 19:04:56 IST 2014]; root of context hierarchy
+2014-10-06 19:04:57 WARN  BoneCPConfig:356 - Please use setIdleConnectionTestPeriodInMinutes in place of setIdleConnectionTestPeriod. This method has been deprecated.
+2014-10-06 19:04:57 WARN  BoneCPConfig:455 - Please use setIdleMaxAgeInMinutes in place of setIdleMaxAge. This method has been deprecated.
+2014-10-06 19:04:57 WARN  BoneCPConfig:618 - releaseHelperThreads has been deprecated -- it tends to slow down your application more.
+2014-10-06 19:04:57 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-10-06 19:04:57 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2014-10-06 19:04:57 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-10-06 19:04:57 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2014-10-06 19:04:57 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-10-06 19:04:57 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2014-10-06 19:04:57 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2014-10-06 19:04:58 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-10-06 19:04:58 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-10-06 19:04:59 INFO  Version:43 - HSEARCH000034: Hibernate Search 4.5.1.Final
+2014-10-06 19:04:59 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-10-06 19:04:59 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-10-06 19:04:59 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Address
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Campaign
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Contact
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature_UserTypes
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Lead
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Oppurtunity
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Organization
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: User
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: UserType
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Address
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Campaign
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Contact
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature_UserTypes
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Lead
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Oppurtunity
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Organization
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: User
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: UserType
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Address
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Campaign
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Contact
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature_UserTypes
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Lead
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Oppurtunity
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Organization
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: User
+2014-10-06 19:04:59 INFO  DatabaseMetaData:147 - HHH000262: Table not found: UserType
+2014-10-06 19:05:02 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2014-10-06 19:05:02 WARN  ConfigContext:257 - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+2014-10-06 19:05:03 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@68a1a432]; rollback [true]
+2014-10-06 19:05:03 WARN  SqlExceptionHelper:144 - SQL Error: 1062, SQLState: 23000
+2014-10-06 19:05:03 ERROR SqlExceptionHelper:146 - Duplicate entry 'Admin' for key 2
+2014-10-06 19:05:03 INFO  TransactionalTestExecutionListener:296 - Rolled back transaction after test execution for test context [DefaultTestContext@72a60df8 testClass = UserServiceTest, testInstance = com.v2.services.test.UserServiceTest@73df4f95, testMethod = testUserTypeCreation@UserServiceTest, testException = com.v2crm.exceptions.CRMException: com.v2crm.domain.UserType - , mergedContextConfiguration = [MergedContextConfiguration@49e1faa1 testClass = UserServiceTest, locations = '{classpath:appCtx1.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2014-10-06 19:05:03 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@54e94480: startup date [Mon Oct 06 19:04:56 IST 2014]; root of context hierarchy
+2014-10-06 19:05:03 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-10-06 19:05:03 INFO  BoneCP:159 - Shutting down connection pool...
+2014-10-06 19:05:03 INFO  BoneCP:188 - Connection pool has been shutdown.
+2014-10-06 19:14:47 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appCtx1.xml]
+2014-10-06 19:14:47 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@54e94480: startup date [Mon Oct 06 19:14:47 IST 2014]; root of context hierarchy
+2014-10-06 19:14:48 WARN  BoneCPConfig:356 - Please use setIdleConnectionTestPeriodInMinutes in place of setIdleConnectionTestPeriod. This method has been deprecated.
+2014-10-06 19:14:48 WARN  BoneCPConfig:455 - Please use setIdleMaxAgeInMinutes in place of setIdleMaxAge. This method has been deprecated.
+2014-10-06 19:14:48 WARN  BoneCPConfig:618 - releaseHelperThreads has been deprecated -- it tends to slow down your application more.
+2014-10-06 19:14:48 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-10-06 19:14:48 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2014-10-06 19:14:48 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-10-06 19:14:48 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2014-10-06 19:14:48 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-10-06 19:14:48 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2014-10-06 19:14:48 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2014-10-06 19:14:49 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-10-06 19:14:49 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-10-06 19:14:49 INFO  Version:43 - HSEARCH000034: Hibernate Search 4.5.1.Final
+2014-10-06 19:14:50 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-10-06 19:14:50 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-10-06 19:14:50 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Address
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Campaign
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Contact
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature_UserTypes
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Lead
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Oppurtunity
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Organization
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: User
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: UserType
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Address
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Campaign
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Contact
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature_UserTypes
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Lead
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Oppurtunity
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Organization
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: User
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: UserType
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Address
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Campaign
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Contact
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature_UserTypes
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Lead
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Oppurtunity
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Organization
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: User
+2014-10-06 19:14:50 INFO  DatabaseMetaData:147 - HHH000262: Table not found: UserType
+2014-10-06 19:14:56 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2014-10-06 19:14:56 WARN  ConfigContext:257 - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+2014-10-06 19:14:57 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@1c953808]; rollback [true]
+2014-10-06 19:14:57 WARN  SqlExceptionHelper:144 - SQL Error: 1062, SQLState: 23000
+2014-10-06 19:14:57 ERROR SqlExceptionHelper:146 - Duplicate entry 'Admin' for key 2
+2014-10-06 19:14:57 INFO  TransactionalTestExecutionListener:296 - Rolled back transaction after test execution for test context [DefaultTestContext@3f163e7e testClass = UserServiceTest, testInstance = com.v2.services.test.UserServiceTest@4d60e28d, testMethod = testUserTypeCreation@UserServiceTest, testException = com.v2crm.exceptions.CRMException: com.v2crm.domain.UserType - , mergedContextConfiguration = [MergedContextConfiguration@13b9beab testClass = UserServiceTest, locations = '{classpath:appCtx1.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2014-10-06 19:14:57 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@54e94480: startup date [Mon Oct 06 19:14:47 IST 2014]; root of context hierarchy
+2014-10-06 19:14:57 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-10-06 19:14:57 INFO  BoneCP:159 - Shutting down connection pool...
+2014-10-06 19:14:57 INFO  BoneCP:188 - Connection pool has been shutdown.
+2014-10-06 19:56:19 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appCtx1.xml]
+2014-10-06 19:56:20 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@1749c228: startup date [Mon Oct 06 19:56:20 IST 2014]; root of context hierarchy
+2014-10-06 19:56:20 WARN  BoneCPConfig:356 - Please use setIdleConnectionTestPeriodInMinutes in place of setIdleConnectionTestPeriod. This method has been deprecated.
+2014-10-06 19:56:20 WARN  BoneCPConfig:455 - Please use setIdleMaxAgeInMinutes in place of setIdleMaxAge. This method has been deprecated.
+2014-10-06 19:56:20 WARN  BoneCPConfig:618 - releaseHelperThreads has been deprecated -- it tends to slow down your application more.
+2014-10-06 19:56:20 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-10-06 19:56:20 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2014-10-06 19:56:20 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-10-06 19:56:20 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2014-10-06 19:56:21 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-10-06 19:56:21 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2014-10-06 19:56:21 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2014-10-06 19:56:21 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-10-06 19:56:22 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-10-06 19:56:22 INFO  Version:43 - HSEARCH000034: Hibernate Search 4.5.1.Final
+2014-10-06 19:56:22 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-10-06 19:56:22 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-10-06 19:56:22 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Address
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Campaign
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Contact
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature_UserTypes
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Lead
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Oppurtunity
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Organization
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: User
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: UserType
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Address
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Campaign
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Contact
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature_UserTypes
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Lead
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Oppurtunity
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Organization
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: User
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: UserType
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Address
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Campaign
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Contact
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Feature_UserTypes
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Lead
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Oppurtunity
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: Organization
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: User
+2014-10-06 19:56:22 INFO  DatabaseMetaData:147 - HHH000262: Table not found: UserType
+2014-10-06 19:56:27 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2014-10-06 19:56:27 WARN  ConfigContext:257 - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+2014-10-06 19:56:28 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@575c64f6]; rollback [false]
+2014-10-06 19:56:28 WARN  SqlExceptionHelper:144 - SQL Error: 1062, SQLState: 23000
+2014-10-06 19:56:28 ERROR SqlExceptionHelper:146 - Duplicate entry 'Admin' for key 2
+2014-10-06 19:56:28 WARN  TestContextManager:414 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@3a335d31] to process 'after' execution for test: method [public void com.v2.services.test.UserServiceTest.testSetUpInitData()], instance [com.v2.services.test.UserServiceTest@22b59d1], exception [com.v2crm.exceptions.CRMException: com.v2crm.domain.UserType - ]
+org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Transaction marked as rollbackOnly
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:524)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:726)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.endTransaction(TransactionalTestExecutionListener.java:595)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.endTransaction(TransactionalTestExecutionListener.java:294)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.afterTestMethod(TransactionalTestExecutionListener.java:189)
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:411)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:91)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: javax.persistence.RollbackException: Transaction marked as rollbackOnly
+	at org.hibernate.jpa.internal.TransactionImpl.commit(TransactionImpl.java:74)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:515)
+	... 25 more
+2014-10-06 19:56:28 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@1749c228: startup date [Mon Oct 06 19:56:20 IST 2014]; root of context hierarchy
+2014-10-06 19:56:28 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-10-06 19:56:28 INFO  BoneCP:159 - Shutting down connection pool...
+2014-10-06 19:56:28 INFO  BoneCP:188 - Connection pool has been shutdown.
+2014-10-06 19:57:17 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appCtx1.xml]
+2014-10-06 19:57:18 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@1e905b0d: startup date [Mon Oct 06 19:57:18 IST 2014]; root of context hierarchy
+2014-10-06 19:57:18 WARN  BoneCPConfig:356 - Please use setIdleConnectionTestPeriodInMinutes in place of setIdleConnectionTestPeriod. This method has been deprecated.
+2014-10-06 19:57:18 WARN  BoneCPConfig:455 - Please use setIdleMaxAgeInMinutes in place of setIdleMaxAge. This method has been deprecated.
+2014-10-06 19:57:18 WARN  BoneCPConfig:618 - releaseHelperThreads has been deprecated -- it tends to slow down your application more.
+2014-10-06 19:57:18 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-10-06 19:57:18 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2014-10-06 19:57:18 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-10-06 19:57:19 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2014-10-06 19:57:19 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-10-06 19:57:19 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2014-10-06 19:57:19 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2014-10-06 19:57:19 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-10-06 19:57:20 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-10-06 19:57:20 INFO  Version:43 - HSEARCH000034: Hibernate Search 4.5.1.Final
+2014-10-06 19:57:21 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-10-06 19:57:21 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-10-06 19:57:21 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-10-06 19:57:21 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.address
+2014-10-06 19:57:21 INFO  TableMetadata:67 - HHH000037: Columns: [deprecated, deprecateddate, street, officenumber, state, lastmodifiedby, createdby, createddate, country, lastmodifieddate, version, city, id, pin, description, deprecatedby, bldg]
+2014-10-06 19:57:21 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2014-10-06 19:57:21 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2014-10-06 19:57:21 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.campaign
+2014-10-06 19:57:21 INFO  TableMetadata:67 - HHH000037: Columns: [startdt, expectedrevenue, lastmodifiedby, campaignresponsetype, version, lastmodifieddate, id, campaignstatus, actualrevenue, description, actualcost, expectedresponsecount, enddt, deprecatedby, deprecated, campaignname, ownedby, deprecateddate, createddate, createdby, campaigntype, startdate, estimatedcost, enddate, actualresponsecount]
+2014-10-06 19:57:21 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2014-10-06 19:57:21 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2014-10-06 19:57:21 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.contact
+2014-10-06 19:57:21 INFO  TableMetadata:67 - HHH000037: Columns: [department, designation, lastname, contactsource, lastmodifiedby, dateofbirth, version, lastmodifieddate, officeaddress_id, id, mobilephone, personalemail, officephone, description, messengerid, reportsto, homephone, deprecatedby, deprecated, fax, messengertype, deprecateddate, homeaddress_id, createddate, createdby, firstname, reference, organization_id, donotcall, company, primaryemail]
+2014-10-06 19:57:21 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_5uige5h64e3x3w2b8dja5895m, fk_nc85jc7tpme7an6x3cgt9hq1, fk_7u2jikil9u4wnorw8hbhg7rrd]
+2014-10-06 19:57:21 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_5uige5h64e3x3w2b8dja5895m, primary, fk_nc85jc7tpme7an6x3cgt9hq1, fk_7u2jikil9u4wnorw8hbhg7rrd]
+2014-10-06 19:57:21 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.feature
+2014-10-06 19:57:21 INFO  TableMetadata:67 - HHH000037: Columns: [id, deprecated, description, deprecateddate, featurename, lastmodifiedby, createddate, createdby, deprecatedby, version, lastmodifieddate]
+2014-10-06 19:57:21 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2014-10-06 19:57:21 INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_5e7tha3hdebby7qxtn62fa0u5]
+2014-10-06 19:57:21 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.feature_usertypes
+2014-10-06 19:57:21 INFO  TableMetadata:67 - HHH000037: Columns: [feature_id, usertype_id]
+2014-10-06 19:57:21 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_10upiaungmx9rse1b0n8avjm1, fk_hcdhcyu4p2ghskbr1n7g1g766]
+2014-10-06 19:57:21 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_10upiaungmx9rse1b0n8avjm1, fk_hcdhcyu4p2ghskbr1n7g1g766]
+2014-10-06 19:57:21 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.lead
+2014-10-06 19:57:21 INFO  TableMetadata:67 - HHH000037: Columns: [designation, leadsource, lastname, lastmodifiedby, version, lastmodifieddate, id, address_id, description, industry, deprecatedby, deprecated, fax, website, deprecateddate, createddate, createdby, firstname, numofemployers, organization_id, leadstatus, company, rating, primaryphone, mobile, primaryemail]
+2014-10-06 19:57:21 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rguxnjnn777hgxrt9dvumeqsx, fk_4iujre5ns8d3hi0b8vihg54yh]
+2014-10-06 19:57:21 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rguxnjnn777hgxrt9dvumeqsx, primary, fk_4iujre5ns8d3hi0b8vihg54yh]
+2014-10-06 19:57:21 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.oppurtunity
+2014-10-06 19:57:21 INFO  TableMetadata:67 - HHH000037: Columns: [deprecated, contact_id, deprecateddate, oppurtunitytype, leadsource, salesstage, oppurtunityname, lastmodifiedby, createdby, createddate, campaign_id, lastmodifieddate, version, id, amount, organization_id, description, oppurtunitystrategy, expclosuredate, expectedcloseddate, probability, deprecatedby, primaryemail]
+2014-10-06 19:57:21 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_o4aajjitn4hghxgai6batv9sd, fk_d7as6tgxc2t4se8qd0hrc579e, fk_5n1x2jw893uclny4j3drxgake]
+2014-10-06 19:57:21 INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_o4aajjitn4hghxgai6batv9sd, fk_d7as6tgxc2t4se8qd0hrc579e, fk_5n1x2jw893uclny4j3drxgake]
+2014-10-06 19:57:21 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.organization
+2014-10-06 19:57:21 INFO  TableMetadata:67 - HHH000037: Columns: [deprecated, fax, website, deprecateddate, orgstatus, lastmodifiedby, createdby, createddate, memberof, lastmodifieddate, version, numofemployers, id, revenuerange, ownership, address_id, orgname, description, organizationtype, company, rating, primaryphone, industry, deprecatedby, primaryemail, mobile]
+2014-10-06 19:57:21 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ljm9iffvwgim4selnwlmjqgdg]
+2014-10-06 19:57:21 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ljm9iffvwgim4selnwlmjqgdg, primary]
+2014-10-06 19:57:21 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.user
+2014-10-06 19:57:21 INFO  TableMetadata:67 - HHH000037: Columns: [deprecated, isemployee, deprecateddate, lastname, lastmodifiedby, createdby, createddate, firstname, password, usertype_id, lastmodifieddate, version, id, username, description, deprecatedby]
+2014-10-06 19:57:21 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_9vnibxjg5l2vb1srkcgry9fnu]
+2014-10-06 19:57:21 INFO  TableMetadata:70 - HHH000126: Indexes: [uk_6lvo20vv623j77uj6wurcry8f, primary, fk_9vnibxjg5l2vb1srkcgry9fnu, uk_hl8fftx66p59oqgkkcfit3eay]
+2014-10-06 19:57:21 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.usertype
+2014-10-06 19:57:21 INFO  TableMetadata:67 - HHH000037: Columns: [id, deprecated, description, deprecateddate, usertype, lastmodifiedby, createddate, createdby, deprecatedby, version, lastmodifieddate]
+2014-10-06 19:57:21 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2014-10-06 19:57:21 INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_bjx7rbq37wm4kqe1x6i8vaigf]
+2014-10-06 19:57:21 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2014-10-06 19:57:21 WARN  ConfigContext:257 - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+2014-10-06 19:57:22 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@7e2f328f]; rollback [false]
+2014-10-06 19:57:23 INFO  TransactionalTestExecutionListener:296 - Committed transaction after test execution for test context [DefaultTestContext@711ee528 testClass = UserServiceTest, testInstance = com.v2.services.test.UserServiceTest@2356df1d, testMethod = testSetUpInitData@UserServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1c51fb0b testClass = UserServiceTest, locations = '{classpath:appCtx1.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2014-10-06 19:57:23 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@1e905b0d: startup date [Mon Oct 06 19:57:18 IST 2014]; root of context hierarchy
+2014-10-06 19:57:23 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-10-06 19:57:23 INFO  BoneCP:159 - Shutting down connection pool...
+2014-10-06 19:57:23 INFO  BoneCP:188 - Connection pool has been shutdown.
+2014-10-06 19:57:44 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [appCtx1.xml]
+2014-10-06 19:57:45 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@5f2cfc0f: startup date [Mon Oct 06 19:57:45 IST 2014]; root of context hierarchy
+2014-10-06 19:57:45 WARN  BoneCPConfig:356 - Please use setIdleConnectionTestPeriodInMinutes in place of setIdleConnectionTestPeriod. This method has been deprecated.
+2014-10-06 19:57:45 WARN  BoneCPConfig:455 - Please use setIdleMaxAgeInMinutes in place of setIdleMaxAge. This method has been deprecated.
+2014-10-06 19:57:45 WARN  BoneCPConfig:618 - releaseHelperThreads has been deprecated -- it tends to slow down your application more.
+2014-10-06 19:57:45 INFO  LocalContainerEntityManagerFactoryBean:314 - Building JPA container EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-10-06 19:57:45 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2014-10-06 19:57:45 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: V2CRM_PersistenceUnit
+	...]
+2014-10-06 19:57:46 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2014-10-06 19:57:46 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-10-06 19:57:46 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2014-10-06 19:57:46 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2014-10-06 19:57:46 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2014-10-06 19:57:47 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-10-06 19:57:47 INFO  Version:43 - HSEARCH000034: Hibernate Search 4.5.1.Final
+2014-10-06 19:57:48 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2014-10-06 19:57:48 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2014-10-06 19:57:48 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2014-10-06 19:57:48 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.address
+2014-10-06 19:57:48 INFO  TableMetadata:67 - HHH000037: Columns: [deprecated, deprecateddate, street, officenumber, state, lastmodifiedby, createdby, createddate, country, lastmodifieddate, version, city, id, pin, description, deprecatedby, bldg]
+2014-10-06 19:57:48 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2014-10-06 19:57:48 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2014-10-06 19:57:48 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.campaign
+2014-10-06 19:57:48 INFO  TableMetadata:67 - HHH000037: Columns: [startdt, expectedrevenue, lastmodifiedby, campaignresponsetype, version, lastmodifieddate, id, campaignstatus, actualrevenue, description, actualcost, expectedresponsecount, enddt, deprecatedby, deprecated, campaignname, ownedby, deprecateddate, createddate, createdby, campaigntype, startdate, estimatedcost, enddate, actualresponsecount]
+2014-10-06 19:57:48 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2014-10-06 19:57:48 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2014-10-06 19:57:48 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.contact
+2014-10-06 19:57:48 INFO  TableMetadata:67 - HHH000037: Columns: [department, designation, lastname, contactsource, lastmodifiedby, dateofbirth, version, lastmodifieddate, officeaddress_id, id, mobilephone, personalemail, officephone, description, messengerid, reportsto, homephone, deprecatedby, deprecated, fax, messengertype, deprecateddate, homeaddress_id, createddate, createdby, firstname, reference, organization_id, donotcall, company, primaryemail]
+2014-10-06 19:57:48 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_5uige5h64e3x3w2b8dja5895m, fk_nc85jc7tpme7an6x3cgt9hq1, fk_7u2jikil9u4wnorw8hbhg7rrd]
+2014-10-06 19:57:48 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_5uige5h64e3x3w2b8dja5895m, primary, fk_nc85jc7tpme7an6x3cgt9hq1, fk_7u2jikil9u4wnorw8hbhg7rrd]
+2014-10-06 19:57:48 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.feature
+2014-10-06 19:57:48 INFO  TableMetadata:67 - HHH000037: Columns: [id, deprecated, description, deprecateddate, featurename, lastmodifiedby, createddate, createdby, deprecatedby, version, lastmodifieddate]
+2014-10-06 19:57:48 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2014-10-06 19:57:48 INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_5e7tha3hdebby7qxtn62fa0u5]
+2014-10-06 19:57:48 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.feature_usertypes
+2014-10-06 19:57:48 INFO  TableMetadata:67 - HHH000037: Columns: [feature_id, usertype_id]
+2014-10-06 19:57:48 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_10upiaungmx9rse1b0n8avjm1, fk_hcdhcyu4p2ghskbr1n7g1g766]
+2014-10-06 19:57:48 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_10upiaungmx9rse1b0n8avjm1, fk_hcdhcyu4p2ghskbr1n7g1g766]
+2014-10-06 19:57:48 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.lead
+2014-10-06 19:57:48 INFO  TableMetadata:67 - HHH000037: Columns: [designation, leadsource, lastname, lastmodifiedby, version, lastmodifieddate, id, address_id, description, industry, deprecatedby, deprecated, fax, website, deprecateddate, createddate, createdby, firstname, numofemployers, organization_id, leadstatus, company, rating, primaryphone, mobile, primaryemail]
+2014-10-06 19:57:48 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rguxnjnn777hgxrt9dvumeqsx, fk_4iujre5ns8d3hi0b8vihg54yh]
+2014-10-06 19:57:48 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rguxnjnn777hgxrt9dvumeqsx, primary, fk_4iujre5ns8d3hi0b8vihg54yh]
+2014-10-06 19:57:48 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.oppurtunity
+2014-10-06 19:57:48 INFO  TableMetadata:67 - HHH000037: Columns: [deprecated, contact_id, deprecateddate, oppurtunitytype, leadsource, salesstage, oppurtunityname, lastmodifiedby, createdby, createddate, campaign_id, lastmodifieddate, version, id, amount, organization_id, description, oppurtunitystrategy, expclosuredate, expectedcloseddate, probability, deprecatedby, primaryemail]
+2014-10-06 19:57:48 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_o4aajjitn4hghxgai6batv9sd, fk_d7as6tgxc2t4se8qd0hrc579e, fk_5n1x2jw893uclny4j3drxgake]
+2014-10-06 19:57:48 INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_o4aajjitn4hghxgai6batv9sd, fk_d7as6tgxc2t4se8qd0hrc579e, fk_5n1x2jw893uclny4j3drxgake]
+2014-10-06 19:57:48 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.organization
+2014-10-06 19:57:48 INFO  TableMetadata:67 - HHH000037: Columns: [deprecated, fax, website, deprecateddate, orgstatus, lastmodifiedby, createdby, createddate, memberof, lastmodifieddate, version, numofemployers, id, revenuerange, ownership, address_id, orgname, description, organizationtype, company, rating, primaryphone, industry, deprecatedby, primaryemail, mobile]
+2014-10-06 19:57:48 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ljm9iffvwgim4selnwlmjqgdg]
+2014-10-06 19:57:48 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ljm9iffvwgim4selnwlmjqgdg, primary]
+2014-10-06 19:57:48 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.user
+2014-10-06 19:57:48 INFO  TableMetadata:67 - HHH000037: Columns: [deprecated, isemployee, deprecateddate, lastname, lastmodifiedby, createdby, createddate, firstname, password, usertype_id, lastmodifieddate, version, id, username, description, deprecatedby]
+2014-10-06 19:57:48 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_9vnibxjg5l2vb1srkcgry9fnu]
+2014-10-06 19:57:48 INFO  TableMetadata:70 - HHH000126: Indexes: [uk_6lvo20vv623j77uj6wurcry8f, primary, fk_9vnibxjg5l2vb1srkcgry9fnu, uk_hl8fftx66p59oqgkkcfit3eay]
+2014-10-06 19:57:48 INFO  TableMetadata:66 - HHH000261: Table found: v2crm.usertype
+2014-10-06 19:57:48 INFO  TableMetadata:67 - HHH000037: Columns: [id, deprecated, description, deprecateddate, usertype, lastmodifiedby, createddate, createdby, deprecatedby, version, lastmodifieddate]
+2014-10-06 19:57:48 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2014-10-06 19:57:48 INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_bjx7rbq37wm4kqe1x6i8vaigf]
+2014-10-06 19:57:48 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2014-10-06 19:57:48 WARN  ConfigContext:257 - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+2014-10-06 19:57:49 INFO  TransactionalTestExecutionListener:276 - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@34c927df]; rollback [false]
+2014-10-06 19:58:30 INFO  TransactionalTestExecutionListener:296 - Committed transaction after test execution for test context [DefaultTestContext@374d7e46 testClass = UserServiceTest, testInstance = com.v2.services.test.UserServiceTest@409d4207, testMethod = testFetchFeaturesByRole@UserServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1459fab5 testClass = UserServiceTest, locations = '{classpath:appCtx1.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2014-10-06 19:58:30 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@5f2cfc0f: startup date [Mon Oct 06 19:57:45 IST 2014]; root of context hierarchy
+2014-10-06 19:58:30 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'V2CRM_PersistenceUnit'
+2014-10-06 19:58:30 INFO  BoneCP:159 - Shutting down connection pool...
+2014-10-06 19:58:30 INFO  BoneCP:188 - Connection pool has been shutdown.
